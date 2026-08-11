@@ -1,0 +1,2050 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Excel Practical | EduNegi</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:linear-gradient(135deg,#eef2ff,#f8fafc,#ecfeff);
+    color:#172033;
+    line-height:1.7;
+}
+
+
+/* ================= HEADER ================= */
+
+header{
+    background:linear-gradient(
+        135deg,
+        #1e1b4b,
+        #4338ca,
+        #7c3aed,
+        #0891b2
+    );
+
+    color:white;
+    padding:20px 7%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    box-shadow:0 6px 25px rgba(0,0,0,.15);
+
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:27px;
+    font-weight:800;
+}
+
+.logo span{
+    color:#fbbf24;
+}
+
+nav{
+    display:flex;
+    gap:22px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:700;
+}
+
+nav a:hover{
+    color:#fbbf24;
+}
+
+
+/* ================= BREADCRUMB ================= */
+
+.breadcrumb{
+    width:90%;
+    max-width:1150px;
+    margin:25px auto 0;
+
+    color:#64748b;
+    font-size:14px;
+}
+
+.breadcrumb a{
+    color:#4f46e5;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+
+/* ================= HERO ================= */
+
+.hero{
+    width:90%;
+    max-width:1150px;
+    margin:auto;
+
+    text-align:center;
+
+    padding:60px 20px 50px;
+}
+
+.hero-icon{
+    font-size:65px;
+    margin-bottom:12px;
+}
+
+.hero h1{
+    font-family:Georgia,serif;
+    font-size:46px;
+    color:#312e81;
+    margin-bottom:14px;
+}
+
+.hero h1 span{
+    color:#16a34a;
+}
+
+.hero p{
+    max-width:800px;
+    margin:auto;
+
+    color:#475569;
+    font-size:17px;
+    line-height:1.8;
+}
+
+
+/* ================= CONTAINER ================= */
+
+.container{
+    width:90%;
+    max-width:1150px;
+    margin:auto;
+}
+
+
+/* ================= QUICK NAVIGATION ================= */
+
+.quick-nav{
+    background:white;
+
+    padding:24px;
+
+    border-radius:20px;
+
+    box-shadow:
+        0 8px 25px rgba(15,23,42,.07);
+
+    margin-bottom:35px;
+
+    text-align:center;
+}
+
+.quick-nav h3{
+    color:#312e81;
+    margin-bottom:15px;
+}
+
+.quick-links{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.quick-links a{
+    text-decoration:none;
+    color:#166534;
+    background:#dcfce7;
+    padding:9px 15px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:bold;
+}
+
+
+/* ================= SECTION ================= */
+
+.section{
+    background:white;
+
+    padding:32px;
+
+    margin-bottom:30px;
+
+    border-radius:22px;
+
+    border:1px solid #e2e8f0;
+
+    box-shadow:
+        0 8px 25px rgba(15,23,42,.06);
+}
+
+.section-heading{
+    background:
+        linear-gradient(
+            90deg,
+            #166534,
+            #16a34a
+        );
+
+    color:white;
+
+    padding:15px 20px;
+
+    border-radius:12px;
+
+    margin-bottom:23px;
+
+    font-size:21px;
+
+    font-weight:bold;
+}
+
+.subheading{
+    color:#166534;
+
+    font-size:21px;
+
+    margin:
+        25px 0 10px;
+
+    padding-left:12px;
+
+    border-left:5px solid #22c55e;
+}
+
+.section p{
+    color:#334155;
+    margin-bottom:12px;
+}
+
+.section ul{
+    margin:
+        10px 0 15px 25px;
+}
+
+.section li{
+    margin-bottom:7px;
+}
+
+
+/* ================= DEFINITION ================= */
+
+.definition{
+    background:#f0fdf4;
+
+    border-left:
+        5px solid #16a34a;
+
+    padding:18px;
+
+    border-radius:10px;
+
+    margin:15px 0;
+}
+
+.definition strong{
+    color:#166534;
+}
+
+
+/* ================= EXAMPLE ================= */
+
+.example{
+    background:#fff7ed;
+
+    border-left:
+        5px solid #f97316;
+
+    padding:18px;
+
+    border-radius:10px;
+
+    margin:15px 0;
+}
+
+.example strong{
+    color:#c2410c;
+}
+
+
+/* ================= FORMULA ================= */
+
+.formula{
+    background:#0f172a;
+
+    color:#e2e8f0;
+
+    padding:15px 18px;
+
+    border-radius:10px;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    margin:12px 0 18px;
+
+    overflow-x:auto;
+}
+
+
+/* ================= FUNCTION CARDS ================= */
+
+.function-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(220px,1fr)
+        );
+
+    gap:18px;
+
+    margin-top:20px;
+}
+
+.function-card{
+    padding:22px;
+
+    background:#f8fafc;
+
+    border-radius:16px;
+
+    border-top:
+        5px solid #22c55e;
+
+    transition:.2s;
+}
+
+.function-card:hover{
+    transform:translateY(-5px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(15,23,42,.08);
+}
+
+.function-card h3{
+    color:#166534;
+    margin-bottom:8px;
+}
+
+.function-card p{
+    font-size:14px;
+}
+
+.function-card code{
+    display:block;
+
+    background:#0f172a;
+
+    color:#e2e8f0;
+
+    padding:10px;
+
+    border-radius:7px;
+
+    margin-top:10px;
+
+    overflow-x:auto;
+}
+
+
+/* ================= TABLE ================= */
+
+.table-wrapper{
+    overflow-x:auto;
+
+    margin-top:18px;
+}
+
+table{
+    width:100%;
+
+    border-collapse:collapse;
+
+    min-width:650px;
+}
+
+th{
+    background:#166534;
+
+    color:white;
+
+    padding:13px;
+
+    text-align:left;
+}
+
+td{
+    padding:13px;
+
+    border-bottom:
+        1px solid #e2e8f0;
+}
+
+tr:nth-child(even){
+    background:#f8fafc;
+}
+
+
+/* ================= PRACTICE CARDS ================= */
+
+.practice-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(250px,1fr)
+        );
+
+    gap:20px;
+}
+
+.practice{
+    background:#f8fafc;
+
+    padding:23px;
+
+    border-radius:16px;
+
+    border:1px solid #e2e8f0;
+}
+
+.practice-number{
+    width:40px;
+    height:40px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #16a34a,
+            #15803d
+        );
+
+    color:white;
+
+    font-weight:bold;
+
+    margin-bottom:12px;
+}
+
+.practice h3{
+    color:#166534;
+
+    margin-bottom:8px;
+}
+
+.practice p{
+    font-size:14px;
+}
+
+
+/* ================= DATA TABLE ================= */
+
+.data-table{
+    margin-top:20px;
+}
+
+.data-table table{
+    min-width:700px;
+}
+
+
+/* ================= NOTE BOX ================= */
+
+.note{
+    background:#fefce8;
+
+    border-left:
+        5px solid #eab308;
+
+    padding:18px;
+
+    border-radius:10px;
+
+    margin:18px 0;
+}
+
+
+/* ================= EXCEL TASK ================= */
+
+.task-box{
+    background:
+        linear-gradient(
+            135deg,
+            #14532d,
+            #16a34a
+        );
+
+    color:white;
+
+    padding:32px;
+
+    border-radius:22px;
+
+    margin-top:20px;
+}
+
+.task-box h2{
+    margin-bottom:10px;
+}
+
+.task-box p{
+    color:#dcfce7;
+}
+
+.task-list{
+    margin:
+        18px 0 0 20px;
+}
+
+.task-list li{
+    color:white;
+    margin-bottom:8px;
+}
+
+
+/* ================= BACK BUTTON ================= */
+
+.back-button{
+    display:inline-block;
+
+    margin:
+        5px 0 45px;
+
+    padding:
+        12px 20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #166534,
+            #16a34a
+        );
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:10px;
+
+    font-weight:bold;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#0f172a;
+
+    color:#cbd5e1;
+
+    text-align:center;
+
+    padding:28px;
+
+    margin-top:30px;
+
+    font-size:14px;
+}
+
+footer strong{
+    color:white;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:700px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+        padding:18px 15px;
+    }
+
+    nav{
+        gap:12px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    nav a{
+        font-size:12px;
+    }
+
+    .hero{
+        padding:45px 10px;
+    }
+
+    .hero h1{
+        font-size:35px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .section{
+        padding:22px;
+    }
+
+    .section-heading{
+        font-size:18px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <div class="logo">
+        🎓 Edu<span>Negi</span>
+    </div>
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="index.html#bba">
+            BBA & BCH
+        </a>
+
+        <a href="index.html#mba">
+            MBA
+        </a>
+
+        <a href="index.html#practical">
+            Practical
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- ================= BREADCRUMB ================= -->
+
+<div class="breadcrumb">
+
+    <a href="index.html">
+        EduNegi
+    </a>
+
+    &nbsp; / &nbsp;
+
+    <a href="data-analytics.html">
+        Data Analytics
+    </a>
+
+    &nbsp; / &nbsp;
+
+    Excel Practical
+
+</div>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-icon">
+        📗
+    </div>
+
+    <h1>
+        Excel <span>Practical</span>
+    </h1>
+
+    <p>
+
+        Learn Excel through practical
+        examples, formulas, functions,
+        data entry, formatting and
+        data validation exercises.
+
+    </p>
+
+</section>
+
+
+<div class="container">
+
+
+<!-- ================= QUICK NAV ================= -->
+
+<div class="quick-nav">
+
+    <h3>
+        📌 Quick Navigation
+    </h3>
+
+    <div class="quick-links">
+
+        <a href="#basics">
+            Excel Basics
+        </a>
+
+        <a href="#functions">
+            Functions
+        </a>
+
+        <a href="#logic">
+            IF / AND / OR
+        </a>
+
+        <a href="#formatting">
+            Formatting
+        </a>
+
+        <a href="#validation">
+            Data Validation
+        </a>
+
+        <a href="#practice">
+            Practice
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     EXCEL BASICS
+===================================================== -->
+
+<section
+    class="section"
+    id="basics">
+
+    <div class="section-heading">
+
+        📗 1. Excel Basics
+
+    </div>
+
+
+    <div class="definition">
+
+        <strong>
+            Microsoft Excel
+        </strong>
+
+        is a spreadsheet application
+        used for data entry, calculations,
+        data analysis and presentation
+        of information.
+
+    </div>
+
+
+    <h3 class="subheading">
+
+        Important Excel Terms
+
+    </h3>
+
+
+    <div class="table-wrapper">
+
+        <table>
+
+            <tr>
+
+                <th>
+                    Term
+                </th>
+
+                <th>
+                    Meaning
+                </th>
+
+            </tr>
+
+            <tr>
+
+                <td>
+                    Workbook
+                </td>
+
+                <td>
+                    Complete Excel file.
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+                    Worksheet
+                </td>
+
+                <td>
+                    Individual spreadsheet
+                    inside a workbook.
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+                    Cell
+                </td>
+
+                <td>
+                    Intersection of a row
+                    and a column.
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+                    Row
+                </td>
+
+                <td>
+                    Horizontal arrangement
+                    of cells.
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+                    Column
+                </td>
+
+                <td>
+                    Vertical arrangement
+                    of cells.
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+                    Cell Reference
+                </td>
+
+                <td>
+                    Address of a cell,
+                    such as A1 or B5.
+                </td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SUM AVERAGE COUNT MIN MAX
+===================================================== -->
+
+<section
+    class="section"
+    id="functions">
+
+    <div class="section-heading">
+
+        🧮 2. Basic Excel Functions
+
+    </div>
+
+
+    <div class="function-grid">
+
+
+        <div class="function-card">
+
+            <h3>
+                SUM
+            </h3>
+
+            <p>
+                Adds values from
+                selected cells.
+            </p>
+
+            <code>
+                =SUM(B2:B10)
+            </code>
+
+        </div>
+
+
+        <div class="function-card">
+
+            <h3>
+                AVERAGE
+            </h3>
+
+            <p>
+                Calculates the
+                arithmetic average.
+            </p>
+
+            <code>
+                =AVERAGE(B2:B10)
+            </code>
+
+        </div>
+
+
+        <div class="function-card">
+
+            <h3>
+                COUNT
+            </h3>
+
+            <p>
+                Counts cells containing
+                numeric values.
+            </p>
+
+            <code>
+                =COUNT(B2:B10)
+            </code>
+
+        </div>
+
+
+        <div class="function-card">
+
+            <h3>
+                MIN
+            </h3>
+
+            <p>
+                Finds the smallest
+                numeric value.
+            </p>
+
+            <code>
+                =MIN(B2:B10)
+            </code>
+
+        </div>
+
+
+        <div class="function-card">
+
+            <h3>
+                MAX
+            </h3>
+
+            <p>
+                Finds the largest
+                numeric value.
+            </p>
+
+            <code>
+                =MAX(B2:B10)
+            </code>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="example">
+
+        <strong>
+            Example:
+        </strong>
+
+        Suppose the marks of five students
+        are:
+
+        <br><br>
+
+        65, 72, 48, 85, 90
+
+        <br><br>
+
+        Total:
+
+        <strong>
+            =SUM(A2:A6)
+        </strong>
+
+        <br>
+
+        Average:
+
+        <strong>
+            =AVERAGE(A2:A6)
+        </strong>
+
+        <br>
+
+        Highest:
+
+        <strong>
+            =MAX(A2:A6)
+        </strong>
+
+        <br>
+
+        Lowest:
+
+        <strong>
+            =MIN(A2:A6)
+        </strong>
+
+        <br>
+
+        Number of marks:
+
+        <strong>
+            =COUNT(A2:A6)
+        </strong>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     IF AND OR
+===================================================== -->
+
+<section
+    class="section"
+    id="logic">
+
+    <div class="section-heading">
+
+        ✅ 3. IF, AND and OR Functions
+
+    </div>
+
+
+    <h3 class="subheading">
+        IF Function
+    </h3>
+
+
+    <p>
+
+        IF checks a condition and returns
+        one result when the condition is
+        TRUE and another result when it
+        is FALSE.
+
+    </p>
+
+
+    <div class="formula">
+
+        =IF(B2>=40,"Pass","Fail")
+
+    </div>
+
+
+    <div class="example">
+
+        <strong>
+            Practical Example:
+        </strong>
+
+        If B2 contains 65 marks,
+        Excel will display:
+
+        <strong>
+            Pass
+        </strong>
+
+    </div>
+
+
+    <h3 class="subheading">
+        AND Function
+    </h3>
+
+
+    <p>
+
+        AND returns TRUE only when
+        all conditions are TRUE.
+
+    </p>
+
+
+    <div class="formula">
+
+        =AND(B2>=40,C2>=40)
+
+    </div>
+
+
+    <h3 class="subheading">
+        OR Function
+    </h3>
+
+
+    <p>
+
+        OR returns TRUE when at least
+        one condition is TRUE.
+
+    </p>
+
+
+    <div class="formula">
+
+        =OR(B2>=40,C2>=40)
+
+    </div>
+
+
+    <div class="note">
+
+        <strong>
+            Remember:
+        </strong>
+
+        <br><br>
+
+        IF → Decision
+
+        <br>
+
+        AND → All conditions
+
+        <br>
+
+        OR → Any one condition
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PRACTICAL DATASET
+===================================================== -->
+
+<section class="section">
+
+    <div class="section-heading">
+
+        📊 4. Practical Dataset
+
+    </div>
+
+
+    <p>
+
+        Enter the following data in Excel
+        and apply the formulas given below.
+
+    </p>
+
+
+    <div class="data-table">
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <tr>
+
+                    <th>
+                        Student
+                    </th>
+
+                    <th>
+                        Excel
+                    </th>
+
+                    <th>
+                        Data Analytics
+                    </th>
+
+                    <th>
+                        Total
+                    </th>
+
+                    <th>
+                        Average
+                    </th>
+
+                    <th>
+                        Result
+                    </th>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        Amit
+                    </td>
+
+                    <td>
+                        75
+                    </td>
+
+                    <td>
+                        82
+                    </td>
+
+                    <td>
+                        ?
+                    </td>
+
+                    <td>
+                        ?
+                    </td>
+
+                    <td>
+                        ?
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        Neha
+                    </td>
+
+                    <td>
+                        65
+                    </td>
+
+                    <td>
+                        71
+                    </td>
+
+                    <td>
+                        ?
+                    </td>
+
+                    <td>
+                        ?
+                    </td>
+
+                    <td>
+                        ?
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        Rahul
+                    </td>
+
+                    <td>
+                        35
+                    </td>
+
+                    <td>
+                        42
+                    </td>
+
+                    <td>
+                        ?
+                    </td>
+
+                    <td>
+                        ?
+                    </td>
+
+                    <td>
+                        ?
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        Priya
+                    </td>
+
+                    <td>
+                        88
+                    </td>
+
+                    <td>
+                        91
+                    </td>
+
+                    <td>
+                        ?
+                    </td>
+
+                    <td>
+                        ?
+                    </td>
+
+                    <td>
+                        ?
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        Karan
+                    </td>
+
+                    <td>
+                        28
+                    </td>
+
+                    <td>
+                        36
+                    </td>
+
+                    <td>
+                        ?
+                    </td>
+
+                    <td>
+                        ?
+                    </td>
+
+                    <td>
+                        ?
+                    </td>
+
+                </tr>
+
+            </table>
+
+        </div>
+
+    </div>
+
+
+    <h3 class="subheading">
+        Tasks
+    </h3>
+
+
+    <ol style="margin-left:25px">
+
+        <li>
+            Calculate Total marks.
+        </li>
+
+        <li>
+            Calculate Average marks.
+        </li>
+
+        <li>
+            Find the highest Total.
+        </li>
+
+        <li>
+            Find the lowest Total.
+        </li>
+
+        <li>
+            Count the number of students.
+        </li>
+
+        <li>
+            Use IF to display Pass or Fail.
+        </li>
+
+    </ol>
+
+
+    <h3 class="subheading">
+        Suggested Formulas
+    </h3>
+
+
+    <div class="formula">
+
+        Total:
+        =SUM(B2:C2)
+
+    </div>
+
+
+    <div class="formula">
+
+        Average:
+        =AVERAGE(B2:C2)
+
+    </div>
+
+
+    <div class="formula">
+
+        Highest Total:
+        =MAX(D2:D6)
+
+    </div>
+
+
+    <div class="formula">
+
+        Lowest Total:
+        =MIN(D2:D6)
+
+    </div>
+
+
+    <div class="formula">
+
+        Number of Students:
+        =COUNT(B2:B6)
+
+    </div>
+
+
+    <div class="formula">
+
+        Result:
+        =IF(E2>=40,"Pass","Fail")
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FORMATTING
+===================================================== -->
+
+<section
+    class="section"
+    id="formatting">
+
+    <div class="section-heading">
+
+        🎨 5. Excel Formatting Practice
+
+    </div>
+
+
+    <p>
+
+        Formatting makes a worksheet
+        professional, clear and easy
+        to understand.
+
+    </p>
+
+
+    <div class="practice-grid">
+
+
+        <div class="practice">
+
+            <div class="practice-number">
+                1
+            </div>
+
+            <h3>
+                Heading
+            </h3>
+
+            <p>
+                Make the table heading
+                bold and increase its
+                font size.
+            </p>
+
+        </div>
+
+
+        <div class="practice">
+
+            <div class="practice-number">
+                2
+            </div>
+
+            <h3>
+                Borders
+            </h3>
+
+            <p>
+                Apply borders to the
+                complete dataset.
+            </p>
+
+        </div>
+
+
+        <div class="practice">
+
+            <div class="practice-number">
+                3
+            </div>
+
+            <h3>
+                Alignment
+            </h3>
+
+            <p>
+                Align headings and
+                numerical values properly.
+            </p>
+
+        </div>
+
+
+        <div class="practice">
+
+            <div class="practice-number">
+                4
+            </div>
+
+            <h3>
+                Number Format
+            </h3>
+
+            <p>
+                Apply suitable number
+                formatting to marks.
+            </p>
+
+        </div>
+
+
+        <div class="practice">
+
+            <div class="practice-number">
+                5
+            </div>
+
+            <h3>
+                Conditional Formatting
+            </h3>
+
+            <p>
+                Highlight students with
+                marks below 40.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     DATA VALIDATION
+===================================================== -->
+
+<section
+    class="section"
+    id="validation">
+
+    <div class="section-heading">
+
+        ✔️ 6. Data Validation
+
+    </div>
+
+
+    <div class="definition">
+
+        <strong>
+            Data Validation
+        </strong>
+
+        controls what type of information
+        users are allowed to enter into
+        a cell.
+
+    </div>
+
+
+    <h3 class="subheading">
+        Example 1 — Marks
+    </h3>
+
+
+    <p>
+
+        Suppose marks should be between
+        0 and 100.
+
+    </p>
+
+
+    <ol style="margin-left:25px">
+
+        <li>
+            Select the marks cells.
+        </li>
+
+        <li>
+            Open the Data tab.
+        </li>
+
+        <li>
+            Select Data Validation.
+        </li>
+
+        <li>
+            Choose Whole Number.
+        </li>
+
+        <li>
+            Set minimum value to 0.
+        </li>
+
+        <li>
+            Set maximum value to 100.
+        </li>
+
+    </ol>
+
+
+    <h3 class="subheading">
+        Example 2 — Drop-down List
+    </h3>
+
+
+    <p>
+
+        Suppose the department field
+        should allow only:
+
+    </p>
+
+
+    <div class="example">
+
+        <strong>
+            BBA
+        </strong>
+        <br>
+
+        <strong>
+            BCH
+        </strong>
+        <br>
+
+        <strong>
+            MBA
+        </strong>
+
+    </div>
+
+
+    <p>
+
+        Use Data Validation → List to
+        create a drop-down menu.
+
+    </p>
+
+
+</section>
+
+
+<!-- =====================================================
+     PRACTICE QUESTIONS
+===================================================== -->
+
+<section
+    class="section"
+    id="practice">
+
+    <div class="section-heading">
+
+        🎯 7. Excel Practical Questions
+
+    </div>
+
+
+    <div class="practice-grid">
+
+
+        <div class="practice">
+
+            <div class="practice-number">
+                1
+            </div>
+
+            <h3>
+                Sales Total
+            </h3>
+
+            <p>
+
+                A company has sales figures
+                in B2:B20.
+
+                Calculate total sales.
+
+            </p>
+
+            <div class="formula">
+                =SUM(B2:B20)
+            </div>
+
+        </div>
+
+
+        <div class="practice">
+
+            <div class="practice-number">
+                2
+            </div>
+
+            <h3>
+                Average Sales
+            </h3>
+
+            <p>
+
+                Calculate the average sales
+                using the same dataset.
+
+            </p>
+
+            <div class="formula">
+                =AVERAGE(B2:B20)
+            </div>
+
+        </div>
+
+
+        <div class="practice">
+
+            <div class="practice-number">
+                3
+            </div>
+
+            <h3>
+                Highest Sale
+            </h3>
+
+            <p>
+
+                Find the highest sales value.
+
+            </p>
+
+            <div class="formula">
+                =MAX(B2:B20)
+            </div>
+
+        </div>
+
+
+        <div class="practice">
+
+            <div class="practice-number">
+                4
+            </div>
+
+            <h3>
+                Lowest Sale
+            </h3>
+
+            <p>
+
+                Find the lowest sales value.
+
+            </p>
+
+            <div class="formula">
+                =MIN(B2:B20)
+            </div>
+
+        </div>
+
+
+        <div class="practice">
+
+            <div class="practice-number">
+                5
+            </div>
+
+            <h3>
+                Sales Count
+            </h3>
+
+            <p>
+
+                Count the number of
+                numeric sales records.
+
+            </p>
+
+            <div class="formula">
+                =COUNT(B2:B20)
+            </div>
+
+        </div>
+
+
+        <div class="practice">
+
+            <div class="practice-number">
+                6
+            </div>
+
+            <h3>
+                Performance
+            </h3>
+
+            <p>
+
+                Display "Good" when sales
+                are 50,000 or more,
+                otherwise "Needs Improvement".
+
+            </p>
+
+            <div class="formula">
+                =IF(B2>=50000,"Good","Needs Improvement")
+            </div>
+
+        </div>
+
+
+        <div class="practice">
+
+            <div class="practice-number">
+                7
+            </div>
+
+            <h3>
+                Two Conditions
+            </h3>
+
+            <p>
+
+                Check whether both subjects
+                have marks of at least 40.
+
+            </p>
+
+            <div class="formula">
+                =AND(B2>=40,C2>=40)
+            </div>
+
+        </div>
+
+
+        <div class="practice">
+
+            <div class="practice-number">
+                8
+            </div>
+
+            <h3>
+                Alternative Condition
+            </h3>
+
+            <p>
+
+                Check whether at least one
+                subject has marks of 40 or more.
+
+            </p>
+
+            <div class="formula">
+                =OR(B2>=40,C2>=40)
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FINAL PRACTICAL TASK
+===================================================== -->
+
+<section class="section">
+
+    <div class="section-heading">
+
+        🚀 Final Excel Practical Task
+
+    </div>
+
+
+    <div class="task-box">
+
+        <h2>
+            Student Performance Analysis
+        </h2>
+
+
+        <p>
+
+            Create an Excel worksheet containing
+            at least 10 students and their marks
+            in three subjects.
+
+        </p>
+
+
+        <ul class="task-list">
+
+            <li>
+                Enter student names.
+            </li>
+
+            <li>
+                Enter marks for three subjects.
+            </li>
+
+            <li>
+                Calculate Total marks using SUM.
+            </li>
+
+            <li>
+                Calculate Average using AVERAGE.
+            </li>
+
+            <li>
+                Find highest marks using MAX.
+            </li>
+
+            <li>
+                Find lowest marks using MIN.
+            </li>
+
+            <li>
+                Count students using COUNT.
+            </li>
+
+            <li>
+                Use IF to determine Pass/Fail.
+            </li>
+
+            <li>
+                Use AND to check multiple conditions.
+            </li>
+
+            <li>
+                Use OR to check alternative conditions.
+            </li>
+
+            <li>
+                Apply professional formatting.
+            </li>
+
+            <li>
+                Use Data Validation for marks.
+            </li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+
+<!-- ================= BACK ================= -->
+
+<a
+    href="data-analytics.html"
+    class="back-button">
+
+    ← Back to Data Analytics
+
+</a>
+
+
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    © 2026
+
+    <strong>
+        EduNegi
+    </strong>
+
+    <br><br>
+
+    Learn Better. Practice More.
+    Grow with EduNegi.
+
+    <br><br>
+
+    BBA & BCH • MBA • Practical Learning
+
+</footer>
+
+
+</body>
+
+</html>
