@@ -1,0 +1,2495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Data Analytics Notes | EduNegi</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:linear-gradient(135deg,#eef2ff,#f8fafc,#ecfeff);
+    color:#172033;
+    line-height:1.7;
+}
+
+
+/* ================= HEADER ================= */
+
+header{
+    background:linear-gradient(
+        135deg,
+        #1e1b4b,
+        #4338ca,
+        #7c3aed,
+        #0891b2
+    );
+
+    color:white;
+    padding:20px 7%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    box-shadow:0 6px 25px rgba(0,0,0,.15);
+
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:27px;
+    font-weight:800;
+}
+
+.logo span{
+    color:#fbbf24;
+}
+
+nav{
+    display:flex;
+    gap:22px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:700;
+}
+
+nav a:hover{
+    color:#fbbf24;
+}
+
+
+/* ================= BREADCRUMB ================= */
+
+.breadcrumb{
+    width:90%;
+    max-width:1100px;
+    margin:25px auto 0;
+
+    color:#64748b;
+    font-size:14px;
+}
+
+.breadcrumb a{
+    color:#4f46e5;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+
+/* ================= HERO ================= */
+
+.hero{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+
+    text-align:center;
+
+    padding:55px 20px 45px;
+}
+
+.hero-icon{
+    font-size:60px;
+    margin-bottom:10px;
+}
+
+.hero h1{
+    font-family:Georgia,serif;
+    font-size:44px;
+    color:#312e81;
+    margin-bottom:12px;
+}
+
+.hero h1 span{
+    color:#7c3aed;
+}
+
+.hero p{
+    max-width:800px;
+    margin:auto;
+
+    color:#475569;
+    font-size:17px;
+}
+
+
+/* ================= CONTENT ================= */
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+}
+
+
+/* ================= UNIT NAVIGATION ================= */
+
+.unit-nav{
+    background:white;
+
+    padding:22px;
+
+    border-radius:18px;
+
+    box-shadow:
+        0 8px 25px rgba(15,23,42,.07);
+
+    margin-bottom:35px;
+
+    text-align:center;
+}
+
+.unit-nav h3{
+    color:#312e81;
+    margin-bottom:15px;
+}
+
+.unit-links{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.unit-links a{
+    text-decoration:none;
+
+    color:#4338ca;
+
+    background:#eef2ff;
+
+    padding:9px 15px;
+
+    border-radius:20px;
+
+    font-size:13px;
+
+    font-weight:bold;
+}
+
+
+/* ================= NOTE SECTION ================= */
+
+.note-section{
+    background:white;
+
+    padding:32px;
+
+    margin-bottom:30px;
+
+    border-radius:22px;
+
+    border:1px solid #e2e8f0;
+
+    box-shadow:
+        0 8px 25px rgba(15,23,42,.06);
+}
+
+.section-heading{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #4338ca,
+            #7c3aed
+        );
+
+    color:white;
+
+    padding:14px 18px;
+
+    border-radius:12px;
+
+    margin-bottom:22px;
+
+    font-size:21px;
+}
+
+.subheading{
+    color:#312e81;
+
+    font-size:21px;
+
+    margin:
+        25px 0 10px;
+
+    padding-left:12px;
+
+    border-left:
+        5px solid #6366f1;
+}
+
+.note-section p{
+    margin-bottom:12px;
+    color:#334155;
+}
+
+.note-section ul{
+    margin:
+        10px 0 15px 25px;
+}
+
+.note-section li{
+    margin-bottom:7px;
+}
+
+
+/* ================= DEFINITION BOX ================= */
+
+.definition{
+    background:#eef2ff;
+
+    border-left:
+        5px solid #4f46e5;
+
+    padding:18px;
+
+    border-radius:10px;
+
+    margin:15px 0;
+}
+
+.definition strong{
+    color:#312e81;
+}
+
+
+/* ================= SIMPLE MEANING ================= */
+
+.simple{
+    background:#ecfdf5;
+
+    border-left:
+        5px solid #10b981;
+
+    padding:18px;
+
+    border-radius:10px;
+
+    margin:15px 0;
+}
+
+.simple strong{
+    color:#047857;
+}
+
+
+/* ================= EXAMPLE ================= */
+
+.example{
+    background:#fff7ed;
+
+    border-left:
+        5px solid #f97316;
+
+    padding:18px;
+
+    border-radius:10px;
+
+    margin:15px 0;
+}
+
+.example strong{
+    color:#c2410c;
+}
+
+
+/* ================= ANALYTICS TYPES ================= */
+
+.type-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(220px,1fr)
+        );
+
+    gap:18px;
+
+    margin-top:20px;
+}
+
+.type-card{
+    padding:22px;
+
+    border-radius:16px;
+
+    background:#f8fafc;
+
+    border-top:
+        5px solid #6366f1;
+}
+
+.type-card h4{
+    color:#312e81;
+    font-size:19px;
+    margin-bottom:8px;
+}
+
+.type-card p{
+    font-size:14px;
+}
+
+
+/* ================= PROCESS ================= */
+
+.process{
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(170px,1fr)
+        );
+
+    gap:15px;
+
+    margin-top:20px;
+}
+
+.process-step{
+    text-align:center;
+
+    padding:20px 12px;
+
+    background:#f8fafc;
+
+    border-radius:15px;
+
+    border:1px solid #e2e8f0;
+}
+
+.process-number{
+    width:42px;
+    height:42px;
+
+    margin:
+        0 auto 10px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #4f46e5,
+            #7c3aed
+        );
+
+    color:white;
+
+    font-weight:bold;
+}
+
+.process-step h4{
+    color:#312e81;
+    margin-bottom:5px;
+}
+
+
+/* ================= TABLE ================= */
+
+.table-wrapper{
+    overflow-x:auto;
+    margin-top:18px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    min-width:650px;
+}
+
+th{
+    background:#4338ca;
+    color:white;
+    padding:13px;
+    text-align:left;
+}
+
+td{
+    padding:13px;
+    border-bottom:1px solid #e2e8f0;
+}
+
+tr:nth-child(even){
+    background:#f8fafc;
+}
+
+
+/* ================= CODE ================= */
+
+.formula{
+    background:#0f172a;
+
+    color:#e2e8f0;
+
+    padding:14px 18px;
+
+    border-radius:10px;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    margin:10px 0 18px;
+
+    overflow-x:auto;
+}
+
+
+/* ================= HIGHLIGHT ================= */
+
+.highlight{
+    background:#fefce8;
+
+    border-left:
+        5px solid #eab308;
+
+    padding:18px;
+
+    border-radius:10px;
+
+    margin:18px 0;
+}
+
+
+/* ================= BACK BUTTON ================= */
+
+.back-button{
+    display:inline-block;
+
+    margin:
+        10px 0 40px;
+
+    padding:
+        12px 20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #4f46e5,
+            #7c3aed
+        );
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:10px;
+
+    font-weight:bold;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#0f172a;
+
+    color:#cbd5e1;
+
+    text-align:center;
+
+    padding:28px;
+
+    margin-top:40px;
+
+    font-size:14px;
+}
+
+footer strong{
+    color:white;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:700px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+        padding:18px 15px;
+    }
+
+    nav{
+        gap:12px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    nav a{
+        font-size:12px;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .note-section{
+        padding:22px;
+    }
+
+    .section-heading{
+        font-size:18px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <div class="logo">
+        🎓 Edu<span>Negi</span>
+    </div>
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="index.html#bba">
+            BBA & BCH
+        </a>
+
+        <a href="index.html#mba">
+            MBA
+        </a>
+
+        <a href="index.html#practical">
+            Practical
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- ================= BREADCRUMB ================= -->
+
+<div class="breadcrumb">
+
+    <a href="index.html">
+        EduNegi
+    </a>
+
+    &nbsp; / &nbsp;
+
+    <a href="data-analytics.html">
+        Data Analytics
+    </a>
+
+    &nbsp; / &nbsp;
+
+    Lecture Notes
+
+</div>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-icon">
+        📚
+    </div>
+
+    <h1>
+        Data Analytics
+        <span>Lecture Notes</span>
+    </h1>
+
+    <p>
+
+        Unit 1: Introduction to Data Analytics
+        and Introduction to Excel for Data Analytics
+
+    </p>
+
+</section>
+
+
+<div class="container">
+
+
+<!-- ================= UNIT NAV ================= -->
+
+<div class="unit-nav">
+
+    <h3>
+        📑 Quick Navigation
+    </h3>
+
+    <div class="unit-links">
+
+        <a href="#intro">
+            1.1 Data Analytics
+        </a>
+
+        <a href="#process">
+            1.2 Process
+        </a>
+
+        <a href="#applications">
+            1.3 Applications
+        </a>
+
+        <a href="#excel">
+            2. Excel
+        </a>
+
+        <a href="#datatype">
+            Data Types
+        </a>
+
+        <a href="#functions">
+            Functions
+        </a>
+
+        <a href="#formatting">
+            Formatting
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     SECTION 1.1
+===================================================== -->
+
+<section
+    class="note-section"
+    id="intro">
+
+
+    <div class="section-heading">
+
+        📊 1.1 What is Data Analytics?
+
+    </div>
+
+
+    <h3 class="subheading">
+        Definition of Data Analytics
+    </h3>
+
+
+    <div class="definition">
+
+        <strong>
+            Data Analytics
+        </strong>
+        is the process of collecting,
+        cleaning, examining and interpreting
+        data to discover useful information,
+        patterns and insights that support
+        better decision-making.
+
+    </div>
+
+
+    <div class="simple">
+
+        <strong>
+            Simple Meaning:
+        </strong>
+
+        Data Analytics means studying data
+        to understand what happened,
+        why it happened, what may happen
+        in the future and what action
+        should be taken.
+
+    </div>
+
+
+    <h3 class="subheading">
+        Importance of Data Analytics
+    </h3>
+
+
+    <ul>
+
+        <li>
+            Helps organizations make
+            better decisions.
+        </li>
+
+        <li>
+            Identifies patterns and trends.
+        </li>
+
+        <li>
+            Helps understand customers.
+        </li>
+
+        <li>
+            Improves business performance.
+        </li>
+
+        <li>
+            Helps identify problems
+            and their causes.
+        </li>
+
+        <li>
+            Supports forecasting
+            and planning.
+        </li>
+
+        <li>
+            Helps reduce uncertainty
+            in decision-making.
+        </li>
+
+        <li>
+            Helps organizations use
+            resources more effectively.
+        </li>
+
+    </ul>
+
+
+    <div class="example">
+
+        <strong>
+            Example:
+        </strong>
+
+        Suppose a company has sales data
+        for five years. By analyzing the data,
+        the company can identify which products
+        sell the most, which months have
+        higher sales and which products
+        are losing demand.
+
+    </div>
+
+
+    <h3 class="subheading">
+        Types of Data Analytics
+    </h3>
+
+
+    <div class="type-grid">
+
+
+        <div class="type-card">
+
+            <h4>
+                1. Descriptive Analytics
+            </h4>
+
+            <p>
+                Answers:
+                <strong>
+                    "What happened?"
+                </strong>
+
+                It summarizes historical data
+                using reports, tables and charts.
+            </p>
+
+        </div>
+
+
+        <div class="type-card">
+
+            <h4>
+                2. Diagnostic Analytics
+            </h4>
+
+            <p>
+                Answers:
+                <strong>
+                    "Why did it happen?"
+                </strong>
+
+                It investigates the reasons
+                behind an event or result.
+            </p>
+
+        </div>
+
+
+        <div class="type-card">
+
+            <h4>
+                3. Predictive Analytics
+            </h4>
+
+            <p>
+                Answers:
+                <strong>
+                    "What is likely to happen?"
+                </strong>
+
+                It uses historical data,
+                patterns and models to
+                forecast future outcomes.
+            </p>
+
+        </div>
+
+
+        <div class="type-card">
+
+            <h4>
+                4. Prescriptive Analytics
+            </h4>
+
+            <p>
+                Answers:
+                <strong>
+                    "What should we do?"
+                </strong>
+
+                It recommends possible
+                actions based on analysis.
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="table-wrapper">
+
+        <table>
+
+            <tr>
+
+                <th>
+                    Type
+                </th>
+
+                <th>
+                    Main Question
+                </th>
+
+                <th>
+                    Example
+                </th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Descriptive
+                </td>
+
+                <td>
+                    What happened?
+                </td>
+
+                <td>
+                    Last month's sales were ₹10 lakh.
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Diagnostic
+                </td>
+
+                <td>
+                    Why did it happen?
+                </td>
+
+                <td>
+                    Sales decreased because demand fell.
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Predictive
+                </td>
+
+                <td>
+                    What may happen?
+                </td>
+
+                <td>
+                    Sales may increase next month.
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Prescriptive
+                </td>
+
+                <td>
+                    What should we do?
+                </td>
+
+                <td>
+                    Increase promotion for the product.
+                </td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+
+</section>
+
+
+<!-- =====================================================
+     SECTION 1.2
+===================================================== -->
+
+<section
+    class="note-section"
+    id="process">
+
+
+    <div class="section-heading">
+
+        🔄 1.2 Data Analytics Process
+
+    </div>
+
+
+    <p>
+
+        The Data Analytics Process is a
+        systematic sequence through which
+        raw data is converted into useful
+        information and insights.
+
+    </p>
+
+
+    <div class="process">
+
+
+        <div class="process-step">
+
+            <div class="process-number">
+                1
+            </div>
+
+            <h4>
+                Data Collection
+            </h4>
+
+            <p>
+                Gather relevant data.
+            </p>
+
+        </div>
+
+
+        <div class="process-step">
+
+            <div class="process-number">
+                2
+            </div>
+
+            <h4>
+                Data Cleaning
+            </h4>
+
+            <p>
+                Correct errors and
+                inconsistencies.
+            </p>
+
+        </div>
+
+
+        <div class="process-step">
+
+            <div class="process-number">
+                3
+            </div>
+
+            <h4>
+                Data Analysis
+            </h4>
+
+            <p>
+                Examine data and
+                identify insights.
+            </p>
+
+        </div>
+
+
+        <div class="process-step">
+
+            <div class="process-number">
+                4
+            </div>
+
+            <h4>
+                Visualization
+            </h4>
+
+            <p>
+                Present information
+                using charts and graphs.
+            </p>
+
+        </div>
+
+
+        <div class="process-step">
+
+            <div class="process-number">
+                5
+            </div>
+
+            <h4>
+                Decision Making
+            </h4>
+
+            <p>
+                Use insights to
+                take action.
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <h3 class="subheading">
+        1. Data Collection
+    </h3>
+
+    <p>
+
+        Data Collection is the first step
+        in the analytics process. It involves
+        gathering relevant information from
+        different sources.
+
+    </p>
+
+
+    <h3 class="subheading">
+        2. Data Cleaning
+    </h3>
+
+    <p>
+
+        Data Cleaning involves identifying
+        and correcting missing values,
+        duplicate records, incorrect entries
+        and inconsistent formats.
+
+    </p>
+
+
+    <h3 class="subheading">
+        3. Data Analysis
+    </h3>
+
+    <p>
+
+        In this stage, data is examined using
+        mathematical, statistical and analytical
+        techniques to identify patterns,
+        relationships and useful information.
+
+    </p>
+
+
+    <h3 class="subheading">
+        4. Data Visualization
+    </h3>
+
+    <p>
+
+        Data Visualization presents information
+        using charts, graphs, dashboards and
+        other visual methods.
+
+    </p>
+
+
+    <h3 class="subheading">
+        5. Decision Making
+    </h3>
+
+    <p>
+
+        The final objective is to use analytical
+        findings to support effective
+        business and managerial decisions.
+
+    </p>
+
+
+</section>
+
+
+<!-- =====================================================
+     SECTION 1.3
+===================================================== -->
+
+<section
+    class="note-section"
+    id="applications">
+
+
+    <div class="section-heading">
+
+        💼 1.3 Applications of Data Analytics
+
+    </div>
+
+
+    <h3 class="subheading">
+        Business Analytics
+    </h3>
+
+    <p>
+
+        Business Analytics uses data to improve
+        business decisions and performance.
+
+    </p>
+
+
+    <ul>
+
+        <li>
+            Sales analysis
+        </li>
+
+        <li>
+            Customer analysis
+        </li>
+
+        <li>
+            Demand forecasting
+        </li>
+
+        <li>
+            Business performance analysis
+        </li>
+
+        <li>
+            Inventory analysis
+        </li>
+
+    </ul>
+
+
+    <h3 class="subheading">
+        Financial Analysis
+    </h3>
+
+    <p>
+
+        Financial Analytics helps organizations
+        understand financial performance and
+        make better financial decisions.
+
+    </p>
+
+
+    <ul>
+
+        <li>
+            Profit analysis
+        </li>
+
+        <li>
+            Revenue analysis
+        </li>
+
+        <li>
+            Expense analysis
+        </li>
+
+        <li>
+            Financial ratio analysis
+        </li>
+
+        <li>
+            Investment analysis
+        </li>
+
+    </ul>
+
+
+    <h3 class="subheading">
+        Marketing Analytics
+    </h3>
+
+    <p>
+
+        Marketing Analytics helps organizations
+        understand customers and evaluate
+        marketing activities.
+
+    </p>
+
+
+    <ul>
+
+        <li>
+            Customer behaviour analysis
+        </li>
+
+        <li>
+            Market segmentation
+        </li>
+
+        <li>
+            Campaign performance
+        </li>
+
+        <li>
+            Customer preferences
+        </li>
+
+        <li>
+            Sales conversion analysis
+        </li>
+
+    </ul>
+
+
+    <h3 class="subheading">
+        Healthcare Analytics
+    </h3>
+
+    <p>
+
+        Healthcare Analytics uses data to
+        improve healthcare services and
+        support healthcare-related decisions.
+
+    </p>
+
+
+    <ul>
+
+        <li>
+            Patient data analysis
+        </li>
+
+        <li>
+            Disease pattern analysis
+        </li>
+
+        <li>
+            Hospital performance
+        </li>
+
+        <li>
+            Resource planning
+        </li>
+
+        <li>
+            Healthcare service improvement
+        </li>
+
+    </ul>
+
+
+</section>
+
+
+<!-- =====================================================
+     SECTION 2
+===================================================== -->
+
+<section
+    class="note-section"
+    id="excel">
+
+
+    <div class="section-heading">
+
+        💻 2. Introduction to Excel for Data Analytics
+
+    </div>
+
+
+    <h3 class="subheading">
+        What is Microsoft Excel?
+    </h3>
+
+
+    <div class="definition">
+
+        <strong>
+            Microsoft Excel
+        </strong>
+
+        is a spreadsheet application
+        used to enter, organize,
+        calculate, analyze and present
+        data.
+
+    </div>
+
+
+    <h3 class="subheading">
+        Importance of Excel in Data Analytics
+    </h3>
+
+
+    <ul>
+
+        <li>
+            Easy data entry and organization.
+        </li>
+
+        <li>
+            Performs mathematical calculations.
+        </li>
+
+        <li>
+            Provides many built-in functions.
+        </li>
+
+        <li>
+            Helps create charts and graphs.
+        </li>
+
+        <li>
+            Supports data analysis.
+        </li>
+
+        <li>
+            Useful for small and medium-sized datasets.
+        </li>
+
+    </ul>
+
+
+    <h3 class="subheading">
+        Excel Interface and Navigation
+    </h3>
+
+
+    <p>
+
+        Important parts of the Excel interface
+        include the Ribbon, Formula Bar,
+        Name Box, worksheet area, rows,
+        columns and sheet tabs.
+
+    </p>
+
+
+    <div class="table-wrapper">
+
+        <table>
+
+            <tr>
+
+                <th>
+                    Element
+                </th>
+
+                <th>
+                    Meaning / Use
+                </th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Workbook
+                </td>
+
+                <td>
+                    An Excel file containing worksheets.
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Worksheet
+                </td>
+
+                <td>
+                    A spreadsheet page containing
+                    rows and columns.
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Cell
+                </td>
+
+                <td>
+                    Intersection of a row and column.
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Formula Bar
+                </td>
+
+                <td>
+                    Used to enter or edit cell contents
+                    and formulas.
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Name Box
+                </td>
+
+                <td>
+                    Displays the address of the
+                    selected cell.
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Ribbon
+                </td>
+
+                <td>
+                    Contains Excel commands and tools.
+                </td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+
+    <h3 class="subheading">
+        Workbook, Worksheet and Cell
+    </h3>
+
+
+    <div class="simple">
+
+        <strong>
+            Workbook:
+        </strong>
+
+        The complete Excel file.
+
+        <br><br>
+
+        <strong>
+            Worksheet:
+        </strong>
+
+        An individual spreadsheet inside
+        a workbook.
+
+        <br><br>
+
+        <strong>
+            Cell:
+        </strong>
+
+        The intersection of a row and
+        a column.
+
+        Example:
+
+        <strong>
+            A1
+        </strong>
+
+    </div>
+
+
+</section>
+
+
+<!-- =====================================================
+     DATA TYPES
+===================================================== -->
+
+<section
+    class="note-section"
+    id="datatype">
+
+
+    <div class="section-heading">
+
+        🔢 2.2 Data Types in Excel
+
+    </div>
+
+
+    <p>
+
+        Excel can store different types
+        of information. Correct data types
+        are important for accurate
+        calculations and analysis.
+
+    </p>
+
+
+    <div class="table-wrapper">
+
+        <table>
+
+            <tr>
+
+                <th>
+                    Data Type
+                </th>
+
+                <th>
+                    Examples
+                </th>
+
+                <th>
+                    Use
+                </th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Text
+                </td>
+
+                <td>
+                    Manoj, BBA, Sales
+                </td>
+
+                <td>
+                    Names and labels
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Numbers
+                </td>
+
+                <td>
+                    100, 250.50
+                </td>
+
+                <td>
+                    Calculations
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Dates
+                </td>
+
+                <td>
+                    10/08/2026
+                </td>
+
+                <td>
+                    Date-related analysis
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Formulas
+                </td>
+
+                <td>
+                    =A1+B1
+                </td>
+
+                <td>
+                    Calculations
+                </td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+
+</section>
+
+
+<!-- =====================================================
+     FUNCTIONS
+===================================================== -->
+
+<section
+    class="note-section"
+    id="functions">
+
+
+    <div class="section-heading">
+
+        🧮 2.3 Basic Excel Functions
+
+    </div>
+
+
+    <h3 class="subheading">
+        SUM Function
+    </h3>
+
+
+    <p>
+
+        The SUM function adds numbers
+        from selected cells or ranges.
+
+    </p>
+
+
+    <div class="formula">
+        =SUM(A1:A5)
+    </div>
+
+
+    <div class="example">
+
+        <strong>
+            Example:
+        </strong>
+
+        If A1:A5 contains
+
+        10, 20, 30, 40 and 50,
+
+        the result will be
+
+        <strong>
+            150
+        </strong>.
+
+    </div>
+
+
+    <h3 class="subheading">
+        AVERAGE Function
+    </h3>
+
+
+    <p>
+
+        AVERAGE calculates the arithmetic
+        mean of numbers.
+
+    </p>
+
+
+    <div class="formula">
+        =AVERAGE(A1:A5)
+    </div>
+
+
+    <h3 class="subheading">
+        COUNT Function
+    </h3>
+
+
+    <p>
+
+        COUNT counts the number of cells
+        containing numeric values.
+
+    </p>
+
+
+    <div class="formula">
+        =COUNT(A1:A10)
+    </div>
+
+
+    <h3 class="subheading">
+        MIN Function
+    </h3>
+
+
+    <p>
+
+        MIN returns the smallest value
+        from a selected range.
+
+    </p>
+
+
+    <div class="formula">
+        =MIN(A1:A10)
+    </div>
+
+
+    <h3 class="subheading">
+        MAX Function
+    </h3>
+
+
+    <p>
+
+        MAX returns the largest value
+        from a selected range.
+
+    </p>
+
+
+    <div class="formula">
+        =MAX(A1:A10)
+    </div>
+
+
+    <div class="table-wrapper">
+
+        <table>
+
+            <tr>
+
+                <th>
+                    Function
+                </th>
+
+                <th>
+                    Purpose
+                </th>
+
+                <th>
+                    Example
+                </th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    SUM
+                </td>
+
+                <td>
+                    Adds values
+                </td>
+
+                <td>
+                    =SUM(A1:A10)
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    AVERAGE
+                </td>
+
+                <td>
+                    Calculates average
+                </td>
+
+                <td>
+                    =AVERAGE(A1:A10)
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    COUNT
+                </td>
+
+                <td>
+                    Counts numeric cells
+                </td>
+
+                <td>
+                    =COUNT(A1:A10)
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    MIN
+                </td>
+
+                <td>
+                    Finds smallest value
+                </td>
+
+                <td>
+                    =MIN(A1:A10)
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    MAX
+                </td>
+
+                <td>
+                    Finds largest value
+                </td>
+
+                <td>
+                    =MAX(A1:A10)
+                </td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+
+    <h3 class="subheading">
+        IF Function
+    </h3>
+
+
+    <p>
+
+        The IF function checks a condition
+        and returns one result if the
+        condition is TRUE and another
+        result if it is FALSE.
+
+    </p>
+
+
+    <div class="formula">
+        =IF(A1>=40,"Pass","Fail")
+    </div>
+
+
+    <div class="example">
+
+        <strong>
+            Example:
+        </strong>
+
+        If a student's marks are 65,
+        the formula will return:
+
+        <strong>
+            Pass
+        </strong>
+
+    </div>
+
+
+    <h3 class="subheading">
+        AND Function
+    </h3>
+
+
+    <p>
+
+        AND returns TRUE when all specified
+        conditions are TRUE.
+
+    </p>
+
+
+    <div class="formula">
+        =AND(A1>=40,B1>=40)
+    </div>
+
+
+    <h3 class="subheading">
+        OR Function
+    </h3>
+
+
+    <p>
+
+        OR returns TRUE when at least
+        one specified condition is TRUE.
+
+    </p>
+
+
+    <div class="formula">
+        =OR(A1>=40,B1>=40)
+    </div>
+
+
+    <div class="highlight">
+
+        <strong>
+            Remember:
+        </strong>
+
+        <br>
+
+        AND → All conditions should be TRUE.
+
+        <br>
+
+        OR → At least one condition should be TRUE.
+
+        <br>
+
+        IF → Gives different results based
+        on a condition.
+
+    </div>
+
+
+</section>
+
+
+<!-- =====================================================
+     DATA ENTRY & FORMATTING
+===================================================== -->
+
+<section
+    class="note-section"
+    id="formatting">
+
+
+    <div class="section-heading">
+
+        🎨 2.4 Data Entry and Formatting
+
+    </div>
+
+
+    <h3 class="subheading">
+        Data Entry
+    </h3>
+
+
+    <p>
+
+        Data Entry means entering information
+        into Excel cells.
+
+    </p>
+
+
+    <p>
+        Data may include:
+    </p>
+
+
+    <ul>
+
+        <li>
+            Names
+        </li>
+
+        <li>
+            Numbers
+        </li>
+
+        <li>
+            Dates
+        </li>
+
+        <li>
+            Addresses
+        </li>
+
+        <li>
+            Marks
+        </li>
+
+        <li>
+            Sales figures
+        </li>
+
+    </ul>
+
+
+    <h3 class="subheading">
+        Formatting Cells and Data
+    </h3>
+
+
+    <p>
+
+        Formatting changes the appearance
+        of data to make a worksheet clearer
+        and easier to understand.
+
+    </p>
+
+
+    <ul>
+
+        <li>
+            Font style and size
+        </li>
+
+        <li>
+            Bold and italic
+        </li>
+
+        <li>
+            Font colour
+        </li>
+
+        <li>
+            Cell background
+        </li>
+
+        <li>
+            Borders
+        </li>
+
+        <li>
+            Alignment
+        </li>
+
+        <li>
+            Number format
+        </li>
+
+        <li>
+            Currency format
+        </li>
+
+        <li>
+            Percentage format
+        </li>
+
+        <li>
+            Date format
+        </li>
+
+    </ul>
+
+
+    <h3 class="subheading">
+        Data Validation
+    </h3>
+
+
+    <div class="definition">
+
+        <strong>
+            Data Validation
+        </strong>
+
+        is an Excel feature used to
+        control the type of data that
+        users can enter into a cell.
+
+    </div>
+
+
+    <div class="example">
+
+        <strong>
+            Example:
+        </strong>
+
+        Suppose a cell should contain
+        only marks between 0 and 100.
+
+        Data Validation can be used to
+        prevent values such as 150 or -20.
+
+    </div>
+
+
+    <h3 class="subheading">
+        Drop-down List
+    </h3>
+
+
+    <p>
+
+        Data Validation can also create
+        a drop-down list.
+
+    </p>
+
+
+    <div class="example">
+
+        <strong>
+            Example:
+        </strong>
+
+        For a "Department" field, the
+        drop-down list may contain:
+
+        <br><br>
+
+        BBA
+
+        <br>
+
+        BCH
+
+        <br>
+
+        MBA
+
+    </div>
+
+
+</section>
+
+
+<!-- =====================================================
+     SUMMARY
+===================================================== -->
+
+<section class="note-section">
+
+
+    <div class="section-heading">
+
+        📌 Quick Revision
+
+    </div>
+
+
+    <div class="table-wrapper">
+
+        <table>
+
+            <tr>
+
+                <th>
+                    Topic
+                </th>
+
+                <th>
+                    Key Point
+                </th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Data Analytics
+                </td>
+
+                <td>
+                    Studying data to find useful
+                    information and insights.
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Descriptive
+                </td>
+
+                <td>
+                    What happened?
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Diagnostic
+                </td>
+
+                <td>
+                    Why did it happen?
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Predictive
+                </td>
+
+                <td>
+                    What may happen?
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Prescriptive
+                </td>
+
+                <td>
+                    What should we do?
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    SUM
+                </td>
+
+                <td>
+                    Adds values.
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    AVERAGE
+                </td>
+
+                <td>
+                    Calculates average.
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    COUNT
+                </td>
+
+                <td>
+                    Counts numeric cells.
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    MIN
+                </td>
+
+                <td>
+                    Finds smallest value.
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    MAX
+                </td>
+
+                <td>
+                    Finds largest value.
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    IF
+                </td>
+
+                <td>
+                    Tests a condition.
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    AND
+                </td>
+
+                <td>
+                    All conditions must be TRUE.
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    OR
+                </td>
+
+                <td>
+                    At least one condition must be TRUE.
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Data Validation
+                </td>
+
+                <td>
+                    Controls data entered into cells.
+                </td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+
+</section>
+
+
+<a
+    href="data-analytics.html"
+    class="back-button">
+
+    ← Back to Data Analytics
+
+</a>
+
+
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    © 2026
+
+    <strong>
+        EduNegi
+    </strong>
+
+    <br><br>
+
+    Learn Better. Practice More.
+    Grow with EduNegi.
+
+    <br><br>
+
+    BBA & BCH • MBA • Practical Learning
+
+</footer>
+
+
+</body>
+
+</html>
