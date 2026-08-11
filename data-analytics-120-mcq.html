@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Analytics & Excel | EduNegi Class Test</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:linear-gradient(135deg,#eef2ff,#f8fafc,#ecfeff);
+    color:#172033;
+    line-height:1.6;
+}
+
+.header{
+    background:linear-gradient(135deg,#1e1b4b,#4338ca,#7c3aed,#0891b2);
+    color:white;
+    text-align:center;
+    padding:45px 20px;
+    box-shadow:0 8px 30px rgba(0,0,0,.15);
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.logo span{color:#fbbf24}
+
+.header h1{
+    font-family:Georgia,serif;
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+.header p{
+    max-width:800px;
+    margin:auto;
+    color:#e0e7ff;
+}
+
+.badges{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:22px;
+}
+
+.badge{
+    background:rgba(255,255,255,.15);
+    border:1px solid rgba(255,255,255,.3);
+    padding:8px 15px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:bold;
+}
+
+.container{
+    width:94%;
+    max-width:1100px;
+    margin:25px auto;
+}
+
+.instructions{
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    border-left:6px solid #f59e0b;
+    box-shadow:0 8px 25px rgba(15,23,42,.07);
+    margin-bottom:30px;
+}
+
+.instructions h2{
+    color:#b45309;
+    margin-bottom:12px;
+}
+
+.instructions li{
+    margin:7px 0 7px 20px;
+}
+
+.section-title{
+    color:white;
+    padding:15px 20px;
+    border-radius:14px;
+    margin:30px 0 15px;
+    font-size:19px;
+    font-weight:bold;
+    background:linear-gradient(90deg,#4338ca,#7c3aed);
+}
+
+.question{
+    background:white;
+    padding:22px;
+    margin:15px 0;
+    border-radius:17px;
+    border:1px solid #e2e8f0;
+    box-shadow:0 6px 18px rgba(15,23,42,.06);
+}
+
+.qno{
+    color:#6366f1;
+    font-size:13px;
+    font-weight:800;
+}
+
+.qtext{
+    font-size:16px;
+    font-weight:700;
+    margin:7px 0 16px;
+}
+
+.option{
+    display:block;
+    padding:11px 14px;
+    margin:8px 0;
+    border:1px solid #dbe3ed;
+    border-radius:10px;
+    background:#f8fafc;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.option:hover{
+    background:#eef2ff;
+    border-color:#818cf8;
+}
+
+.option input{
+    accent-color:#4f46e5;
+    margin-right:8px;
+}
+
+.submit-box{
+    text-align:center;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    margin:35px 0;
+    box-shadow:0 10px 30px rgba(15,23,42,.08);
+}
+
+.submit-btn{
+    border:0;
+    padding:15px 35px;
+    border-radius:12px;
+    color:white;
+    background:linear-gradient(90deg,#4f46e5,#7c3aed);
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.submit-btn:disabled{
+    background:#94a3b8;
+    cursor:not-allowed;
+}
+
+#result{
+    display:none;
+    background:white;
+    padding:40px 20px;
+    text-align:center;
+    border:3px solid #10b981;
+    border-radius:22px;
+    margin:30px 0;
+}
+
+.result-title{
+    color:#047857;
+    font-family:Georgia,serif;
+    font-size:28px;
+}
+
+.score{
+    color:#059669;
+    font-size:55px;
+    font-weight:800;
+    margin:10px;
+}
+
+.percentage{
+    font-size:23px;
+    font-weight:bold;
+    color:#475569;
+}
+
+.message{
+    margin-top:15px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+footer{
+    background:#0f172a;
+    color:#cbd5e1;
+    text-align:center;
+    padding:25px;
+    margin-top:50px;
+}
+
+@media(max-width:700px){
+    .header h1{font-size:26px}
+    .question{padding:17px}
+    .qtext{font-size:15px}
+    .score{font-size:45px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+
+    <div class="logo">
+        🎓 Edu<span>Negi</span>
+    </div>
+
+    <h1>Data Analytics & Excel</h1>
+
+    <p>
+        BBA & BCH Class Test
+    </p>
+
+    <div class="badges">
+        <div class="badge">120 Questions</div>
+        <div class="badge">1 Mark Each</div>
+        <div class="badge">Maximum 120 Marks</div>
+        <div class="badge">One Attempt Only</div>
+    </div>
+
+</div>
+
+<div class="container">
+
+<div class="instructions">
+
+<h2>📌 Test Instructions</h2>
+
+<ul>
+<li>Total number of questions: <strong>120</strong>.</li>
+<li>Each question carries <strong>1 mark</strong>.</li>
+<li>Maximum marks: <strong>120</strong>.</li>
+<li>Select only one option for each question.</li>
+<li>All questions are compulsory.</li>
+<li>You must answer all 120 questions before submitting.</li>
+<li><strong>Only one attempt is allowed.</strong></li>
+<li>After submission, the test will be locked.</li>
+<li>Your marks and percentage will be displayed automatically.</li>
+</ul>
+
+</div>
+
+<form id="quiz"></form>
+
+<div class="submit-box">
+
+<h3>Ready to submit your test?</h3>
+
+<p style="margin:8px 0 18px">
+Please check all answers before submission.
+</p>
+
+<button
+class="submit-btn"
+id="submitBtn"
+type="button"
+onclick="submitTest()">
+Submit Test
+</button>
+
+</div>
+
+<div id="result"></div>
+
+</div>
+
+<footer>
+© 2026 <strong>EduNegi</strong><br>
+Learn Better. Practice More. Grow with EduNegi.
+</footer>
+
+
+<script>
+
+/* =====================================================
+   120 DATA ANALYTICS & EXCEL QUESTIONS
+===================================================== */
+
+const questions = [
+
+/* ---------- SECTION 1: INTRODUCTION ---------- */
+
+["What is Data Analytics?",
+["The process of collecting and interpreting data","The process of deleting all data","Only storing files","Only creating presentations"],0],
+
+["The main purpose of Data Analytics is to:",
+["Find useful insights from data","Increase the size of files","Avoid decision making","Delete information"],0],
+
+["Data Analytics helps organizations to:",
+["Make better decisions","Avoid using information","Increase uncertainty","Remove all employees"],0],
+
+["Which of the following is an important benefit of Data Analytics?",
+["Better decision-making","More confusion","Less information","Elimination of planning"],0],
+
+["Data Analytics involves examining data to identify:",
+["Patterns and insights","Only colours","Only fonts","Only file names"],0],
+
+["Which of the following is NOT normally an objective of Data Analytics?",
+["Finding useful insights","Supporting decisions","Identifying patterns","Increasing unnecessary errors"],3],
+
+["Descriptive Analytics mainly answers:",
+["What happened?","What will never happen?","Who owns the computer?","What colour is the report?"],0],
+
+["Diagnostic Analytics mainly answers:",
+["Why did it happen?","What is the file size?","Who created Excel?","What is the font?"],0],
+
+["Predictive Analytics mainly answers:",
+["What is likely to happen?","What happened yesterday only?","Why is Excel installed?","Who entered the data?"],0],
+
+["Prescriptive Analytics mainly answers:",
+["What should be done?","What happened only?","Where is the keyboard?","Who created the data?"],0],
+
+["Which type of analytics focuses on past performance?",
+["Descriptive","Predictive","Prescriptive","Diagnostic only"],0],
+
+["Which type investigates causes of an event?",
+["Diagnostic","Descriptive","Prescriptive","Predictive"],0],
+
+["Which type uses data to forecast future outcomes?",
+["Predictive","Descriptive","Diagnostic","Historical"],0],
+
+["Which type recommends possible actions?",
+["Prescriptive","Descriptive","Diagnostic","Basic"],0],
+
+["A monthly sales report showing total sales is an example of:",
+["Descriptive Analytics","Prescriptive Analytics","Predictive Analytics","Gambling"],0],
+
+["Finding the reason for a fall in sales is an example of:",
+["Diagnostic Analytics","Descriptive Analytics","Prescriptive Analytics","Data entry"],0],
+
+["Forecasting next month's sales is an example of:",
+["Predictive Analytics","Descriptive Analytics","Data cleaning","Data entry"],0],
+
+["Recommending the best pricing strategy is an example of:",
+["Prescriptive Analytics","Descriptive Analytics","Data entry","Data storage"],0],
+
+["Which sequence represents the four major types correctly?",
+["Descriptive, Diagnostic, Predictive, Prescriptive","Predictive, Descriptive, Prescriptive, Diagnostic","Diagnostic, Predictive, Descriptive, Prescriptive","Prescriptive, Diagnostic, Descriptive, Predictive"],0],
+
+["Data-driven decision making means decisions are supported by:",
+["Relevant data and analysis","Random guesses","Rumours only","Personal preferences only"],0],
+
+/* ---------- SECTION 2: PROCESS ---------- */
+
+["The first major step in the Data Analytics process is generally:",
+["Data Collection","Data Visualization","Decision Making","Report Printing"],0],
+
+["Data Collection means:",
+["Gathering relevant data","Deleting information","Formatting headings","Printing reports"],0],
+
+["Which is a source of primary data?",
+["Survey","Old published report","Website article","Existing database"],0],
+
+["Which is an example of secondary data?",
+["Published government report","Fresh interview conducted by researcher","New survey","Direct observation"],0],
+
+["Data Cleaning is performed to:",
+["Improve data quality","Increase errors","Delete useful information","Change every value"],0],
+
+["Which is a common data quality problem?",
+["Missing values","Correct values","Complete records","Consistent formats"],0],
+
+["Duplicate records mean:",
+["The same record appears more than once","A record is missing","A value is negative","A column is hidden"],0],
+
+["Removing duplicate records is part of:",
+["Data Cleaning","Data Collection","Decision Making","Presentation"],0],
+
+["A missing value means:",
+["Expected information is absent","The value is always zero","The value is always negative","The row is necessarily duplicated"],0],
+
+["Inconsistent date formats are a:",
+["Data quality problem","Data visualization","Decision rule","Marketing strategy"],0],
+
+["Data Analysis involves:",
+["Examining data to obtain meaningful information","Only typing data","Only printing data","Only collecting forms"],0],
+
+["Data Visualization means:",
+["Representing data graphically","Deleting data","Encrypting files","Typing formulas"],0],
+
+["Which is a common data visualization tool?",
+["Chart","Keyboard","Printer","Scanner"],0],
+
+["A bar chart is useful for:",
+["Comparing categories","Writing paragraphs","Entering passwords","Sending emails"],0],
+
+["A line chart is especially useful for showing:",
+["Trends over time","Only text","Passwords","Employee addresses"],0],
+
+["A pie chart is commonly used to show:",
+["Parts of a whole","Continuous time trends only","Text formatting","Database passwords"],0],
+
+["The final purpose of the analytics process is to support:",
+["Decision Making","Data deletion","File naming","Keyboard selection"],0],
+
+["Decision making based on analytics should use:",
+["Relevant insights","Random guesses","Unverified rumours","Incomplete assumptions"],0],
+
+["The correct general sequence is:",
+["Collection → Cleaning → Analysis → Visualization → Decision","Decision → Collection → Cleaning → Analysis → Visualization","Visualization → Collection → Decision → Cleaning → Analysis","Cleaning → Decision → Collection → Visualization → Analysis"],0],
+
+["Data visualization can make complex information:",
+["Easier to understand","Always more confusing","Impossible to analyze","Unusable"],0],
+
+/* ---------- SECTION 3: APPLICATIONS ---------- */
+
+["Business Analytics mainly helps organizations to:",
+["Improve business decisions","Repair computers","Design buildings","Print books"],0],
+
+["Financial Analytics is concerned with:",
+["Financial data and performance","Only employee attendance","Only advertisements","Only office furniture"],0],
+
+["Marketing Analytics helps organizations understand:",
+["Customers and marketing performance","Computer hardware","Building design","Employee uniforms"],0],
+
+["Healthcare Analytics can help in:",
+["Improving healthcare decisions","Designing roads","Selling furniture","Printing books"],0],
+
+["Sales forecasting is an application of:",
+["Business Analytics","Word Processing","Graphic Design","Payroll only"],0],
+
+["Analyzing profit and expenses is an example of:",
+["Financial Analysis","Healthcare Analytics","Website design","Data entry"],0],
+
+["Studying customer buying behaviour is:",
+["Marketing Analytics","Financial Accounting only","Hardware analysis","Payroll processing"],0],
+
+["Analyzing patient records can support:",
+["Healthcare Analytics","Advertising only","Inventory decoration","Office design"],0],
+
+["Customer segmentation is commonly used in:",
+["Marketing Analytics","Healthcare only","Payroll only","Hardware management"],0],
+
+["Financial ratio analysis is useful in:",
+["Financial Analysis","Marketing design","Data entry","Word processing"],0],
+
+["A company using historical sales to forecast future demand is using:",
+["Predictive Analytics","Only data entry","Only formatting","Only printing"],0],
+
+["Analytics can help managers identify:",
+["Business opportunities","Only spelling errors","Keyboard problems","Printer models"],0],
+
+["Which is an example of healthcare data?",
+["Patient records","Office wallpaper","Printer manuals","Building maps"],0],
+
+["Which data can help a marketing manager?",
+["Customer purchase data","Office electricity bill only","Printer model","Employee ID card colour"],0],
+
+["A dashboard is useful because it:",
+["Presents important information in an accessible form","Deletes data","Prevents analysis","Stores passwords only"],0],
+
+["Business Analytics can support:",
+["Strategic and operational decisions","Only typing","Only printing","Only filing"],0],
+
+["Financial analytics may help assess:",
+["Profitability and financial performance","Employee dress code","Office decoration","Keyboard quality"],0],
+
+["Marketing analytics can measure:",
+["Campaign performance","Printer speed","Office temperature only","Computer weight"],0],
+
+["Healthcare analytics can help identify:",
+["Patterns in patient and health data","Office furniture trends","Printer errors","Building colours"],0],
+
+["The use of analytics is valuable because organizations generate:",
+["Large amounts of data","No data","Only paper documents","Only images"],0],
+
+/* ---------- SECTION 4: EXCEL BASICS ---------- */
+
+["Microsoft Excel is primarily used for:",
+["Spreadsheets and data analysis","Video editing only","Web browsing only","Graphic animation only"],0],
+
+["An Excel file is called a:",
+["Workbook","Database server","Presentation","Document folder"],0],
+
+["A workbook contains one or more:",
+["Worksheets","Printers","Keyboards","Emails"],0],
+
+["A worksheet consists of:",
+["Rows and columns","Only pictures","Only charts","Only formulas"],0],
+
+["The intersection of a row and column is called a:",
+["Cell","Workbook","Chart","Ribbon"],0],
+
+["Columns in Excel are identified by:",
+["Letters","Numbers only","Symbols only","Colours"],0],
+
+["Rows in Excel are identified by:",
+["Numbers","Letters only","Colours","Symbols"],0],
+
+["The address A1 refers to:",
+["Column A, Row 1","Row A, Column 1","Workbook 1","Sheet A"],0],
+
+["The Formula Bar is used to:",
+["Enter or edit cell contents and formulas","Print documents","Open websites","Create folders"],0],
+
+["The Ribbon in Excel contains:",
+["Commands and tools","Only worksheets","Only formulas","Only charts"],0],
+
+["The Name Box can display:",
+["Cell reference","Only file size","Only date","Only font name"],0],
+
+["A group of selected cells is called a:",
+["Range","Workbook","Ribbon","Formula"],0],
+
+["The range A1:A5 contains:",
+["Five cells in one column","Five worksheets","Five columns","Five workbooks"],0],
+
+["The range A1:C3 contains:",
+["9 cells","3 cells","6 cells","12 cells"],0],
+
+["A worksheet tab is used to:",
+["Navigate between worksheets","Enter passwords","Print the keyboard","Open email"],0],
+
+["The default Excel file extension for modern workbooks is:",
+[".xlsx",".docx",".pptx",".jpg"],0],
+
+["The active cell is:",
+["The currently selected cell","The largest cell","The first row only","The last column only"],0],
+
+["The Fill Handle can be used to:",
+["Copy or extend data and formulas","Delete the workbook","Open a browser","Print charts"],0],
+
+["Excel is particularly useful for:",
+["Organizing and analyzing numerical data","Playing videos","Editing movies","Sending SMS"],0],
+
+["A formula in Excel normally begins with:",
+["=","#","@","&"],0],
+
+/* ---------- SECTION 5: DATA TYPES ---------- */
+
+["Which is a common Excel data type?",
+["Text","Printer","Keyboard","Folder"],0],
+
+["Numbers in Excel can be used for:",
+["Calculations","Only typing","Only formatting","Only printing"],0],
+
+["Text data may contain:",
+["Names and labels","Only formulas","Only dates","Only calculations"],0],
+
+["Which is a valid example of text?",
+["Delhi","125","450.75","10/08/2026"],0],
+
+["Which is most likely a numeric value?",
+["500","Sales","Delhi","Product"],0],
+
+["Dates in Excel can be used for:",
+["Date calculations and analysis","Only printing","Only formatting","Only passwords"],0],
+
+["Which is a valid date?",
+["10/08/2026","ABC","Five hundred","Sales"],0],
+
+["A formula is:",
+["An expression used to perform calculations","A picture","A text paragraph","A worksheet name"],0],
+
+["Which is a formula?",
+["=A1+B1","A1+B1","SUM","Total"],0],
+
+["Which of the following is text rather than a number?",
+["ABC123","250","99.5","1000"],0],
+
+["Excel may automatically recognize:",
+["Numbers and dates","Only images","Only videos","Only emails"],0],
+
+["A percentage is a form of:",
+["Numeric data","Only text","Only image data","Only audio data"],0],
+
+["The value 75.50 is generally:",
+["Numeric data","Text only","A worksheet","A chart"],0],
+
+["The value 'BBA' is generally:",
+["Text","Number","Formula","Date"],0],
+
+["A cell containing =SUM(A1:A5) contains a:",
+["Formula","Text label only","Date only","Chart"],0],
+
+["Excel formulas can use:",
+["Cell references","Only words","Only pictures","Only colours"],0],
+
+["A1 and B5 are examples of:",
+["Cell references","File names","Chart types","Functions"],0],
+
+["Which symbol is used to start most Excel formulas?",
+["=","+","%","*"],0],
+
+["The value 0.25 can represent:",
+["A numeric value","A worksheet","A text label","A chart"],0],
+
+["Correct data types are important because they:",
+["Allow accurate analysis and calculations","Make files larger","Prevent all formatting","Remove formulas"],0],
+
+/* ---------- SECTION 6: BASIC FUNCTIONS ---------- */
+
+["Which function adds values?",
+["SUM","COUNT","MIN","MAX"],0],
+
+["Which function calculates the arithmetic mean?",
+["AVERAGE","SUM","COUNT","MIN"],0],
+
+["COUNT function is used to:",
+["Count cells containing numbers","Add text","Find the largest value","Find the smallest value"],0],
+
+["MIN function returns:",
+["Smallest value","Largest value","Average","Number of worksheets"],0],
+
+["MAX function returns:",
+["Largest value","Smallest value","Average","Number of rows only"],0],
+
+["Which formula correctly adds A1 to A5?",
+["=SUM(A1:A5)","=ADD(A1:A5)","=TOTAL(A1:A5)","=PLUS(A1:A5)"],0],
+
+["Which formula calculates average of B1:B5?",
+["=AVERAGE(B1:B5)","=MEAN(B1:B5)","=AVG(B1:B5)","=AVERAGE(B1-B5)"],0],
+
+["Which formula counts numbers in C1:C10?",
+["=COUNT(C1:C10)","=NUMBER(C1:C10)","=TOTAL(C1:C10)","=COUNTNUM(C1:C10)"],0],
+
+["Which formula finds the minimum value in D1:D8?",
+["=MIN(D1:D8)","=LOW(D1:D8)","=SMALLVALUE(D1:D8)","=MINIMUMVALUE(D1:D8)"],0],
+
+["Which formula finds the maximum value in E1:E8?",
+["=MAX(E1:E8)","=HIGH(E1:E8)","=LARGEVALUE(E1:E8)","=MAXIMUMVALUE(E1:E8)"],0],
+
+["If A1:A5 contains 10,20,30,40,50, SUM returns:",
+["150","30","50","5"],0],
+
+["If B1:B5 contains 10,20,30,40,50, AVERAGE returns:",
+["30","150","50","10"],0],
+
+["If C1:C5 contains 10,20,ABC,40,50, COUNT returns:",
+["4","5","3","2"],0],
+
+["If D1:D5 contains 12,5,20,8,15, MIN returns:",
+["5","20","8","12"],0],
+
+["If E1:E5 contains 12,5,20,8,15, MAX returns:",
+["20","5","15","12"],0],
+
+["Which function is useful for finding the total sales?",
+["SUM","MIN","COUNT","MAX"],0],
+
+["Which function is useful for finding average marks?",
+["AVERAGE","SUM","MAX","COUNT"],0],
+
+["Which function can count the number of students whose marks are numeric?",
+["COUNT","SUM","MIN","MAX"],0],
+
+["Which function can identify the highest sales value?",
+["MAX","MIN","AVERAGE","COUNT"],0],
+
+["Which function can identify the lowest sales value?",
+["MIN","MAX","SUM","COUNT"],0],
+
+/* ---------- SECTION 7: IF AND OR ---------- */
+
+["The IF function is used to:",
+["Test a condition and return different results","Add numbers only","Find the smallest number","Count worksheets"],0],
+
+["Which is a correct IF formula?",
+["=IF(A1>=40,\"Pass\",\"Fail\")","=IF(A1>=40)","=IF(A1,40)","=IF(Pass,Fail)"],0],
+
+["In =IF(A1>=50,\"Yes\",\"No\"), if A1 is 60, the result is:",
+["Yes","No","60","50"],0],
+
+["In =IF(A1>=50,\"Yes\",\"No\"), if A1 is 40, the result is:",
+["No","Yes","40","50"],0],
+
+["AND returns TRUE when:",
+["All specified conditions are TRUE","At least one condition is TRUE","All conditions are FALSE","There is no condition"],0],
+
+["OR returns TRUE when:",
+["At least one condition is TRUE","All conditions must be TRUE","All conditions are FALSE","No condition exists"],0],
+
+["Which formula checks whether A1 is greater than 50 AND B1 is greater than 50?",
+["=AND(A1>50,B1>50)","=OR(A1>50,B1>50)","=IF(A1,B1)","=CHECK(A1,B1)"],0],
+
+["Which formula checks whether A1 is greater than 50 OR B1 is greater than 50?",
+["=OR(A1>50,B1>50)","=AND(A1>50,B1>50)","=IF(A1,B1)","=CHECK(A1,B1)"],0],
+
+["If both conditions in an AND function are TRUE, the result is:",
+["TRUE","FALSE","0","ERROR"],0],
+
+["If one condition in an OR function is TRUE, the result is:",
+["TRUE","FALSE","0","ERROR"],0],
+
+["IF can be used to classify students as:",
+["Pass or Fail","Rows or Columns","Text or Sheet","File or Folder"],0],
+
+["Which formula can classify sales as High when A1 is above 100000?",
+["=IF(A1>100000,\"High\",\"Low\")","=IF(A1,High,Low)","=CLASSIFY(A1)","=HIGH(A1)"],0],
+
+["AND is useful when:",
+["All conditions must be satisfied","Only one condition is needed","No condition is required","Only text is used"],0],
+
+["OR is useful when:",
+["Any one of multiple conditions can be satisfied","Every condition must be satisfied","No condition is used","Only numbers are deleted"],0],
+
+["A nested IF means:",
+["An IF function used inside another IF","An IF without a condition","A SUM function","A chart"],0],
+
+["Logical functions are useful for:",
+["Decision-based calculations","Changing computer hardware","Printing reports only","Creating folders"],0],
+
+["Which function can combine multiple logical conditions?",
+["AND","SUM","MIN","MAX"],0],
+
+["Which function checks alternative conditions?",
+["OR","COUNT","AVERAGE","MIN"],0],
+
+["If A1=70 and B1=80, =AND(A1>=40,B1>=40) returns:",
+["TRUE","FALSE","70","80"],0],
+
+["If A1=30 and B1=80, =OR(A1>=40,B1>=40) returns:",
+["TRUE","FALSE","30","80"],0],
+
+/* ---------- SECTION 8: DATA ENTRY & FORMATTING ---------- */
+
+["Data entry means:",
+["Entering information into a worksheet","Deleting a workbook","Creating a presentation","Printing a chart"],0],
+
+["A cell can contain:",
+["Text, numbers, dates or formulas","Only numbers","Only text","Only pictures"],0],
+
+["Formatting changes the:",
+["Appearance or presentation of data","Actual meaning of every value","Computer hardware","Internet connection"],0],
+
+["Which is an example of cell formatting?",
+["Changing font size","Deleting Excel","Installing Windows","Opening a browser"],0],
+
+["Number formatting can change how:",
+["Numbers are displayed","Data is collected","Rows are deleted","Files are uploaded"],0],
+
+["Currency formatting is useful for:",
+["Displaying monetary values","Displaying names","Displaying passwords","Displaying pictures"],0],
+
+["Percentage formatting is useful for:",
+["Displaying values as percentages","Displaying dates only","Displaying text only","Displaying charts only"],0],
+
+["Bold formatting is commonly used to:",
+["Emphasize important information","Delete data","Calculate totals","Sort records"],0],
+
+["Cell alignment controls:",
+["Position of content inside a cell","Number of worksheets","File size","Formula accuracy"],0],
+
+["Merging cells means:",
+["Combining multiple cells into one larger cell","Deleting the workbook","Copying formulas only","Sorting data"],0],
+
+["Wrap Text is useful when:",
+["Long text needs to fit within a cell","Numbers must be deleted","A chart is created","A formula is removed"],0],
+
+["Borders can be used to:",
+["Visually separate data","Calculate averages","Count values","Remove duplicates"],0],
+
+["Conditional Formatting is useful for:",
+["Highlighting cells based on conditions","Deleting formulas","Opening websites","Creating passwords"],0],
+
+["Data Validation is used to:",
+["Control what data can be entered","Calculate averages","Create presentations","Delete rows automatically"],0],
+
+["A drop-down list can be created using:",
+["Data Validation","SUM","MAX","COUNT"],0],
+
+["Data Validation can help prevent:",
+["Invalid data entry","All calculations","All formatting","All charts"],0],
+
+["For a gender field, a drop-down list may contain:",
+["Male, Female, Other","SUM, MAX, MIN","A1, B1, C1","10, 20, 30"],0],
+
+["For marks, Data Validation can restrict values to:",
+["A specified range","Only text","Only dates","Only formulas"],0],
+
+["Data validation improves:",
+["Data consistency","Computer speed only","Screen brightness","Internet speed"],0],
+
+["Formatting should be used to make data:",
+["Clear and easy to understand","More confusing","Impossible to read","Less organized"],0],
+
+/* ---------- SECTION 9: MIXED APPLICATION ---------- */
+
+["A manager wants to know total monthly sales. Which function is most appropriate?",
+["SUM","AVERAGE","MIN","IF"],0],
+
+["A teacher wants to calculate average marks. Which function is appropriate?",
+["AVERAGE","MAX","COUNT","OR"],0],
+
+["A manager wants to find the highest sale. Which function should be used?",
+["MAX","MIN","COUNT","AND"],0],
+
+["A manager wants to find the lowest sale. Which function should be used?",
+["MIN","MAX","SUM","IF"],0],
+
+["A teacher wants to count how many students have numeric marks. Which function is appropriate?",
+["COUNT","SUM","MIN","OR"],0],
+
+["A teacher wants Excel to display Pass when marks are 40 or more. Which function is useful?",
+["IF","SUM","MAX","COUNT"],0],
+
+["A company wants to identify employees who satisfy two conditions. Which function is useful?",
+["AND","OR","MIN","SUM"],0],
+
+["A company wants to identify employees satisfying at least one of two conditions. Which function is useful?",
+["OR","AND","COUNT","AVERAGE"],0],
+
+["A sales manager wants to show monthly sales trends. Which chart is most appropriate?",
+["Line chart","Pie chart","Text box","Picture"],0],
+
+["A manager wants to compare sales across different products. Which chart is useful?",
+["Bar chart","Line chart only","Text box","Header"],0],
+
+["A manager wants to show market share percentages. Which chart may be useful?",
+["Pie chart","Line chart only","Column heading","Text paragraph"],0],
+
+["A data analyst finds duplicate customer records. The appropriate action is:",
+["Clean the data","Increase duplicates","Ignore all data","Delete the workbook"],0],
+
+["A dataset contains blank values in important fields. The analyst should:",
+["Investigate and handle missing values","Ignore the issue always","Change all blanks to random values","Delete every row"],0],
+
+["A company studies why sales decreased. Which analytics type is being used?",
+["Diagnostic","Descriptive","Predictive","Prescriptive"],0],
+
+["A company predicts next quarter's sales. Which analytics type is used?",
+["Predictive","Diagnostic","Descriptive","Prescriptive"],0],
+
+["A company recommends the best advertising budget using analytical results. This is:",
+["Prescriptive Analytics","Descriptive Analytics","Data Entry","Formatting"],0],
+
+["A report showing last year's total revenue is:",
+["Descriptive Analytics","Predictive Analytics","Prescriptive Analytics","Data Validation"],0],
+
+["A dashboard showing sales, profit and expenses is mainly used for:",
+["Data visualization and decision support","Data deletion","Typing letters","Creating passwords"],0],
+
+["Using data to understand customer behaviour is an example of:",
+["Marketing Analytics","PowerPoint design","Data entry","Hardware management"],0],
+
+["Using financial data to evaluate profitability is an example of:",
+["Financial Analysis","Healthcare Analytics","Data validation","Formatting"],0],
+
+["The main advantage of combining Excel with Data Analytics is:",
+["It helps organize, calculate and analyze data efficiently","It removes the need for data","It guarantees profit","It prevents decision making"],0],
+
+["A well-designed analytical report should present information:",
+["Clearly and accurately","Randomly","Without labels","Without context"],0],
+
+["Before analyzing data, an analyst should ensure that data is:",
+["Relevant and reasonably accurate","Always perfect without checking","Only colourful","Only printed"],0],
+
+["A formula referring to A1 and B1 uses:",
+["Cell references","File references","Image references","Website references"],0],
+
+["If A1=10, B1=20 and C1=30, =SUM(A1:C1) returns:",
+["60","30","20","10"],0],
+
+["If A1=10, B1=20 and C1=30, =AVERAGE(A1:C1) returns:",
+["20","60","30","10"],0],
+
+["If A1=10, B1=20 and C1=30, =MAX(A1:C1) returns:",
+["30","10","20","60"],0],
+
+["If A1=10, B1=20 and C1=30, =MIN(A1:C1) returns:",
+["10","30","20","60"],0],
+
+["If A1=10, B1=20 and C1 contains text, =COUNT(A1:C1) returns:",
+["2","3","1","0"],0]
+
+];
+
+
+/* =====================================================
+   VERIFY 120 QUESTIONS
+===================================================== */
+
+console.log("Total Questions:", questions.length);
+
+
+/* =====================================================
+   SECTION HEADINGS
+===================================================== */
+
+const sections = {
+    1:"SECTION 1 — Introduction to Data Analytics",
+    21:"SECTION 2 — Data Analytics Process",
+    41:"SECTION 3 — Applications of Data Analytics",
+    61:"SECTION 4 — Introduction to Excel",
+    81:"SECTION 5 — Data Types in Excel",
+    101:"SECTION 6 — Basic Excel Functions, Logic & Practical Applications"
+};
+
+
+/* =====================================================
+   CREATE QUESTIONS
+===================================================== */
+
+const quiz = document.getElementById("quiz");
+
+questions.forEach((item,index)=>{
+
+    const number = index + 1;
+
+    if(sections[number]){
+
+        const heading = document.createElement("div");
+
+        heading.className = "section-title";
+
+        heading.textContent = sections[number];
+
+        quiz.appendChild(heading);
+    }
+
+
+    const question = document.createElement("div");
+
+    question.className = "question";
+
+
+    let options = "";
+
+    item[1].forEach((option,optIndex)=>{
+
+        const letter =
+            String.fromCharCode(65 + optIndex);
+
+        options += `
+        <label class="option">
+
+            <input
+                type="radio"
+                name="q${index}"
+                value="${optIndex}">
+
+            <strong>${letter}.</strong>
+            ${option}
+
+        </label>
+        `;
+    });
+
+
+    question.innerHTML = `
+
+        <div class="qno">
+            QUESTION ${number} &nbsp; | &nbsp; 1 MARK
+        </div>
+
+        <div class="qtext">
+            ${item[0]}
+        </div>
+
+        ${options}
+
+    `;
+
+
+    quiz.appendChild(question);
+
+});
+
+
+/* =====================================================
+   ONE ATTEMPT
+===================================================== */
+
+const storageKey =
+    "edunegi_data_analytics_120_test_submitted";
+
+
+if(localStorage.getItem(storageKey)==="true"){
+
+    lockTest();
+
+}
+
+
+/* =====================================================
+   SUBMIT TEST
+===================================================== */
+
+function submitTest(){
+
+    if(localStorage.getItem(storageKey)==="true"){
+        return;
+    }
+
+
+    let unanswered = [];
+
+
+    questions.forEach((item,index)=>{
+
+        const selected =
+            document.querySelector(
+                `input[name="q${index}"]:checked`
+            );
+
+
+        if(!selected){
+            unanswered.push(index+1);
+        }
+
+    });
+
+
+    if(unanswered.length > 0){
+
+        alert(
+            "Please answer all questions before submitting.\n\n" +
+            "Unanswered questions: " +
+            unanswered.join(", ")
+        );
+
+        return;
+    }
+
+
+    const confirmSubmit = confirm(
+        "Are you sure you want to submit the test?\n\n" +
+        "Only one attempt is allowed."
+    );
+
+
+    if(!confirmSubmit){
+        return;
+    }
+
+
+    let score = 0;
+
+
+    questions.forEach((item,index)=>{
+
+        const selected =
+            document.querySelector(
+                `input[name="q${index}"]:checked`
+            );
+
+
+        if(
+            Number(selected.value) ===
+            item[2]
+        ){
+            score++;
+        }
+
+    });
+
+
+    const total = questions.length;
+
+    const percentage =
+        ((score / total) * 100).toFixed(2);
+
+
+    localStorage.setItem(
+        storageKey,
+        "true"
+    );
+
+
+    document
+        .querySelectorAll("input")
+        .forEach(input=>{
+            input.disabled = true;
+        });
+
+
+    const button =
+        document.getElementById("submitBtn");
+
+    button.disabled = true;
+
+    button.textContent =
+        "Test Submitted";
+
+
+    let message;
+
+
+    if(score >= 108){
+
+        message =
+            "Outstanding Performance! 🌟";
+
+    }
+    else if(score >= 96){
+
+        message =
+            "Excellent Performance! 🎉";
+
+    }
+    else if(score >= 84){
+
+        message =
+            "Very Good Performance! 👏";
+
+    }
+    else if(score >= 60){
+
+        message =
+            "Good Effort! Keep Practicing. 📚";
+
+    }
+    else{
+
+        message =
+            "Keep practicing and revise the topics again. 💪";
+
+    }
+
+
+    const result =
+        document.getElementById("result");
+
+
+    result.style.display = "block";
+
+
+    result.innerHTML = `
+
+        <div class="result-title">
+            🎓 Test Completed
+        </div>
+
+        <div class="score">
+            ${score} / ${total}
+        </div>
+
+        <div class="percentage">
+            Percentage: ${percentage}%
+        </div>
+
+        <div class="message">
+            ${message}
+        </div>
+
+        <p style="margin-top:20px">
+            <strong>
+                Total Marks Earned:
+                ${score} out of ${total}
+            </strong>
+        </p>
+
+        <p style="
+            color:#b91c1c;
+            font-weight:bold;
+            margin-top:12px">
+
+            🔒 Attempt Status:
+            Submitted — Test Locked
+
+        </p>
+
+    `;
+
+
+    result.scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+
+/* =====================================================
+   LOCK ALREADY SUBMITTED TEST
+===================================================== */
+
+function lockTest(){
+
+    document
+        .querySelectorAll("input")
+        .forEach(input=>{
+            input.disabled = true;
+        });
+
+
+    const button =
+        document.getElementById("submitBtn");
+
+    button.disabled = true;
+
+    button.textContent =
+        "Test Already Submitted";
+
+
+    const result =
+        document.getElementById("result");
+
+
+    result.style.display = "block";
+
+
+    result.innerHTML = `
+
+        <div class="result-title">
+            🔒 Test Locked
+        </div>
+
+        <p style="margin-top:15px">
+            This test has already been submitted
+            on this browser.
+        </p>
+
+        <p style="
+            color:#b91c1c;
+            font-weight:bold;
+            margin-top:10px">
+
+            Only one attempt is allowed.
+
+        </p>
+
+    `;
+
+}
+
+</script>
+
+</body>
+</html>
