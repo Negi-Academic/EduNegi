@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Data Analytics | EduNegi</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background:
+        linear-gradient(
+            135deg,
+            #eef2ff,
+            #f8fafc,
+            #ecfeff
+        );
+    color: #172033;
+}
+
+
+/* ================= HEADER ================= */
+
+header {
+
+    background:
+        linear-gradient(
+            135deg,
+            #1e1b4b,
+            #4338ca,
+            #7c3aed,
+            #0891b2
+        );
+
+    color: white;
+
+    padding: 20px 7%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,.15);
+
+}
+
+.logo {
+
+    font-size: 25px;
+
+    font-weight: 800;
+
+}
+
+.logo span {
+
+    color: #fbbf24;
+
+}
+
+nav a {
+
+    color: white;
+
+    text-decoration: none;
+
+    margin-left: 22px;
+
+    font-weight: 600;
+
+}
+
+nav a:hover {
+
+    color: #fbbf24;
+
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+
+    text-align: center;
+
+    padding: 70px 20px 55px;
+
+}
+
+.hero-icon {
+
+    font-size: 60px;
+
+    margin-bottom: 15px;
+
+}
+
+.hero h1 {
+
+    font-family: Georgia, serif;
+
+    font-size: 44px;
+
+    color: #312e81;
+
+    margin-bottom: 12px;
+
+}
+
+.hero p {
+
+    max-width: 750px;
+
+    margin: auto;
+
+    color: #475569;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+}
+
+
+/* ================= BREADCRUMB ================= */
+
+.breadcrumb {
+
+    width: 90%;
+
+    max-width: 1150px;
+
+    margin: 20px auto 0;
+
+    color: #64748b;
+
+    font-size: 14px;
+
+}
+
+.breadcrumb a {
+
+    color: #4f46e5;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+}
+
+
+/* ================= CONTENT ================= */
+
+.container {
+
+    width: 90%;
+
+    max-width: 1150px;
+
+    margin: auto;
+
+}
+
+
+/* ================= CARDS ================= */
+
+.cards {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(250px, 1fr)
+        );
+
+    gap: 22px;
+
+    margin-bottom: 60px;
+
+}
+
+.card {
+
+    background: white;
+
+    padding: 28px;
+
+    border-radius: 20px;
+
+    border: 1px solid #e2e8f0;
+
+    box-shadow:
+        0 8px 25px
+        rgba(15,23,42,.07);
+
+    transition: .25s;
+
+}
+
+.card:hover {
+
+    transform:
+        translateY(-7px);
+
+    box-shadow:
+        0 15px 35px
+        rgba(15,23,42,.13);
+
+}
+
+.card-icon {
+
+    font-size: 40px;
+
+    margin-bottom: 15px;
+
+}
+
+.card h2 {
+
+    font-size: 21px;
+
+    color: #312e81;
+
+    margin-bottom: 10px;
+
+}
+
+.card p {
+
+    color: #64748b;
+
+    line-height: 1.6;
+
+    font-size: 14px;
+
+}
+
+.card-button {
+
+    display: inline-block;
+
+    margin-top: 18px;
+
+    padding: 10px 17px;
+
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #4f46e5,
+            #7c3aed
+        );
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+}
+
+
+/* ================= TEST CARD ================= */
+
+.test-card {
+
+    background:
+        linear-gradient(
+            135deg,
+            #312e81,
+            #4f46e5,
+            #7c3aed
+        );
+
+    color: white;
+
+    padding: 35px;
+
+    border-radius: 24px;
+
+    margin-bottom: 30px;
+
+    box-shadow:
+        0 12px 30px
+        rgba(49,46,129,.22);
+
+}
+
+.test-card h2 {
+
+    font-size: 26px;
+
+    margin-bottom: 12px;
+
+}
+
+.test-card p {
+
+    color: #e0e7ff;
+
+    line-height: 1.7;
+
+}
+
+.test-button {
+
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 13px 25px;
+
+    background: white;
+
+    color: #4338ca;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-weight: 800;
+
+}
+
+
+/* ================= TOPICS ================= */
+
+.topics {
+
+    background: white;
+
+    border-radius: 22px;
+
+    padding: 30px;
+
+    margin-bottom: 50px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(15,23,42,.06);
+
+}
+
+.topics h2 {
+
+    color: #312e81;
+
+    margin-bottom: 20px;
+
+}
+
+.topic-list {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(230px, 1fr)
+        );
+
+    gap: 12px;
+
+}
+
+.topic {
+
+    padding: 13px 15px;
+
+    background: #f8fafc;
+
+    border-left: 4px solid #6366f1;
+
+    border-radius: 8px;
+
+    color: #334155;
+
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+
+    background: #0f172a;
+
+    color: #cbd5e1;
+
+    text-align: center;
+
+    padding: 25px;
+
+    font-size: 14px;
+
+}
+
+footer strong {
+
+    color: white;
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:700px) {
+
+    header {
+
+        flex-direction: column;
+
+        gap: 15px;
+
+    }
+
+    nav a {
+
+        margin: 0 7px;
+
+        font-size: 13px;
+
+    }
+
+    .hero h1 {
+
+        font-size: 34px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <div class="logo">
+
+        🎓 Edu<span>Negi</span>
+
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="index.html#bba">
+            BBA & BCH
+        </a>
+
+        <a href="index.html#mba">
+            MBA
+        </a>
+
+        <a href="index.html#practical">
+            Practical
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- ================= BREADCRUMB ================= -->
+
+<div class="breadcrumb">
+
+    <a href="index.html">
+        EduNegi
+    </a>
+
+    &nbsp; / &nbsp;
+
+    BBA & BCH
+
+    &nbsp; / &nbsp;
+
+    Data Analytics
+
+</div>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-icon">
+        📊
+    </div>
+
+
+    <h1>
+        Data Analytics
+    </h1>
+
+
+    <p>
+
+        Learn how to collect, clean,
+        analyse and visualize data
+        for better decision-making.
+        Explore concepts, Excel,
+        practical exercises and
+        online class tests.
+
+    </p>
+
+</section>
+
+
+<div class="container">
+
+
+<!-- ================= LEARNING RESOURCES ================= -->
+
+<div class="cards">
+
+
+    <!-- LECTURE NOTES -->
+
+    <div class="card">
+
+        <div class="card-icon">
+            📚
+        </div>
+
+        <h2>
+            Lecture Notes
+        </h2>
+
+        <p>
+
+            Detailed and student-friendly
+            lecture notes covering the
+            important concepts of Data
+            Analytics.
+
+        </p>
+
+        <a
+            href="#"
+            class="card-button">
+
+            View Notes →
+
+        </a>
+
+    </div>
+
+
+    <!-- CLASS TEST -->
+
+    <div class="card">
+
+        <div class="card-icon">
+            📝
+        </div>
+
+        <h2>
+            Class Tests
+        </h2>
+
+        <p>
+
+            Attempt online class tests
+            and check your understanding
+            of the subject.
+
+        </p>
+
+        <a
+            href="#tests"
+            class="card-button">
+
+            View Tests →
+
+        </a>
+
+    </div>
+
+
+    <!-- PRACTICAL -->
+
+    <div class="card">
+
+        <div class="card-icon">
+            💻
+        </div>
+
+        <h2>
+            Practical
+        </h2>
+
+        <p>
+
+            Practice Excel functions,
+            data entry, formatting,
+            data validation and
+            data analysis.
+
+        </p>
+
+        <a
+            href="#"
+            class="card-button">
+
+            Practice →
+
+        </a>
+
+    </div>
+
+
+    <!-- ASSIGNMENT -->
+
+    <div class="card">
+
+        <div class="card-icon">
+            📂
+        </div>
+
+        <h2>
+            Assignments
+        </h2>
+
+        <p>
+
+            Subject assignments and
+            practice questions for
+            better understanding.
+
+        </p>
+
+        <a
+            href="#"
+            class="card-button">
+
+            View Assignments →
+
+        </a>
+
+    </div>
+
+
+</div>
+
+
+<!-- ================= ONLINE TEST ================= -->
+
+<section id="tests">
+
+
+    <div class="test-card">
+
+        <h2>
+
+            🎯 Data Analytics & Excel
+            — 120 MCQ Class Test
+
+        </h2>
+
+
+        <p>
+
+            Test your knowledge of
+            Data Analytics, Excel,
+            data types, functions,
+            data entry, formatting
+            and data validation.
+
+        </p>
+
+
+        <p style="margin-top:10px;">
+
+            <strong>
+                120 Questions
+            </strong>
+            &nbsp; | &nbsp;
+
+            <strong>
+                1 Mark Each
+            </strong>
+            &nbsp; | &nbsp;
+
+            <strong>
+                Maximum 120 Marks
+            </strong>
+
+        </p>
+
+
+        <!--
+        IMPORTANT:
+        Later we will replace # with
+        the actual MCQ file/link.
+        -->
+
+        <a
+            href="#"
+            class="test-button">
+
+            🚀 Start Class Test
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= TOPICS ================= -->
+
+<div class="topics">
+
+    <h2>
+        📖 Topics Covered
+    </h2>
+
+
+    <div class="topic-list">
+
+
+        <div class="topic">
+
+            What is Data Analytics?
+
+        </div>
+
+
+        <div class="topic">
+
+            Importance of Data Analytics
+
+        </div>
+
+
+        <div class="topic">
+
+            Descriptive Analytics
+
+        </div>
+
+
+        <div class="topic">
+
+            Diagnostic Analytics
+
+        </div>
+
+
+        <div class="topic">
+
+            Predictive Analytics
+
+        </div>
+
+
+        <div class="topic">
+
+            Prescriptive Analytics
+
+        </div>
+
+
+        <div class="topic">
+
+            Data Collection
+
+        </div>
+
+
+        <div class="topic">
+
+            Data Cleaning
+
+        </div>
+
+
+        <div class="topic">
+
+            Data Analysis
+
+        </div>
+
+
+        <div class="topic">
+
+            Data Visualization
+
+        </div>
+
+
+        <div class="topic">
+
+            Decision Making
+
+        </div>
+
+
+        <div class="topic">
+
+            Business Analytics
+
+        </div>
+
+
+        <div class="topic">
+
+            Financial Analysis
+
+        </div>
+
+
+        <div class="topic">
+
+            Marketing Analytics
+
+        </div>
+
+
+        <div class="topic">
+
+            Healthcare Analytics
+
+        </div>
+
+
+        <div class="topic">
+
+            Excel for Data Analytics
+
+        </div>
+
+
+        <div class="topic">
+
+            SUM, AVERAGE, COUNT
+
+        </div>
+
+
+        <div class="topic">
+
+            MIN, MAX
+
+        </div>
+
+
+        <div class="topic">
+
+            IF, AND, OR
+
+        </div>
+
+
+        <div class="topic">
+
+            Data Validation
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    © 2026
+    <strong>EduNegi</strong>
+
+    <br><br>
+
+    Learn Better. Practice More. Grow with EduNegi.
+
+</footer>
+
+
+</body>
+
+</html>
