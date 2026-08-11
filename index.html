@@ -6,11 +6,15 @@
 <meta charset="UTF-8">
 
 <meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+      content="width=device-width, initial-scale=1.0">
 
-<title>Manoj Academic</title>
+<title>EduNegi | Academic Learning Portal</title>
 
 <style>
+
+/* =====================================================
+   RESET
+===================================================== */
 
 * {
     margin: 0;
@@ -18,227 +22,501 @@ content="width=device-width, initial-scale=1.0">
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(135deg, #eef2ff, #f8fafc, #ecfeff);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef2ff,
+            #f8fafc,
+            #ecfeff
+        );
+
     color: #172033;
+
+    line-height: 1.6;
+
 }
 
 
-/* ================= HEADER ================= */
+/* =====================================================
+   HEADER
+===================================================== */
 
 header {
-    background: linear-gradient(
-        135deg,
-        #1e1b4b,
-        #4338ca,
-        #7c3aed,
-        #0891b2
-    );
+
+    background:
+        linear-gradient(
+            135deg,
+            #1e1b4b,
+            #4338ca,
+            #7c3aed,
+            #0891b2
+        );
 
     color: white;
-    padding: 22px 7%;
+
+    padding:
+        20px 7%;
 
     display: flex;
-    justify-content: space-between;
-    align-items: center;
 
-    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    box-shadow:
+        0 6px 25px
+        rgba(0,0,0,.15);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
 }
+
 
 .logo {
-    font-size: 26px;
+
+    font-size: 27px;
+
     font-weight: 800;
+
+    letter-spacing: .5px;
+
 }
+
 
 .logo span {
+
     color: #fbbf24;
+
 }
+
+
+nav {
+
+    display: flex;
+
+    gap: 24px;
+
+}
+
 
 nav a {
+
     color: white;
+
     text-decoration: none;
-    margin-left: 25px;
-    font-weight: 600;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition: .2s;
+
 }
+
 
 nav a:hover {
+
     color: #fbbf24;
+
 }
 
 
-/* ================= HERO ================= */
+/* =====================================================
+   HERO
+===================================================== */
 
 .hero {
+
+    width: 90%;
+
+    max-width: 1150px;
+
+    margin: auto;
+
     text-align: center;
-    padding: 80px 20px 65px;
+
+    padding:
+        85px 20px
+        70px;
+
 }
+
+
+.hero-icon {
+
+    font-size: 65px;
+
+    margin-bottom: 15px;
+
+}
+
 
 .hero h1 {
-    font-family: Georgia, serif;
-    font-size: 48px;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 50px;
+
     color: #312e81;
+
     margin-bottom: 15px;
+
 }
+
 
 .hero h1 span {
+
     color: #7c3aed;
+
 }
+
 
 .hero p {
-    max-width: 750px;
+
+    max-width: 800px;
+
     margin: auto;
+
     color: #475569;
+
     font-size: 18px;
-    line-height: 1.7;
+
+    line-height: 1.8;
+
 }
 
-.hero-btn {
+
+.hero-button {
+
     display: inline-block;
+
     margin-top: 28px;
-    padding: 14px 28px;
+
+    padding:
+        14px 28px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #4f46e5,
+            #7c3aed
+        );
 
     color: white;
+
     text-decoration: none;
-    font-weight: 700;
 
     border-radius: 12px;
 
-    background: linear-gradient(
-        90deg,
-        #4f46e5,
-        #7c3aed
-    );
+    font-weight: 800;
 
     box-shadow:
-        0 8px 20px rgba(79,70,229,.25);
+        0 8px 20px
+        rgba(79,70,229,.25);
+
+    transition: .2s;
+
 }
 
 
-/* ================= SECTION ================= */
+.hero-button:hover {
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+/* =====================================================
+   MAIN CONTAINER
+===================================================== */
+
+.container {
+
+    width: 90%;
+
+    max-width: 1150px;
+
+    margin: auto;
+
+}
+
+
+/* =====================================================
+   SECTION
+===================================================== */
 
 .section {
-    width: 90%;
-    max-width: 1200px;
-    margin: 20px auto 60px;
+
+    margin-bottom: 70px;
+
 }
+
 
 .section-title {
+
     text-align: center;
-    margin-bottom: 30px;
+
+    margin-bottom: 32px;
+
 }
+
 
 .section-title h2 {
-    font-size: 32px;
+
+    font-size: 34px;
+
     color: #1e1b4b;
+
     margin-bottom: 8px;
+
 }
+
 
 .section-title p {
+
     color: #64748b;
+
+    font-size: 15px;
+
 }
 
 
-/* ================= CARDS ================= */
+/* =====================================================
+   CARDS
+===================================================== */
 
 .cards {
+
     display: grid;
 
     grid-template-columns:
-        repeat(auto-fit, minmax(250px, 1fr));
+        repeat(
+            auto-fit,
+            minmax(250px, 1fr)
+        );
 
     gap: 22px;
+
 }
 
+
 .card {
+
     background: white;
 
     padding: 28px;
 
-    border-radius: 20px;
+    border-radius: 22px;
 
-    border: 1px solid #e2e8f0;
+    border:
+        1px solid
+        #e2e8f0;
 
     box-shadow:
-        0 8px 25px rgba(15,23,42,.07);
+        0 8px 25px
+        rgba(15,23,42,.07);
 
-    transition: .25s;
+    transition:
+        .25s ease;
+
 }
+
 
 .card:hover {
-    transform: translateY(-7px);
+
+    transform:
+        translateY(-8px);
 
     box-shadow:
-        0 15px 35px rgba(15,23,42,.13);
+        0 18px 38px
+        rgba(15,23,42,.13);
+
 }
+
 
 .card-icon {
-    font-size: 42px;
+
+    font-size: 45px;
+
     margin-bottom: 15px;
+
 }
+
 
 .card h3 {
+
     color: #312e81;
+
     font-size: 21px;
+
     margin-bottom: 10px;
+
 }
+
 
 .card p {
+
     color: #64748b;
-    line-height: 1.6;
+
     font-size: 14px;
+
+    line-height: 1.7;
+
 }
 
-.card-btn {
-    display: inline-block;
-    margin-top: 18px;
 
-    color: #4f46e5;
+.card-button {
+
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding:
+        10px 18px;
+
+    border-radius: 10px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            90deg,
+            #4f46e5,
+            #7c3aed
+        );
 
     text-decoration: none;
 
+    font-size: 14px;
+
     font-weight: 700;
+
+    transition: .2s;
+
 }
 
 
-/* BBA & BCH */
+.card-button:hover {
 
-.bba .card {
-    border-top: 5px solid #4f46e5;
+    transform:
+        scale(1.03);
+
 }
 
 
-/* MBA */
+/* =====================================================
+   BBA & BCH
+===================================================== */
 
-.mba .card {
-    border-top: 5px solid #0891b2;
+.bba-card {
+
+    border-top:
+        5px solid
+        #4f46e5;
+
 }
 
 
-/* PRACTICAL */
+/* =====================================================
+   MBA
+===================================================== */
 
-.practical .card {
-    border-top: 5px solid #10b981;
+.mba-card {
+
+    border-top:
+        5px solid
+        #0891b2;
+
 }
 
 
-/* ================= FEATURES ================= */
+/* =====================================================
+   PRACTICAL
+===================================================== */
+
+.practical-card {
+
+    border-top:
+        5px solid
+        #10b981;
+
+}
+
+
+/* =====================================================
+   FEATURE SECTION
+===================================================== */
 
 .features {
+
     background:
         linear-gradient(
             135deg,
             #1e1b4b,
             #312e81,
-            #4f46e5
+            #4f46e5,
+            #7c3aed
         );
 
     color: white;
 
-    padding: 55px 7%;
+    padding:
+        60px 20px;
+
+    margin-top: 20px;
+
 }
 
+
+.feature-title {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+
+}
+
+
+.feature-title h2 {
+
+    font-size: 32px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.feature-title p {
+
+    color:
+        #dbeafe;
+
+}
+
+
 .feature-grid {
+
+    width: 90%;
 
     max-width: 1100px;
 
@@ -247,73 +525,238 @@ nav a:hover {
     display: grid;
 
     grid-template-columns:
-        repeat(auto-fit, minmax(180px, 1fr));
+        repeat(
+            auto-fit,
+            minmax(190px, 1fr)
+        );
 
-    gap: 25px;
+    gap: 22px;
+
 }
+
 
 .feature {
+
     text-align: center;
-    padding: 20px;
+
+    padding: 24px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.15);
+
+    border-radius: 18px;
+
+    background:
+        rgba(255,255,255,.08);
+
 }
+
 
 .feature-icon {
-    font-size: 35px;
+
+    font-size: 38px;
+
     margin-bottom: 10px;
+
 }
+
 
 .feature h3 {
+
     margin-bottom: 7px;
+
 }
+
 
 .feature p {
-    color: #dbeafe;
-    font-size: 14px;
+
+    color:
+        #dbeafe;
+
+    font-size: 13px;
+
 }
 
 
-/* ================= FOOTER ================= */
+/* =====================================================
+   ABOUT SECTION
+===================================================== */
 
-footer {
-    background: #0f172a;
-    color: #cbd5e1;
+.about {
+
+    width: 90%;
+
+    max-width: 1000px;
+
+    margin:
+        70px auto;
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(15,23,42,.06);
 
     text-align: center;
 
-    padding: 25px;
+}
+
+
+.about h2 {
+
+    color: #312e81;
+
+    margin-bottom: 15px;
+
+}
+
+
+.about p {
+
+    color: #64748b;
+
+    line-height: 1.8;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    background:
+        #0f172a;
+
+    color:
+        #cbd5e1;
+
+    text-align: center;
+
+    padding: 30px 20px;
 
     font-size: 14px;
+
 }
+
 
 footer strong {
+
     color: white;
+
 }
 
 
-/* ================= MOBILE ================= */
+.footer-links {
+
+    margin-top: 12px;
+
+}
+
+
+.footer-links a {
+
+    color:
+        #cbd5e1;
+
+    text-decoration: none;
+
+    margin:
+        0 8px;
+
+}
+
+
+.footer-links a:hover {
+
+    color: white;
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
 
 @media(max-width:700px) {
 
     header {
+
         flex-direction: column;
+
         gap: 15px;
+
+        padding:
+            18px 15px;
+
     }
+
+
+    nav {
+
+        gap: 12px;
+
+        flex-wrap: wrap;
+
+        justify-content:
+            center;
+
+    }
+
 
     nav a {
-        margin: 0 7px;
-        font-size: 13px;
+
+        font-size: 12px;
+
     }
+
 
     .hero {
-        padding: 55px 20px;
+
+        padding:
+            55px 15px;
+
     }
+
 
     .hero h1 {
-        font-size: 35px;
+
+        font-size: 36px;
+
     }
 
+
     .hero p {
+
         font-size: 16px;
+
+    }
+
+
+    .section-title h2 {
+
+        font-size: 28px;
+
+    }
+
+
+    .card {
+
+        padding: 24px;
+
+    }
+
+
+    .about {
+
+        padding: 25px;
+
     }
 
 }
@@ -326,70 +769,98 @@ footer strong {
 <body>
 
 
-<!-- ================= HEADER ================= -->
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
 <header>
 
     <div class="logo">
 
-        🎓 MANOJ
-        <span>ACADEMIC</span>
+        🎓 Edu<span>Negi</span>
 
     </div>
 
 
     <nav>
 
-        <a href="#home">Home</a>
+        <a href="#home">
+            Home
+        </a>
 
-        <a href="#bba">BBA & BCH</a>
+        <a href="#bba">
+            BBA & BCH
+        </a>
 
-        <a href="#mba">MBA</a>
+        <a href="#mba">
+            MBA
+        </a>
 
-        <a href="#practical">Practical</a>
+        <a href="#practical">
+            Practical
+        </a>
 
     </nav>
 
 </header>
 
 
-<!-- ================= HOME ================= -->
+<!-- =====================================================
+     HERO / HOME
+===================================================== -->
 
-<section class="hero" id="home">
+<section
+    class="hero"
+    id="home">
+
+
+    <div class="hero-icon">
+
+        🎓
+
+    </div>
+
 
     <h1>
 
         Welcome to
-        <span>Manoj Academic</span>
+        <span>EduNegi</span>
 
     </h1>
 
 
     <p>
 
-        A digital learning platform providing
-        academic notes, online MCQ tests,
-        assignments and practical learning
-        resources for BBA, BCH and MBA students.
+        A student-friendly academic learning
+        platform providing lecture notes,
+        MCQ tests, quizzes, study materials
+        and practical learning resources
+        for BBA, BCH and MBA students.
 
     </p>
 
 
     <a
         href="#bba"
-        class="hero-btn">
+        class="hero-button">
 
         Explore Courses →
 
     </a>
 
+
 </section>
 
 
-<!-- ================= BBA & BCH ================= -->
+<div class="container">
+
+
+<!-- =====================================================
+     BBA & BCH
+===================================================== -->
 
 <section
-    class="section bba"
+    class="section"
     id="bba">
 
 
@@ -400,6 +871,7 @@ footer strong {
             🎓 BBA & BCH
 
         </h2>
+
 
         <p>
 
@@ -415,7 +887,9 @@ footer strong {
 
         <!-- DATA ANALYTICS -->
 
-        <div class="card">
+        <div
+            class="card bba-card">
+
 
             <div class="card-icon">
 
@@ -433,28 +907,33 @@ footer strong {
 
             <p>
 
-                Data Analytics concepts,
-                Excel functions, data cleaning,
-                data visualization, analysis
-                and practical applications.
+                Learn Data Analytics,
+                data collection,
+                data cleaning,
+                data visualization,
+                Excel functions and
+                practical applications.
 
             </p>
 
 
             <a
-                href="#"
-                class="card-btn">
+                href="data-analytics.html"
+                class="card-button">
 
                 Explore Course →
 
             </a>
+
 
         </div>
 
 
         <!-- FINANCIAL ACCOUNTING -->
 
-        <div class="card">
+        <div
+            class="card bba-card">
+
 
             <div class="card-icon">
 
@@ -472,21 +951,23 @@ footer strong {
 
             <p>
 
-                Accounting concepts,
+                Learn accounting concepts,
                 accounting principles,
-                financial statements
-                and practical problems.
+                financial statements,
+                calculations and
+                practical problems.
 
             </p>
 
 
             <a
                 href="#"
-                class="card-btn">
+                class="card-button">
 
-                Explore Course →
+                Coming Soon →
 
             </a>
+
 
         </div>
 
@@ -496,10 +977,12 @@ footer strong {
 </section>
 
 
-<!-- ================= MBA ================= -->
+<!-- =====================================================
+     MBA
+===================================================== -->
 
 <section
-    class="section mba"
+    class="section"
     id="mba">
 
 
@@ -510,6 +993,7 @@ footer strong {
             🎓 MBA
 
         </h2>
+
 
         <p>
 
@@ -525,7 +1009,9 @@ footer strong {
 
         <!-- INVESTMENT -->
 
-        <div class="card">
+        <div
+            class="card mba-card">
+
 
             <div class="card-icon">
 
@@ -537,36 +1023,39 @@ footer strong {
             <h3>
 
                 Investment Analysis
-                &amp; Portfolio Management
+                and Portfolio Management
 
             </h3>
 
 
             <p>
 
-                Investment decisions,
+                Study investment decisions,
                 security analysis,
-                risk and return,
-                portfolio management
-                and investment avenues.
+                investment avenues,
+                risk, return and
+                portfolio management.
 
             </p>
 
 
             <a
                 href="#"
-                class="card-btn">
+                class="card-button">
 
-                Explore Course →
+                Coming Soon →
 
             </a>
+
 
         </div>
 
 
-        <!-- FINANCIAL ACCOUNTING -->
+        <!-- FINANCIAL ACCOUNTING ANALYSIS -->
 
-        <div class="card">
+        <div
+            class="card mba-card">
+
 
             <div class="card-icon">
 
@@ -585,21 +1074,22 @@ footer strong {
 
             <p>
 
-                Financial statement analysis,
-                accounting information,
+                Study financial statement
+                analysis, accounting data,
                 financial ratios and
-                interpretation of financial data.
+                interpretation of information.
 
             </p>
 
 
             <a
                 href="#"
-                class="card-btn">
+                class="card-button">
 
-                Explore Course →
+                Coming Soon →
 
             </a>
+
 
         </div>
 
@@ -609,10 +1099,12 @@ footer strong {
 </section>
 
 
-<!-- ================= PRACTICAL ================= -->
+<!-- =====================================================
+     PRACTICAL
+===================================================== -->
 
 <section
-    class="section practical"
+    class="section"
     id="practical">
 
 
@@ -623,6 +1115,7 @@ footer strong {
             💻 Practical Learning
 
         </h2>
+
 
         <p>
 
@@ -638,7 +1131,9 @@ footer strong {
 
         <!-- EXCEL -->
 
-        <div class="card">
+        <div
+            class="card practical-card">
+
 
             <div class="card-icon">
 
@@ -656,28 +1151,31 @@ footer strong {
 
             <p>
 
-                Excel functions,
-                formulas, data entry,
+                Learn Excel formulas,
+                functions, data entry,
                 formatting, IF, AND,
-                OR and data validation.
+                OR and Data Validation.
 
             </p>
 
 
             <a
                 href="#"
-                class="card-btn">
+                class="card-button">
 
-                Practice →
+                Coming Soon →
 
             </a>
+
 
         </div>
 
 
         <!-- POWERPOINT -->
 
-        <div class="card">
+        <div
+            class="card practical-card">
+
 
             <div class="card-icon">
 
@@ -695,28 +1193,31 @@ footer strong {
 
             <p>
 
-                Presentation design,
-                slide creation,
-                academic presentations
-                and professional presentation skills.
+                Learn presentation design,
+                slide creation, academic
+                presentations and
+                professional presentation skills.
 
             </p>
 
 
             <a
                 href="#"
-                class="card-btn">
+                class="card-button">
 
-                Practice →
+                Coming Soon →
 
             </a>
+
 
         </div>
 
 
         <!-- DATA ANALYSIS -->
 
-        <div class="card">
+        <div
+            class="card practical-card">
+
 
             <div class="card-icon">
 
@@ -734,21 +1235,22 @@ footer strong {
 
             <p>
 
-                Data cleaning,
+                Practice data cleaning,
                 data visualization,
-                interpretation
-                and practical exercises.
+                interpretation and
+                practical analysis techniques.
 
             </p>
 
 
             <a
                 href="#"
-                class="card-btn">
+                class="card-button">
 
-                Practice →
+                Coming Soon →
 
             </a>
+
 
         </div>
 
@@ -758,24 +1260,29 @@ footer strong {
 </section>
 
 
-<!-- ================= FEATURES ================= -->
+</div>
+
+
+<!-- =====================================================
+     FEATURES
+===================================================== -->
 
 <section class="features">
 
 
-    <div class="section-title">
+    <div class="feature-title">
 
-        <h2 style="color:white;">
+        <h2>
 
-            Learning Resources
+            📚 What You Can Learn
 
         </h2>
 
 
-        <p style="color:#dbeafe;">
+        <p>
 
-            Everything students need
-            in one place.
+            Learning resources available
+            through EduNegi
 
         </p>
 
@@ -793,15 +1300,18 @@ footer strong {
 
             </div>
 
+
             <h3>
 
                 Lecture Notes
 
             </h3>
 
+
             <p>
 
-                Subject-wise study material
+                Simple and detailed
+                academic notes.
 
             </p>
 
@@ -816,15 +1326,18 @@ footer strong {
 
             </div>
 
+
             <h3>
 
                 Online Tests
 
             </h3>
 
+
             <p>
 
-                Practice MCQs and class tests
+                Practice MCQs and
+                online class tests.
 
             </p>
 
@@ -839,15 +1352,18 @@ footer strong {
 
             </div>
 
+
             <h3>
 
-                Practicals
+                Practical Learning
 
             </h3>
 
+
             <p>
 
-                Hands-on practical exercises
+                Learn through practical
+                exercises and activities.
 
             </p>
 
@@ -862,16 +1378,44 @@ footer strong {
 
             </div>
 
+
             <h3>
 
                 Assignments
 
             </h3>
 
+
             <p>
 
                 Academic assignments
-                and activities
+                and practice questions.
+
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+
+                📊
+
+            </div>
+
+
+            <h3>
+
+                Data Analysis
+
+            </h3>
+
+
+            <p>
+
+                Understand and work
+                with real-world data.
 
             </p>
 
@@ -883,19 +1427,88 @@ footer strong {
 </section>
 
 
-<!-- ================= FOOTER ================= -->
+<!-- =====================================================
+     ABOUT EDUNEGI
+===================================================== -->
+
+<section class="about">
+
+
+    <h2>
+
+        About EduNegi
+
+    </h2>
+
+
+    <p>
+
+        EduNegi is a student-friendly
+        learning platform designed to
+        bring academic notes, online
+        tests, quizzes, practical
+        exercises and study materials
+        together in one place.
+
+        <br><br>
+
+        The platform focuses on
+        BBA, BCH, MBA, Accounting,
+        Finance, Data Analytics,
+        Excel and Computer Applications.
+
+    </p>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
+
 
     © 2026
 
     <strong>
-        Manoj Academic
+        EduNegi
     </strong>
+
 
     <br><br>
 
-    BBA & BCH • MBA • Practical Learning
+
+    Learn Better. Practice More.
+    Grow with EduNegi.
+
+
+    <div class="footer-links">
+
+        <a href="#home">
+            Home
+        </a>
+
+        |
+
+        <a href="#bba">
+            BBA & BCH
+        </a>
+
+        |
+
+        <a href="#mba">
+            MBA
+        </a>
+
+        |
+
+        <a href="#practical">
+            Practical
+        </a>
+
+    </div>
+
 
 </footer>
 
