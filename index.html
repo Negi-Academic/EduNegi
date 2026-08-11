@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Manoj Academic</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #eef2ff, #f8fafc, #ecfeff);
+    color: #172033;
+}
+
+
+/* ================= HEADER ================= */
+
+header {
+    background: linear-gradient(
+        135deg,
+        #1e1b4b,
+        #4338ca,
+        #7c3aed,
+        #0891b2
+    );
+
+    color: white;
+    padding: 22px 7%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.logo span {
+    color: #fbbf24;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #fbbf24;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    text-align: center;
+    padding: 80px 20px 65px;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: 48px;
+    color: #312e81;
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: #7c3aed;
+}
+
+.hero p {
+    max-width: 750px;
+    margin: auto;
+    color: #475569;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.hero-btn {
+    display: inline-block;
+    margin-top: 28px;
+    padding: 14px 28px;
+
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+
+    border-radius: 12px;
+
+    background: linear-gradient(
+        90deg,
+        #4f46e5,
+        #7c3aed
+    );
+
+    box-shadow:
+        0 8px 20px rgba(79,70,229,.25);
+}
+
+
+/* ================= SECTION ================= */
+
+.section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto 60px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    color: #1e1b4b;
+    margin-bottom: 8px;
+}
+
+.section-title p {
+    color: #64748b;
+}
+
+
+/* ================= CARDS ================= */
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 22px;
+}
+
+.card {
+    background: white;
+
+    padding: 28px;
+
+    border-radius: 20px;
+
+    border: 1px solid #e2e8f0;
+
+    box-shadow:
+        0 8px 25px rgba(15,23,42,.07);
+
+    transition: .25s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 15px 35px rgba(15,23,42,.13);
+}
+
+.card-icon {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #312e81;
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #64748b;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.card-btn {
+    display: inline-block;
+    margin-top: 18px;
+
+    color: #4f46e5;
+
+    text-decoration: none;
+
+    font-weight: 700;
+}
+
+
+/* BBA & BCH */
+
+.bba .card {
+    border-top: 5px solid #4f46e5;
+}
+
+
+/* MBA */
+
+.mba .card {
+    border-top: 5px solid #0891b2;
+}
+
+
+/* PRACTICAL */
+
+.practical .card {
+    border-top: 5px solid #10b981;
+}
+
+
+/* ================= FEATURES ================= */
+
+.features {
+    background:
+        linear-gradient(
+            135deg,
+            #1e1b4b,
+            #312e81,
+            #4f46e5
+        );
+
+    color: white;
+
+    padding: 55px 7%;
+}
+
+.feature-grid {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(180px, 1fr));
+
+    gap: 25px;
+}
+
+.feature {
+    text-align: center;
+    padding: 20px;
+}
+
+.feature-icon {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.feature h3 {
+    margin-bottom: 7px;
+}
+
+.feature p {
+    color: #dbeafe;
+    font-size: 14px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #0f172a;
+    color: #cbd5e1;
+
+    text-align: center;
+
+    padding: 25px;
+
+    font-size: 14px;
+}
+
+footer strong {
+    color: white;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:700px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0 7px;
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 55px 20px;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <div class="logo">
+
+        🎓 MANOJ
+        <span>ACADEMIC</span>
+
+    </div>
+
+
+    <nav>
+
+        <a href="#home">Home</a>
+
+        <a href="#bba">BBA & BCH</a>
+
+        <a href="#mba">MBA</a>
+
+        <a href="#practical">Practical</a>
+
+    </nav>
+
+</header>
+
+
+<!-- ================= HOME ================= -->
+
+<section class="hero" id="home">
+
+    <h1>
+
+        Welcome to
+        <span>Manoj Academic</span>
+
+    </h1>
+
+
+    <p>
+
+        A digital learning platform providing
+        academic notes, online MCQ tests,
+        assignments and practical learning
+        resources for BBA, BCH and MBA students.
+
+    </p>
+
+
+    <a
+        href="#bba"
+        class="hero-btn">
+
+        Explore Courses →
+
+    </a>
+
+</section>
+
+
+<!-- ================= BBA & BCH ================= -->
+
+<section
+    class="section bba"
+    id="bba">
+
+
+    <div class="section-title">
+
+        <h2>
+
+            🎓 BBA & BCH
+
+        </h2>
+
+        <p>
+
+            Undergraduate learning resources
+
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+
+        <!-- DATA ANALYTICS -->
+
+        <div class="card">
+
+            <div class="card-icon">
+
+                📊
+
+            </div>
+
+
+            <h3>
+
+                Data Analytics
+
+            </h3>
+
+
+            <p>
+
+                Data Analytics concepts,
+                Excel functions, data cleaning,
+                data visualization, analysis
+                and practical applications.
+
+            </p>
+
+
+            <a
+                href="#"
+                class="card-btn">
+
+                Explore Course →
+
+            </a>
+
+        </div>
+
+
+        <!-- FINANCIAL ACCOUNTING -->
+
+        <div class="card">
+
+            <div class="card-icon">
+
+                💰
+
+            </div>
+
+
+            <h3>
+
+                Financial Accounting
+
+            </h3>
+
+
+            <p>
+
+                Accounting concepts,
+                accounting principles,
+                financial statements
+                and practical problems.
+
+            </p>
+
+
+            <a
+                href="#"
+                class="card-btn">
+
+                Explore Course →
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= MBA ================= -->
+
+<section
+    class="section mba"
+    id="mba">
+
+
+    <div class="section-title">
+
+        <h2>
+
+            🎓 MBA
+
+        </h2>
+
+        <p>
+
+            Postgraduate learning resources
+
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+
+        <!-- INVESTMENT -->
+
+        <div class="card">
+
+            <div class="card-icon">
+
+                📈
+
+            </div>
+
+
+            <h3>
+
+                Investment Analysis
+                &amp; Portfolio Management
+
+            </h3>
+
+
+            <p>
+
+                Investment decisions,
+                security analysis,
+                risk and return,
+                portfolio management
+                and investment avenues.
+
+            </p>
+
+
+            <a
+                href="#"
+                class="card-btn">
+
+                Explore Course →
+
+            </a>
+
+        </div>
+
+
+        <!-- FINANCIAL ACCOUNTING -->
+
+        <div class="card">
+
+            <div class="card-icon">
+
+                📑
+
+            </div>
+
+
+            <h3>
+
+                Analysis of
+                Financial Accounting
+
+            </h3>
+
+
+            <p>
+
+                Financial statement analysis,
+                accounting information,
+                financial ratios and
+                interpretation of financial data.
+
+            </p>
+
+
+            <a
+                href="#"
+                class="card-btn">
+
+                Explore Course →
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= PRACTICAL ================= -->
+
+<section
+    class="section practical"
+    id="practical">
+
+
+    <div class="section-title">
+
+        <h2>
+
+            💻 Practical Learning
+
+        </h2>
+
+        <p>
+
+            Hands-on learning resources
+
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+
+        <!-- EXCEL -->
+
+        <div class="card">
+
+            <div class="card-icon">
+
+                📗
+
+            </div>
+
+
+            <h3>
+
+                Excel
+
+            </h3>
+
+
+            <p>
+
+                Excel functions,
+                formulas, data entry,
+                formatting, IF, AND,
+                OR and data validation.
+
+            </p>
+
+
+            <a
+                href="#"
+                class="card-btn">
+
+                Practice →
+
+            </a>
+
+        </div>
+
+
+        <!-- POWERPOINT -->
+
+        <div class="card">
+
+            <div class="card-icon">
+
+                📽️
+
+            </div>
+
+
+            <h3>
+
+                PowerPoint
+
+            </h3>
+
+
+            <p>
+
+                Presentation design,
+                slide creation,
+                academic presentations
+                and professional presentation skills.
+
+            </p>
+
+
+            <a
+                href="#"
+                class="card-btn">
+
+                Practice →
+
+            </a>
+
+        </div>
+
+
+        <!-- DATA ANALYSIS -->
+
+        <div class="card">
+
+            <div class="card-icon">
+
+                📊
+
+            </div>
+
+
+            <h3>
+
+                Data Analysis
+
+            </h3>
+
+
+            <p>
+
+                Data cleaning,
+                data visualization,
+                interpretation
+                and practical exercises.
+
+            </p>
+
+
+            <a
+                href="#"
+                class="card-btn">
+
+                Practice →
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= FEATURES ================= -->
+
+<section class="features">
+
+
+    <div class="section-title">
+
+        <h2 style="color:white;">
+
+            Learning Resources
+
+        </h2>
+
+
+        <p style="color:#dbeafe;">
+
+            Everything students need
+            in one place.
+
+        </p>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+
+                📚
+
+            </div>
+
+            <h3>
+
+                Lecture Notes
+
+            </h3>
+
+            <p>
+
+                Subject-wise study material
+
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+
+                📝
+
+            </div>
+
+            <h3>
+
+                Online Tests
+
+            </h3>
+
+            <p>
+
+                Practice MCQs and class tests
+
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+
+                💻
+
+            </div>
+
+            <h3>
+
+                Practicals
+
+            </h3>
+
+            <p>
+
+                Hands-on practical exercises
+
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+
+                📂
+
+            </div>
+
+            <h3>
+
+                Assignments
+
+            </h3>
+
+            <p>
+
+                Academic assignments
+                and activities
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    © 2026
+
+    <strong>
+        Manoj Academic
+    </strong>
+
+    <br><br>
+
+    BBA & BCH • MBA • Practical Learning
+
+</footer>
+
+
+</body>
+
+</html>
