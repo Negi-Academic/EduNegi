@@ -2,341 +2,212 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
-
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Data Analytics | EduNegi</title>
 
 <style>
 
-/* =========================
-   BASIC RESET
-========================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
 
-body {
-
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-    background:
-        linear-gradient(
-            135deg,
-            #eef2ff,
-            #f8fafc,
-            #ecfeff
-        );
-
-    color: #172033;
-
-    min-height: 100vh;
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:linear-gradient(135deg,#eef2ff,#f8fafc,#ecfeff);
+    color:#172033;
+    line-height:1.6;
 }
 
 
-/* =========================
-   HEADER
-========================= */
+/* ================= HEADER ================= */
 
-header {
+header{
+    background:linear-gradient(
+        135deg,
+        #1e1b4b,
+        #4338ca,
+        #7c3aed,
+        #0891b2
+    );
 
-    background:
-        linear-gradient(
-            135deg,
-            #1e1b4b,
-            #4338ca,
-            #7c3aed,
-            #0891b2
-        );
+    color:white;
+    padding:20px 7%;
 
-    color: white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 
-    padding: 20px 7%;
+    box-shadow:0 6px 25px rgba(0,0,0,.15);
 
-    display: flex;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
 
-    justify-content: space-between;
+.logo{
+    font-size:27px;
+    font-weight:800;
+}
 
-    align-items: center;
+.logo span{
+    color:#fbbf24;
+}
 
-    box-shadow:
-        0 6px 25px
-        rgba(0,0,0,0.15);
+nav{
+    display:flex;
+    gap:22px;
+}
 
-    position: sticky;
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:700;
+}
 
-    top: 0;
-
-    z-index: 1000;
-
+nav a:hover{
+    color:#fbbf24;
 }
 
 
-.logo {
+/* ================= BREADCRUMB ================= */
 
-    font-size: 27px;
+.breadcrumb{
+    width:90%;
+    max-width:1150px;
+    margin:25px auto 0;
 
-    font-weight: 800;
+    color:#64748b;
+    font-size:14px;
+}
 
-    letter-spacing: .5px;
-
+.breadcrumb a{
+    color:#4f46e5;
+    text-decoration:none;
+    font-weight:bold;
 }
 
 
-.logo span {
+/* ================= HERO ================= */
 
-    color: #fbbf24;
+.hero{
+    width:90%;
+    max-width:1150px;
+    margin:auto;
 
+    text-align:center;
+
+    padding:60px 20px 50px;
+}
+
+.hero-icon{
+    font-size:65px;
+    margin-bottom:12px;
+}
+
+.hero h1{
+    font-family:Georgia,serif;
+    font-size:46px;
+    color:#312e81;
+    margin-bottom:14px;
+}
+
+.hero h1 span{
+    color:#7c3aed;
+}
+
+.hero p{
+    max-width:800px;
+    margin:auto;
+
+    color:#475569;
+    font-size:17px;
+    line-height:1.8;
 }
 
 
-nav {
+/* ================= CONTAINER ================= */
 
-    display: flex;
-
-    gap: 22px;
-
+.container{
+    width:90%;
+    max-width:1150px;
+    margin:auto;
 }
 
 
-nav a {
+/* ================= RESOURCE CARDS ================= */
 
-    color: white;
-
-    text-decoration: none;
-
-    font-size: 14px;
-
-    font-weight: 700;
-
-    transition: .2s;
-
-}
-
-
-nav a:hover {
-
-    color: #fbbf24;
-
-}
-
-
-/* =========================
-   BREADCRUMB
-========================= */
-
-.breadcrumb {
-
-    width: 90%;
-
-    max-width: 1150px;
-
-    margin: 25px auto 0;
-
-    font-size: 14px;
-
-    color: #64748b;
-
-}
-
-
-.breadcrumb a {
-
-    color: #4f46e5;
-
-    text-decoration: none;
-
-    font-weight: 700;
-
-}
-
-
-/* =========================
-   HERO
-========================= */
-
-.hero {
-
-    width: 90%;
-
-    max-width: 1150px;
-
-    margin: auto;
-
-    padding:
-        55px 20px
-        50px;
-
-    text-align: center;
-
-}
-
-
-.hero-icon {
-
-    font-size: 65px;
-
-    margin-bottom: 15px;
-
-}
-
-
-.hero h1 {
-
-    font-family: Georgia, serif;
-
-    font-size: 46px;
-
-    color: #312e81;
-
-    margin-bottom: 14px;
-
-}
-
-
-.hero h1 span {
-
-    color: #7c3aed;
-
-}
-
-
-.hero p {
-
-    max-width: 800px;
-
-    margin: auto;
-
-    font-size: 17px;
-
-    line-height: 1.8;
-
-    color: #475569;
-
-}
-
-
-/* =========================
-   CONTAINER
-========================= */
-
-.container {
-
-    width: 90%;
-
-    max-width: 1150px;
-
-    margin: auto;
-
-}
-
-
-/* =========================
-   RESOURCE CARDS
-========================= */
-
-.resource-grid {
-
-    display: grid;
+.cards{
+    display:grid;
 
     grid-template-columns:
         repeat(
             auto-fit,
-            minmax(240px, 1fr)
+            minmax(245px,1fr)
         );
 
-    gap: 22px;
+    gap:22px;
 
-    margin-bottom: 45px;
-
+    margin-bottom:50px;
 }
 
+.card{
+    background:white;
 
-.resource-card {
+    padding:30px;
 
-    background: white;
+    border-radius:22px;
 
-    padding: 28px;
-
-    border-radius: 20px;
-
-    border: 1px solid #e2e8f0;
+    border:1px solid #e2e8f0;
 
     box-shadow:
         0 8px 25px
         rgba(15,23,42,.07);
 
-    transition: all .25s ease;
-
+    transition:.25s ease;
 }
 
-
-.resource-card:hover {
-
-    transform:
-        translateY(-7px);
+.card:hover{
+    transform:translateY(-8px);
 
     box-shadow:
-        0 16px 35px
+        0 18px 38px
         rgba(15,23,42,.13);
-
 }
 
-
-.resource-icon {
-
-    font-size: 42px;
-
-    margin-bottom: 14px;
-
+.card-icon{
+    font-size:45px;
+    margin-bottom:15px;
 }
 
-
-.resource-card h2 {
-
-    font-size: 21px;
-
-    color: #312e81;
-
-    margin-bottom: 10px;
-
+.card h2{
+    color:#312e81;
+    font-size:22px;
+    margin-bottom:10px;
 }
 
-
-.resource-card p {
-
-    font-size: 14px;
-
-    color: #64748b;
-
-    line-height: 1.7;
-
+.card p{
+    color:#64748b;
+    font-size:14px;
+    line-height:1.7;
 }
 
+.button{
+    display:inline-block;
 
-.resource-button {
+    margin-top:20px;
 
-    display: inline-block;
+    padding:11px 19px;
 
-    margin-top: 18px;
-
-    padding:
-        11px 18px;
-
-    border-radius: 10px;
+    border-radius:10px;
 
     background:
         linear-gradient(
@@ -345,40 +216,29 @@ nav a:hover {
             #7c3aed
         );
 
-    color: white;
+    color:white;
 
-    text-decoration: none;
+    text-decoration:none;
 
-    font-size: 14px;
+    font-size:14px;
 
-    font-weight: 700;
+    font-weight:700;
 
-    transition: .2s;
+    transition:.2s;
+}
 
+.button:hover{
+    transform:scale(1.03);
 }
 
 
-.resource-button:hover {
+/* ================= TEST SECTION ================= */
 
-    transform: scale(1.03);
-
+.test-section{
+    margin-bottom:50px;
 }
 
-
-/* =========================
-   CLASS TEST HERO
-========================= */
-
-.test-section {
-
-    margin:
-        20px 0
-        50px;
-
-}
-
-
-.test-card {
+.test-card{
 
     background:
         linear-gradient(
@@ -388,362 +248,256 @@ nav a:hover {
             #7c3aed
         );
 
-    color: white;
+    color:white;
 
-    padding: 38px;
+    padding:40px;
 
-    border-radius: 25px;
+    border-radius:25px;
 
     box-shadow:
         0 15px 35px
         rgba(49,46,129,.22);
-
-    position: relative;
-
-    overflow: hidden;
-
 }
 
+.test-card h2{
+    font-size:29px;
+    margin-bottom:12px;
+}
 
-.test-card::before {
+.test-card p{
+    color:#e0e7ff;
+    line-height:1.7;
+}
 
-    content: "";
+.test-info{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:20px;
+}
 
-    position: absolute;
-
-    width: 180px;
-
-    height: 180px;
-
-    border-radius: 50%;
-
+.test-info span{
     background:
-        rgba(255,255,255,.08);
-
-    right: -60px;
-
-    top: -60px;
-
-}
-
-
-.test-card h2 {
-
-    font-size: 28px;
-
-    margin-bottom: 12px;
-
-}
-
-
-.test-card p {
-
-    color: #e0e7ff;
-
-    line-height: 1.7;
-
-    max-width: 850px;
-
-}
-
-
-.test-details {
-
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 12px;
-
-    margin-top: 20px;
-
-}
-
-
-.test-detail {
-
-    padding:
-        8px 14px;
-
-    border-radius: 20px;
-
-    background:
-        rgba(255,255,255,.13);
+        rgba(255,255,255,.12);
 
     border:
         1px solid
         rgba(255,255,255,.2);
 
-    font-size: 13px;
+    padding:8px 14px;
 
-    font-weight: 700;
+    border-radius:20px;
 
+    font-size:13px;
+
+    font-weight:bold;
 }
 
+.test-button{
+    display:inline-block;
 
-.test-button {
+    margin-top:25px;
 
-    display: inline-block;
+    padding:14px 25px;
 
-    margin-top: 25px;
+    background:white;
 
-    padding:
-        14px 25px;
+    color:#4338ca;
 
-    background: white;
+    border-radius:11px;
 
-    color: #4338ca;
+    text-decoration:none;
 
-    text-decoration: none;
+    font-weight:800;
 
-    border-radius: 11px;
-
-    font-weight: 800;
-
-    transition: .2s;
-
+    transition:.2s;
 }
 
-
-.test-button:hover {
-
-    transform:
-        translateY(-2px);
+.test-button:hover{
+    transform:translateY(-3px);
 
     box-shadow:
         0 8px 20px
         rgba(0,0,0,.15);
-
 }
 
 
-/* =========================
-   TOPICS
-========================= */
+/* ================= TOPICS ================= */
 
-.topics {
+.topics{
+    background:white;
 
-    background: white;
+    padding:32px;
 
-    padding: 32px;
-
-    border-radius: 22px;
+    border-radius:22px;
 
     box-shadow:
         0 8px 25px
         rgba(15,23,42,.06);
 
-    margin-bottom: 50px;
-
+    margin-bottom:50px;
 }
 
-
-.topics h2 {
-
-    color: #312e81;
-
-    font-size: 25px;
-
-    margin-bottom: 22px;
-
+.topics h2{
+    color:#312e81;
+    margin-bottom:20px;
 }
 
-
-.topic-grid {
-
-    display: grid;
+.topic-grid{
+    display:grid;
 
     grid-template-columns:
         repeat(
             auto-fit,
-            minmax(220px, 1fr)
+            minmax(220px,1fr)
         );
 
-    gap: 12px;
-
+    gap:12px;
 }
 
+.topic{
+    padding:13px 15px;
 
-.topic {
-
-    padding:
-        13px 15px;
-
-    background:
-        #f8fafc;
+    background:#f8fafc;
 
     border-left:
         4px solid #6366f1;
 
-    border-radius: 9px;
+    border-radius:9px;
 
-    color: #334155;
+    color:#334155;
 
-    font-size: 14px;
-
+    font-size:14px;
 }
 
 
-/* =========================
-   COURSE INFORMATION
-========================= */
+/* ================= COURSE INFO ================= */
 
-.info-section {
-
-    display: grid;
+.info-grid{
+    display:grid;
 
     grid-template-columns:
         repeat(
             auto-fit,
-            minmax(250px, 1fr)
+            minmax(240px,1fr)
         );
 
-    gap: 22px;
+    gap:22px;
 
-    margin-bottom: 55px;
+    margin-bottom:50px;
+}
 
+.info-box{
+    background:white;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    border:1px solid #e2e8f0;
+}
+
+.info-box h3{
+    color:#4338ca;
+    margin-bottom:10px;
+}
+
+.info-box p{
+    color:#64748b;
+    font-size:14px;
+    line-height:1.7;
 }
 
 
-.info-box {
+/* ================= BACK BUTTON ================= */
 
-    background: white;
+.back-home{
+    display:inline-block;
 
-    padding: 25px;
+    margin-bottom:50px;
 
-    border-radius: 18px;
-
-    border: 1px solid #e2e8f0;
-
-}
-
-
-.info-box h3 {
-
-    color: #4338ca;
-
-    margin-bottom: 12px;
-
-}
-
-
-.info-box p {
-
-    color: #64748b;
-
-    line-height: 1.7;
-
-    font-size: 14px;
-
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
+    padding:12px 20px;
 
     background:
-        #0f172a;
+        linear-gradient(
+            90deg,
+            #4f46e5,
+            #7c3aed
+        );
 
-    color:
-        #cbd5e1;
+    color:white;
 
-    text-align: center;
+    text-decoration:none;
 
-    padding: 28px;
+    border-radius:10px;
 
-    font-size: 14px;
-
-    margin-top: 40px;
-
+    font-weight:bold;
 }
 
 
-footer strong {
+/* ================= FOOTER ================= */
 
-    color: white;
+footer{
+    background:#0f172a;
 
+    color:#cbd5e1;
+
+    text-align:center;
+
+    padding:28px;
+
+    margin-top:30px;
+
+    font-size:14px;
+}
+
+footer strong{
+    color:white;
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+/* ================= MOBILE ================= */
 
-@media(max-width:700px) {
+@media(max-width:700px){
 
-    header {
-
-        flex-direction: column;
-
-        gap: 15px;
-
-        padding:
-            18px 15px;
-
+    header{
+        flex-direction:column;
+        gap:15px;
+        padding:18px 15px;
     }
 
-
-    nav {
-
-        gap: 12px;
-
-        flex-wrap: wrap;
-
-        justify-content: center;
-
+    nav{
+        gap:12px;
+        flex-wrap:wrap;
+        justify-content:center;
     }
 
-
-    nav a {
-
-        font-size: 12px;
-
+    nav a{
+        font-size:12px;
     }
 
-
-    .hero {
-
-        padding:
-            40px 10px;
-
+    .hero{
+        padding:45px 10px;
     }
 
-
-    .hero h1 {
-
-        font-size: 34px;
-
+    .hero h1{
+        font-size:35px;
     }
 
-
-    .hero p {
-
-        font-size: 15px;
-
+    .hero p{
+        font-size:15px;
     }
 
-
-    .test-card {
-
-        padding: 25px;
-
+    .test-card{
+        padding:27px;
     }
 
-
-    .test-card h2 {
-
-        font-size: 23px;
-
+    .test-card h2{
+        font-size:23px;
     }
 
-
-    .topics {
-
-        padding: 23px;
-
+    .topics{
+        padding:23px;
     }
 
 }
@@ -756,18 +510,13 @@ footer strong {
 <body>
 
 
-<!-- =========================
-     HEADER
-========================= -->
+<!-- ================= HEADER ================= -->
 
 <header>
 
     <div class="logo">
-
         🎓 Edu<span>Negi</span>
-
     </div>
-
 
     <nav>
 
@@ -792,9 +541,7 @@ footer strong {
 </header>
 
 
-<!-- =========================
-     BREADCRUMB
-========================= -->
+<!-- ================= BREADCRUMB ================= -->
 
 <div class="breadcrumb">
 
@@ -815,9 +562,7 @@ footer strong {
 </div>
 
 
-<!-- =========================
-     HERO
-========================= -->
+<!-- ================= HERO ================= -->
 
 <section class="hero">
 
@@ -825,22 +570,16 @@ footer strong {
         📊
     </div>
 
-
     <h1>
-
         Data Analytics
-
     </h1>
-
 
     <p>
 
-        Learn how to collect, clean,
-        analyze and visualize data
-        for better decision-making.
-        Explore lecture notes, class tests,
-        Excel practice, assignments and
-        study resources through EduNegi.
+        Learn Data Analytics from
+        fundamentals to practical Excel
+        applications through lecture notes,
+        class tests and hands-on learning.
 
     </p>
 
@@ -850,42 +589,37 @@ footer strong {
 <div class="container">
 
 
-<!-- =========================
-     RESOURCE CARDS
-========================= -->
+<!-- ================= RESOURCE CARDS ================= -->
 
-<div class="resource-grid">
+<div class="cards">
 
 
-    <!-- NOTES -->
+    <!-- LECTURE NOTES -->
 
-    <div class="resource-card">
+    <div class="card">
 
-        <div class="resource-icon">
+        <div class="card-icon">
             📚
         </div>
-
 
         <h2>
             Lecture Notes
         </h2>
 
-
         <p>
 
-            Detailed and easy-to-understand
-            lecture notes covering Data
-            Analytics concepts and Excel
-            for Data Analytics.
+            Complete study notes covering
+            Data Analytics, analytics types,
+            analytics process, applications
+            and Excel fundamentals.
 
         </p>
 
-
         <a
-            href="#"
-            class="resource-button">
+            href="data-analytics-notes.html"
+            class="button">
 
-            View Notes →
+            📖 Open Lecture Notes →
 
         </a>
 
@@ -894,33 +628,29 @@ footer strong {
 
     <!-- CLASS TEST -->
 
-    <div class="resource-card">
+    <div class="card">
 
-        <div class="resource-icon">
+        <div class="card-icon">
             📝
         </div>
 
-
         <h2>
-            Class Tests
+            Class Test
         </h2>
-
 
         <p>
 
-            Attempt online MCQ tests,
-            practice questions and
-            evaluate your understanding
-            of the course.
+            Attempt the online Data Analytics
+            and Excel MCQ class test and
+            receive your score automatically.
 
         </p>
 
-
         <a
-            href="#class-test"
-            class="resource-button">
+            href="data-analytics-120-mcq.html"
+            class="button">
 
-            View Tests →
+            🎯 Start 120 MCQ Test →
 
         </a>
 
@@ -929,34 +659,29 @@ footer strong {
 
     <!-- PRACTICAL -->
 
-    <div class="resource-card">
+    <div class="card">
 
-        <div class="resource-icon">
+        <div class="card-icon">
             💻
         </div>
 
-
         <h2>
             Practical
-
         </h2>
-
 
         <p>
 
-            Practice Excel functions,
-            data entry, formatting,
-            data validation and
-            basic data analysis.
+            Practice Excel data entry,
+            formulas, functions, formatting
+            and data validation.
 
         </p>
 
-
         <a
             href="#"
-            class="resource-button">
+            class="button">
 
-            Practice →
+            Coming Soon →
 
         </a>
 
@@ -965,100 +690,82 @@ footer strong {
 
     <!-- ASSIGNMENTS -->
 
-    <div class="resource-card">
+    <div class="card">
 
-        <div class="resource-icon">
+        <div class="card-icon">
             📂
         </div>
-
 
         <h2>
             Assignments
         </h2>
 
-
         <p>
 
-            Access assignments,
-            practice activities and
+            Practice assignments and
             application-based questions
-            related to Data Analytics.
+            for Data Analytics.
 
         </p>
 
-
         <a
             href="#"
-            class="resource-button">
+            class="button">
 
-            View Assignments →
+            Coming Soon →
 
         </a>
 
     </div>
 
-
 </div>
 
 
-<!-- =========================
-     CLASS TEST
-========================= -->
+<!-- ================= TEST ================= -->
 
-<section
-    class="test-section"
-    id="class-test">
-
+<section class="test-section">
 
     <div class="test-card">
 
-
         <h2>
-
             🎯 Data Analytics & Excel
             — 120 MCQ Class Test
-
         </h2>
-
 
         <p>
 
-            Test your knowledge of
-            Data Analytics, Excel,
-            analytics types, the
-            analytics process,
-            applications, Excel
-            functions, logical functions,
-            data entry, formatting and
-            data validation.
+            Test your understanding of
+            Data Analytics fundamentals,
+            analytics types, the analytics
+            process, applications, Excel,
+            basic functions and logical
+            functions.
 
         </p>
 
+        <div class="test-info">
 
-        <div class="test-details">
-
-            <div class="test-detail">
+            <span>
                 120 Questions
-            </div>
+            </span>
 
-            <div class="test-detail">
+            <span>
                 1 Mark Each
-            </div>
+            </span>
 
-            <div class="test-detail">
+            <span>
                 Maximum 120 Marks
-            </div>
+            </span>
 
-            <div class="test-detail">
+            <span>
                 One Attempt
-            </div>
+            </span>
 
-            <div class="test-detail">
+            <span>
                 Automatic Result
-            </div>
+            </span>
 
         </div>
-
 
         <a
             href="data-analytics-120-mcq.html"
@@ -1068,169 +775,145 @@ footer strong {
 
         </a>
 
-
     </div>
 
 </section>
 
 
-<!-- =========================
-     TOPICS
-========================= -->
+<!-- ================= TOPICS ================= -->
 
 <section class="topics">
 
-
     <h2>
-
         📖 Topics Covered
-
     </h2>
-
 
     <div class="topic-grid">
 
-
         <div class="topic">
-            What is Data Analytics?
+            1. Introduction to Data Analytics
         </div>
 
-
         <div class="topic">
-            Importance of Data Analytics
+            Definition and Importance
         </div>
-
 
         <div class="topic">
             Descriptive Analytics
         </div>
 
-
         <div class="topic">
             Diagnostic Analytics
         </div>
-
 
         <div class="topic">
             Predictive Analytics
         </div>
 
-
         <div class="topic">
             Prescriptive Analytics
         </div>
-
 
         <div class="topic">
             Data Collection
         </div>
 
-
         <div class="topic">
             Data Cleaning
         </div>
-
 
         <div class="topic">
             Data Analysis
         </div>
 
-
         <div class="topic">
             Data Visualization
         </div>
-
 
         <div class="topic">
             Decision Making
         </div>
 
-
         <div class="topic">
             Business Analytics
         </div>
-
 
         <div class="topic">
             Financial Analysis
         </div>
 
-
         <div class="topic">
             Marketing Analytics
         </div>
-
 
         <div class="topic">
             Healthcare Analytics
         </div>
 
+        <div class="topic">
+            Introduction to Excel
+        </div>
 
         <div class="topic">
             Excel Interface
         </div>
 
-
         <div class="topic">
             Workbooks & Worksheets
         </div>
-
 
         <div class="topic">
             Excel Data Types
         </div>
 
-
         <div class="topic">
-            SUM & AVERAGE
+            SUM
         </div>
 
-
         <div class="topic">
-            COUNT, MIN & MAX
+            AVERAGE
         </div>
 
+        <div class="topic">
+            COUNT
+        </div>
+
+        <div class="topic">
+            MIN & MAX
+        </div>
 
         <div class="topic">
             IF Function
         </div>
 
-
         <div class="topic">
             AND Function
         </div>
-
 
         <div class="topic">
             OR Function
         </div>
 
-
         <div class="topic">
             Data Entry
         </div>
-
 
         <div class="topic">
             Cell Formatting
         </div>
 
-
         <div class="topic">
             Data Validation
         </div>
-
 
     </div>
 
 </section>
 
 
-<!-- =========================
-     INFORMATION
-========================= -->
+<!-- ================= INFORMATION ================= -->
 
-<section class="info-section">
+<section class="info-grid">
 
 
     <div class="info-box">
@@ -1239,13 +922,12 @@ footer strong {
             🎯 Learning Objective
         </h3>
 
-
         <p>
 
             Understand the fundamentals
-            of Data Analytics and develop
-            basic skills for organizing,
-            analyzing and presenting data.
+            of Data Analytics and learn
+            how data can support effective
+            decision-making.
 
         </p>
 
@@ -1258,13 +940,11 @@ footer strong {
             💻 Practical Focus
         </h3>
 
-
         <p>
 
-            Use Microsoft Excel to enter,
-            organize, format and analyze
-            data using commonly used
-            functions and logical formulas.
+            Develop basic Excel skills for
+            entering, organizing, formatting
+            and analyzing data.
 
         </p>
 
@@ -1277,13 +957,11 @@ footer strong {
             📊 Application
         </h3>
 
-
         <p>
 
-            Apply analytics concepts to
-            business, financial, marketing
-            and healthcare-related
-            decision-making situations.
+            Apply analytics concepts in
+            business, finance, marketing
+            and healthcare situations.
 
         </p>
 
@@ -1293,12 +971,21 @@ footer strong {
 </section>
 
 
+<!-- ================= BACK ================= -->
+
+<a
+    href="index.html"
+    class="back-home">
+
+    ← Back to EduNegi Home
+
+</a>
+
+
 </div>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
@@ -1308,16 +995,12 @@ footer strong {
         EduNegi
     </strong>
 
-
     <br><br>
-
 
     Learn Better. Practice More.
     Grow with EduNegi.
 
-
     <br><br>
-
 
     BBA & BCH • MBA • Practical Learning
 
