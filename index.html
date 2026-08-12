@@ -27,7 +27,6 @@ html {
 }
 
 body {
-
     font-family:
         Arial,
         Helvetica,
@@ -44,7 +43,6 @@ body {
     color: #172033;
 
     line-height: 1.6;
-
 }
 
 
@@ -66,7 +64,7 @@ header {
     color: white;
 
     padding:
-        20px 7%;
+        12px 7%;
 
     display: flex;
 
@@ -89,7 +87,17 @@ header {
 }
 
 
+/* =====================================================
+   LOGO
+===================================================== */
+
 .logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
 
     font-size: 27px;
 
@@ -99,6 +107,19 @@ header {
 
 }
 
+.logo img {
+
+    width: 55px;
+
+    height: 55px;
+
+    object-fit: contain;
+
+    display: block;
+
+    border-radius: 50%;
+
+}
 
 .logo span {
 
@@ -107,6 +128,10 @@ header {
 }
 
 
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
 nav {
 
     display: flex;
@@ -114,7 +139,6 @@ nav {
     gap: 24px;
 
 }
-
 
 nav a {
 
@@ -129,7 +153,6 @@ nav a {
     transition: .2s;
 
 }
-
 
 nav a:hover {
 
@@ -158,7 +181,6 @@ nav a:hover {
 
 }
 
-
 .hero-icon {
 
     font-size: 65px;
@@ -166,7 +188,6 @@ nav a:hover {
     margin-bottom: 15px;
 
 }
-
 
 .hero h1 {
 
@@ -182,13 +203,11 @@ nav a:hover {
 
 }
 
-
 .hero h1 span {
 
     color: #7c3aed;
 
 }
-
 
 .hero p {
 
@@ -203,7 +222,6 @@ nav a:hover {
     line-height: 1.8;
 
 }
-
 
 .hero-button {
 
@@ -236,7 +254,6 @@ nav a:hover {
     transition: .2s;
 
 }
-
 
 .hero-button:hover {
 
@@ -271,7 +288,6 @@ nav a:hover {
 
 }
 
-
 .section-title {
 
     text-align: center;
@@ -279,7 +295,6 @@ nav a:hover {
     margin-bottom: 32px;
 
 }
-
 
 .section-title h2 {
 
@@ -290,7 +305,6 @@ nav a:hover {
     margin-bottom: 8px;
 
 }
-
 
 .section-title p {
 
@@ -319,7 +333,6 @@ nav a:hover {
 
 }
 
-
 .card {
 
     background: white;
@@ -341,7 +354,6 @@ nav a:hover {
 
 }
 
-
 .card:hover {
 
     transform:
@@ -353,7 +365,6 @@ nav a:hover {
 
 }
 
-
 .card-icon {
 
     font-size: 45px;
@@ -361,7 +372,6 @@ nav a:hover {
     margin-bottom: 15px;
 
 }
-
 
 .card h3 {
 
@@ -373,7 +383,6 @@ nav a:hover {
 
 }
 
-
 .card p {
 
     color: #64748b;
@@ -383,7 +392,6 @@ nav a:hover {
     line-height: 1.7;
 
 }
-
 
 .card-button {
 
@@ -414,7 +422,6 @@ nav a:hover {
     transition: .2s;
 
 }
-
 
 .card-button:hover {
 
@@ -487,7 +494,6 @@ nav a:hover {
 
 }
 
-
 .feature-title {
 
     text-align: center;
@@ -495,7 +501,6 @@ nav a:hover {
     margin-bottom: 35px;
 
 }
-
 
 .feature-title h2 {
 
@@ -505,14 +510,12 @@ nav a:hover {
 
 }
 
-
 .feature-title p {
 
     color:
         #dbeafe;
 
 }
-
 
 .feature-grid {
 
@@ -534,7 +537,6 @@ nav a:hover {
 
 }
 
-
 .feature {
 
     text-align: center;
@@ -552,7 +554,6 @@ nav a:hover {
 
 }
 
-
 .feature-icon {
 
     font-size: 38px;
@@ -561,13 +562,11 @@ nav a:hover {
 
 }
 
-
 .feature h3 {
 
     margin-bottom: 7px;
 
 }
-
 
 .feature p {
 
@@ -606,7 +605,6 @@ nav a:hover {
 
 }
 
-
 .about h2 {
 
     color: #312e81;
@@ -614,7 +612,6 @@ nav a:hover {
     margin-bottom: 15px;
 
 }
-
 
 .about p {
 
@@ -645,20 +642,17 @@ footer {
 
 }
 
-
 footer strong {
 
     color: white;
 
 }
 
-
 .footer-links {
 
     margin-top: 12px;
 
 }
-
 
 .footer-links a {
 
@@ -671,7 +665,6 @@ footer strong {
         0 8px;
 
 }
-
 
 .footer-links a:hover {
 
@@ -693,10 +686,23 @@ footer strong {
         gap: 15px;
 
         padding:
-            18px 15px;
+            12px 15px;
 
     }
 
+    .logo {
+
+        font-size: 24px;
+
+    }
+
+    .logo img {
+
+        width: 48px;
+
+        height: 48px;
+
+    }
 
     nav {
 
@@ -709,13 +715,11 @@ footer strong {
 
     }
 
-
     nav a {
 
         font-size: 12px;
 
     }
-
 
     .hero {
 
@@ -724,13 +728,11 @@ footer strong {
 
     }
 
-
     .hero h1 {
 
         font-size: 36px;
 
     }
-
 
     .hero p {
 
@@ -738,20 +740,17 @@ footer strong {
 
     }
 
-
     .section-title h2 {
 
         font-size: 28px;
 
     }
 
-
     .card {
 
         padding: 24px;
 
     }
-
 
     .about {
 
@@ -777,7 +776,11 @@ footer strong {
 
     <div class="logo">
 
-        🎓 Edu<span>Negi</span>
+        <img
+            src="images/logo.png"
+            alt="EduNegi Logo">
+
+        <span>EduNegi</span>
 
     </div>
 
@@ -1458,6 +1461,7 @@ footer strong {
         Excel and Computer Applications.
 
     </p>
+
 
 </section>
 
