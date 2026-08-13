@@ -2,12 +2,15 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Data Analytics | EduNegi</title>
 
 <style>
+
+/* ================= RESET ================= */
 
 *{
     margin:0;
@@ -24,6 +27,7 @@ body{
     background:linear-gradient(135deg,#eef2ff,#f8fafc,#ecfeff);
     color:#172033;
     line-height:1.6;
+    overflow-x:hidden;
 }
 
 
@@ -371,6 +375,84 @@ nav a:hover{
 }
 
 
+/* ================= PRACTICAL ================= */
+
+.practical-section{
+    scroll-margin-top:100px;
+}
+
+.practical-section .card{
+    margin-top:10px;
+}
+
+.practical-intro{
+    color:#64748b;
+    margin-bottom:20px;
+}
+
+.practical-list{
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(240px,1fr)
+        );
+
+    gap:12px;
+
+    margin-top:20px;
+}
+
+.practical-item{
+    padding:14px 16px;
+
+    background:#f8fafc;
+
+    border-left:
+        4px solid #10b981;
+
+    border-radius:9px;
+
+    color:#334155;
+
+    font-size:14px;
+}
+
+.download-button{
+    display:inline-block;
+
+    margin-top:25px;
+
+    padding:13px 22px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #059669,
+            #10b981
+        );
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:11px;
+
+    font-weight:800;
+
+    transition:.2s;
+}
+
+.download-button:hover{
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(16,185,129,.25);
+}
+
+
 /* ================= COURSE INFO ================= */
 
 .info-grid{
@@ -515,8 +597,11 @@ footer strong{
 <header>
 
     <div class="logo">
+
         🎓 Edu<span>Negi</span>
+
     </div>
+
 
     <nav>
 
@@ -678,10 +763,10 @@ footer strong{
         </p>
 
         <a
-            href="#"
+            href="#practical"
             class="button">
 
-            Coming Soon →
+            💻 Open Practical →
 
         </a>
 
@@ -709,10 +794,10 @@ footer strong{
         </p>
 
         <a
-            href="#"
+            href="#practical"
             class="button">
 
-            Coming Soon →
+            📂 Open Assignments →
 
         </a>
 
@@ -743,6 +828,7 @@ footer strong{
 
         </p>
 
+
         <div class="test-info">
 
             <span>
@@ -767,11 +853,202 @@ footer strong{
 
         </div>
 
+
         <a
             href="data-analytics-120-mcq.html"
             class="test-button">
 
             🚀 Start Class Test
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PRACTICAL ================= -->
+
+<section
+    class="topics practical-section"
+    id="practical">
+
+    <h2>
+        💻 Data Analytics Practical
+    </h2>
+
+
+    <div class="card">
+
+        <div class="card-icon">
+            📊
+        </div>
+
+
+        <h2>
+            Practical 1: Employee Sales Analysis in Excel
+        </h2>
+
+
+        <p class="practical-intro">
+
+            Use Microsoft Excel to analyze
+            employee sales, targets, attendance
+            and customer ratings.
+
+            Complete the practical using Excel
+            formulas and logical functions.
+
+        </p>
+
+
+        <h3 style="color:#4338ca; margin-top:20px;">
+
+            Practical Questions
+
+        </h3>
+
+
+        <div class="practical-list">
+
+
+            <div class="practical-item">
+
+                <strong>1. Total Sales</strong><br>
+
+                Calculate the total monthly sales
+                of all employees using SUM.
+
+            </div>
+
+
+            <div class="practical-item">
+
+                <strong>2. Average Sales</strong><br>
+
+                Calculate the average monthly sales
+                using AVERAGE.
+
+            </div>
+
+
+            <div class="practical-item">
+
+                <strong>3. Number of Employees</strong><br>
+
+                Find the total number of employees
+                using COUNT.
+
+            </div>
+
+
+            <div class="practical-item">
+
+                <strong>4. Minimum Sales</strong><br>
+
+                Find the lowest monthly sales
+                using MIN.
+
+            </div>
+
+
+            <div class="practical-item">
+
+                <strong>5. Maximum Sales</strong><br>
+
+                Find the highest monthly sales
+                using MAX.
+
+            </div>
+
+
+            <div class="practical-item">
+
+                <strong>6. Target Achievement – IF</strong><br>
+
+                Create a Target Status column.
+                Display "Achieved" if sales are
+                equal to or greater than target;
+                otherwise display "Not Achieved".
+
+            </div>
+
+
+            <div class="practical-item">
+
+                <strong>7. Bonus Eligibility – IF + AND</strong><br>
+
+                Give "Bonus" only when sales are
+                equal to or greater than target
+                AND attendance is at least 80%.
+
+            </div>
+
+
+            <div class="practical-item">
+
+                <strong>8. Special Recognition – IF + OR</strong><br>
+
+                Display "Yes" if sales are at least
+                ₹1,50,000 OR customer rating is
+                at least 4.8.
+
+            </div>
+
+
+        </div>
+
+
+        <h3 style="color:#4338ca; margin-top:25px;">
+
+            Skills Covered
+
+        </h3>
+
+
+        <div class="topic-grid" style="margin-top:15px;">
+
+            <div class="topic">
+                SUM
+            </div>
+
+            <div class="topic">
+                AVERAGE
+            </div>
+
+            <div class="topic">
+                COUNT
+            </div>
+
+            <div class="topic">
+                MIN
+            </div>
+
+            <div class="topic">
+                MAX
+            </div>
+
+            <div class="topic">
+                IF
+            </div>
+
+            <div class="topic">
+                AND
+            </div>
+
+            <div class="topic">
+                OR
+            </div>
+
+        </div>
+
+
+        <a
+            href="files/Excel_Assignment_Employee_Sales_Analysis.xlsx"
+            class="download-button"
+            download>
+
+            📥 Download Excel Assignment
 
         </a>
 
@@ -787,6 +1064,7 @@ footer strong{
     <h2>
         📖 Topics Covered
     </h2>
+
 
     <div class="topic-grid">
 
