@@ -3,340 +3,279 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>EduNegi | Financial Accounting</title>
 
 <style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background: #f4f7fb;
-    color: #1f2937;
-}
-
-/* HEADER */
-.header {
-    background: linear-gradient(135deg, #173b73, #2563a8);
-    color: white;
-    padding: 28px 20px;
-    text-align: center;
-}
-
-.header h1 {
-    font-size: 34px;
-    margin-bottom: 8px;
-}
-
-.header p {
-    font-size: 16px;
-}
-
-/* MAIN CONTAINER */
-.container {
-    max-width: 1200px;
-    margin: 30px auto;
-    padding: 0 18px;
-
-    display: grid;
-    grid-template-columns: 360px 1fr;
-    gap: 24px;
-}
-
-/* LEFT SIDE */
-.units {
-    background: white;
-    border-radius: 14px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-    overflow: hidden;
-}
-
-.unit {
-    border-bottom: 1px solid #e5e7eb;
-}
-
-.unit:last-child {
-    border-bottom: none;
-}
-
-.unit-header {
-    width: 100%;
-    border: none;
-    background: white;
-
-    padding: 18px;
-
-    text-align: left;
-    cursor: pointer;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    font-weight: bold;
-    color: #173b73;
-    font-size: 16px;
-}
-
-.unit-header:hover {
-    background: #eef5ff;
-}
-
-.unit-info {
-    display: block;
-    font-size: 12px;
-    color: #6b7280;
-    margin-top: 5px;
-    font-weight: normal;
-}
-
-.arrow {
-    font-size: 18px;
-    transition: transform 0.2s;
-}
-
-.unit.open .arrow {
-    transform: rotate(180deg);
-}
-
-/* TOPICS */
-.topics {
-    display: none;
-    padding: 0 12px 12px;
-}
-
-.unit.open .topics {
-    display: block;
-}
-
-.topic-btn {
-    width: 100%;
-    border: none;
-
-    background: #f8fafc;
-
-    padding: 12px 14px;
-    margin-top: 5px;
-
-    border-radius: 8px;
-
-    text-align: left;
-    cursor: pointer;
-
-    color: #374151;
-    font-size: 14px;
-}
-
-.topic-btn:hover,
-.topic-btn.active {
-    background: #dbeafe;
-    color: #173b73;
-    font-weight: bold;
-}
-
-/* RIGHT SIDE */
-.lecture {
-    background: white;
-    border-radius: 14px;
-
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-
-    padding: 30px;
-    min-height: 550px;
-}
-
-.welcome {
-    text-align: center;
-    padding: 100px 20px;
-    color: #6b7280;
-}
-
-.welcome .icon {
-    font-size: 55px;
-    margin-bottom: 15px;
-}
-
-.lecture h2 {
-    color: #173b73;
-    font-size: 29px;
-    margin-bottom: 10px;
-}
-
-.lecture h3 {
-    color: #2563a8;
-    margin: 24px 0 10px;
-}
-
-.lecture p,
-.lecture li {
-    line-height: 1.7;
-    font-size: 16px;
-}
-
-.lecture ul {
-    padding-left: 22px;
-}
-
-.meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin: 15px 0 22px;
-}
-
-.badge {
-    background: #eff6ff;
-    color: #1d4ed8;
-    padding: 7px 11px;
-    border-radius: 20px;
-    font-size: 13px;
-}
-
-.note-area {
-    background: #f8fafc;
-    border-left: 4px solid #2563a8;
-
-    padding: 20px;
-    margin-top: 20px;
-
-    border-radius: 8px;
-
-    min-height: 300px;
-}
-
-.note-area h3 {
-    margin-top: 0;
-}
-
-.example {
-    background: #fff7ed;
-    border-left: 4px solid #f97316;
-
-    padding: 18px;
-    margin-top: 15px;
-
-    border-radius: 8px;
-}
-
-.back-top {
-    margin-top: 30px;
-    text-align: center;
-    color: #6b7280;
-    font-size: 13px;
-}
-
-/* MOBILE */
-@media (max-width: 850px) {
-
-    .container {
-        grid-template-columns: 1fr;
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
     }
 
-    .lecture {
-        min-height: auto;
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f7fb;
+        color: #1f2937;
+    }
+
+    .header {
+        background: linear-gradient(135deg, #173b73, #2563a8);
+        color: white;
+        padding: 28px 20px;
+        text-align: center;
     }
 
     .header h1 {
-        font-size: 28px;
+        font-size: 34px;
+        margin-bottom: 7px;
     }
-}
-</style>
 
+    .header p {
+        font-size: 16px;
+        opacity: 0.95;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 30px auto;
+        padding: 0 18px;
+        display: grid;
+        grid-template-columns: 360px 1fr;
+        gap: 24px;
+    }
+
+    .units {
+        background: white;
+        border-radius: 14px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        overflow: hidden;
+    }
+
+    .unit {
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    .unit:last-child {
+        border-bottom: none;
+    }
+
+    .unit-header {
+        width: 100%;
+        border: none;
+        background: white;
+        padding: 18px;
+        text-align: left;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: bold;
+        color: #173b73;
+        font-size: 16px;
+    }
+
+    .unit-header:hover {
+        background: #eef5ff;
+    }
+
+    .unit-info {
+        display: block;
+        font-size: 12px;
+        color: #6b7280;
+        margin-top: 5px;
+        font-weight: normal;
+    }
+
+    .arrow {
+        font-size: 18px;
+        transition: transform 0.2s;
+    }
+
+    .unit.open .arrow {
+        transform: rotate(180deg);
+    }
+
+    .topics {
+        display: none;
+        padding: 0 12px 12px;
+    }
+
+    .unit.open .topics {
+        display: block;
+    }
+
+    .topic-btn {
+        width: 100%;
+        border: none;
+        background: #f8fafc;
+        padding: 12px 14px;
+        margin-top: 5px;
+        border-radius: 8px;
+        text-align: left;
+        cursor: pointer;
+        color: #374151;
+        font-size: 14px;
+    }
+
+    .topic-btn:hover,
+    .topic-btn.active {
+        background: #dbeafe;
+        color: #173b73;
+        font-weight: bold;
+    }
+
+    .lecture {
+        background: white;
+        border-radius: 14px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        padding: 30px;
+        min-height: 550px;
+    }
+
+    .welcome {
+        text-align: center;
+        padding: 100px 20px;
+        color: #6b7280;
+    }
+
+    .welcome .icon {
+        font-size: 55px;
+        margin-bottom: 15px;
+    }
+
+    .lecture h2 {
+        color: #173b73;
+        font-size: 29px;
+        margin-bottom: 10px;
+    }
+
+    .lecture h3 {
+        color: #2563a8;
+        margin: 24px 0 10px;
+    }
+
+    .lecture p,
+    .lecture li {
+        line-height: 1.7;
+        font-size: 16px;
+    }
+
+    .lecture ul {
+        padding-left: 22px;
+    }
+
+    .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 15px 0 22px;
+    }
+
+    .badge {
+        background: #eff6ff;
+        color: #1d4ed8;
+        padding: 7px 11px;
+        border-radius: 20px;
+        font-size: 13px;
+    }
+
+    .note-box {
+        background: #f8fafc;
+        border-left: 4px solid #2563a8;
+        padding: 18px;
+        margin-top: 15px;
+        border-radius: 8px;
+    }
+
+    .example {
+        background: #fff7ed;
+        border-left: 4px solid #f97316;
+        padding: 18px;
+        margin-top: 15px;
+        border-radius: 8px;
+    }
+
+    .journal {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+    }
+
+    .journal th,
+    .journal td {
+        border: 1px solid #d1d5db;
+        padding: 10px;
+        text-align: left;
+    }
+
+    .journal th {
+        background: #eef5ff;
+    }
+
+    .back-top {
+        margin-top: 30px;
+        text-align: center;
+        color: #6b7280;
+        font-size: 13px;
+    }
+
+    @media (max-width: 850px) {
+        .container {
+            grid-template-columns: 1fr;
+        }
+
+        .lecture {
+            min-height: auto;
+        }
+
+        .header h1 {
+            font-size: 28px;
+        }
+    }
+</style>
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
-
 <header class="header">
-
     <h1>📚 EduNegi</h1>
-
-    <p>
-        Financial Accounting – Unit-wise Lecture Notes
-    </p>
-
+    <p>Financial Accounting –Study Guide</p>
 </header>
-
-
-<!-- ================= MAIN ================= -->
 
 <main class="container">
 
-
-    <!-- ================= LEFT SIDE ================= -->
-
+    <!-- LEFT SIDE: UNITS & TOPICS -->
     <aside class="units" id="unitsContainer"></aside>
 
-
-    <!-- ================= RIGHT SIDE ================= -->
-
+    <!-- RIGHT SIDE: LECTURE NOTE -->
     <section class="lecture" id="lectureContent">
-
         <div class="welcome">
-
             <div class="icon">📖</div>
-
-            <h2>
-                Welcome to EduNegi
-            </h2>
-
-            <p>
-                Select a Unit and then click on a topic to view the lecture note.
-            </p>
-
+            <h2>Welcome to EduNegi</h2>
+            <p>Select a Unit and then click on a topic to view the lecture note.</p>
             <br>
-
-            <p>
-                <b>Student Friendly Learning</b>
-            </p>
-
+            <p><b>Student Friendly Learning</b></p>
         </div>
-
     </section>
-
 
 </main>
 
-
 <script>
 
-/* =========================================================
-   EDUNEGI ACCOUNTING DATA
+/*
+=========================================================
+EDUNEGI ACCOUNTING DATA
+=========================================================
 
-   IMPORTANT:
+IMPORTANT:
+Aap yahan har topic ka ORIGINAL lecture note add/edit karenge.
 
-   Har topic ke andar:
-
-   YOUR NOTES HERE
-
-   ki jagah apne lecture notes likhein.
-
-   Aap HTML formatting bhi use kar sakte hain.
-
-   Example:
-
-   <p>This is my lecture note.</p>
-
-   <h3>Example</h3>
-
-   <ul>
-       <li>Point One</li>
-       <li>Point Two</li>
-   </ul>
-
-   ========================================================= */
-
+Student ko wahi content dikhega jo aap yahan likhenge.
+Koi AI answer generate nahi hoga.
+=========================================================
+*/
 
 const accountingData = [
-
-    /* =====================================================
-       UNIT I
-       ===================================================== */
 
     {
         unit: "Unit I",
@@ -344,201 +283,198 @@ const accountingData = [
         hours: "10 Hours",
         weightage: "17",
         co: "CO1, CO2",
-
         topics: [
 
             {
                 title: "Concept of Accounting",
-
                 note: `
+                    <h3>Meaning of Accounting</h3>
+                    <p>
+                    Accounting is the systematic process of identifying, recording,
+                    classifying, summarising and interpreting financial transactions
+                    of a business.
+                    </p>
 
-                    <!-- ==============================
-                         WRITE YOUR NOTES HERE
-                         ============================== -->
-
-                    <div class="">
-
-                        <h3>Concept of Accounting</h3>
-
-                        <p>
-                             Accounting is the systematic process of identifying,
-    recording, classifying, summarising and interpreting
-    financial transactions.
-                        </p>
-<img src="https://raw.githubusercontent.com/Negi-Academic/EduNegi/main/images/accounting.jpg"
-     alt="Accounting"
-     style="width:75%; max-width:500px; height:auto;">
-
-<img src="https://raw.githubusercontent.com/Negi-Academic/EduNegi/main/images/accounting2.jpg"
-     alt="Accounting"
-     style="width:75%; max-width:500px; height:auto;">
-
+                    <h3>Simple Meaning</h3>
+                    <div class="note-box">
+                    Accounting means recording business transactions and using the
+                    recorded information to understand the financial position and
+                    performance of a business.
                     </div>
 
+                    <h3>Main Functions of Accounting</h3>
+                    <ul>
+                        <li>Recording financial transactions</li>
+                        <li>Classifying transactions</li>
+                        <li>Summarising financial information</li>
+                        <li>Finding profit or loss</li>
+                        <li>Knowing the financial position of the business</li>
+                        <li>Helping management in decision-making</li>
+                    </ul>
+
+                    <h3>Example</h3>
+                    <div class="example">
+                    If a business purchases goods for ₹10,000, the transaction is
+                    recorded in the books of accounts. At the end of the period,
+                    accounting helps determine the effect of this transaction on
+                    the business.
+                    </div>
                 `
             },
-
 
             {
                 title: "Importance of Accounting",
-
                 note: `
+                    <h3>Importance of Accounting</h3>
+                    <p>
+                    Accounting provides useful financial information to the
+                    owners, managers, investors, creditors and other users.
+                    </p>
 
-                    <div class="note-area">
-
-                        <h3>Importance of Accounting</h3>
-
-                        <p>
-                            YOUR NOTES HERE
-                        </p>
-
-                    </div>
-
+                    <h3>Important Points</h3>
+                    <ul>
+                        <li>Helps to determine profit or loss.</li>
+                        <li>Shows the financial position of a business.</li>
+                        <li>Helps management in decision-making.</li>
+                        <li>Provides information to investors and creditors.</li>
+                        <li>Helps in maintaining systematic records.</li>
+                    </ul>
                 `
             },
-
 
             {
                 title: "Scope of Accounting",
-
                 note: `
+                    <h3>Scope of Accounting</h3>
+                    <p>
+                    The scope of accounting covers the recording, classification,
+                    summarisation, analysis and interpretation of financial
+                    information.
+                    </p>
 
-                    <div class="note-area">
-
-                        <h3>Scope of Accounting</h3>
-
-                        <p>
-                            YOUR NOTES HERE
-                        </p>
-
-                    </div>
-
+                    <ul>
+                        <li>Financial Accounting</li>
+                        <li>Cost Accounting</li>
+                        <li>Management Accounting</li>
+                        <li>Tax Accounting</li>
+                        <li>Government Accounting</li>
+                    </ul>
                 `
             },
-
 
             {
                 title: "Basic Accounting Principles",
-
                 note: `
+                    <h3>Basic Accounting Principles</h3>
+                    <p>Accounting principles provide a basic framework for recording and reporting financial transactions.</p>
 
-                    <div class="note-area">
-
-                        <h3>Basic Accounting Principles</h3>
-
-                        <p>
-                            YOUR NOTES HERE
-                        </p>
-
-                    </div>
-
+                    <ul>
+                        <li>Business Entity Principle</li>
+                        <li>Going Concern Principle</li>
+                        <li>Money Measurement Principle</li>
+                        <li>Accounting Period Principle</li>
+                        <li>Dual Aspect Principle</li>
+                        <li>Revenue Recognition Principle</li>
+                        <li>Matching Principle</li>
+                    </ul>
                 `
             },
-
 
             {
                 title: "Accounting Conventions",
-
                 note: `
+                    <h3>Accounting Conventions</h3>
+                    <p>
+                    Accounting conventions are generally accepted practices that
+                    help in preparing financial statements in a consistent manner.
+                    </p>
 
-                    <div class="note-area">
-
-                        <h3>Accounting Conventions</h3>
-
-                        <p>
-                            YOUR NOTES HERE
-                        </p>
-
-                    </div>
-
+                    <ul>
+                        <li>Convention of Consistency</li>
+                        <li>Convention of Conservatism</li>
+                        <li>Convention of Materiality</li>
+                        <li>Convention of Full Disclosure</li>
+                    </ul>
                 `
             },
-
 
             {
                 title: "Forms of Accounting",
-
                 note: `
+                    <h3>Forms of Accounting</h3>
+                    <p>
+                    Accounting can be maintained under different systems depending
+                    upon the nature and requirements of the organisation.
+                    </p>
 
-                    <div class="note-area">
-
-                        <h3>Forms of Accounting</h3>
-
-                        <p>
-                            YOUR NOTES HERE
-                        </p>
-
-                    </div>
-
+                    <ul>
+                        <li>Single Entry System</li>
+                        <li>Double Entry System</li>
+                    </ul>
                 `
             },
-
 
             {
                 title: "Users of Accounting Information",
-
                 note: `
-
-                    <div class="note-area">
-
-                        <h3>Users of Accounting Information</h3>
-
-                        <p>
-                            YOUR NOTES HERE
-                        </p>
-
-                    </div>
-
+                    <h3>Users of Accounting Information</h3>
+                    <ul>
+                        <li>Owners</li>
+                        <li>Management</li>
+                        <li>Investors</li>
+                        <li>Creditors</li>
+                        <li>Employees</li>
+                        <li>Government</li>
+                        <li>Customers</li>
+                    </ul>
                 `
             },
-
 
             {
                 title: "Basic Accounting Terms",
-
                 note: `
-
-                    <div class="note-area">
-
-                        <h3>Basic Accounting Terms</h3>
-
-                        <p>
-                            YOUR NOTES HERE
-                        </p>
-
-                    </div>
-
+                    <h3>Basic Accounting Terms</h3>
+                    <ul>
+                        <li>Capital</li>
+                        <li>Drawings</li>
+                        <li>Assets</li>
+                        <li>Liabilities</li>
+                        <li>Revenue</li>
+                        <li>Expenses</li>
+                        <li>Purchases</li>
+                        <li>Sales</li>
+                        <li>Debtor</li>
+                        <li>Creditor</li>
+                    </ul>
                 `
             },
 
-
             {
                 title: "Capital Expenditure and Revenue Expenditure",
-
                 note: `
+                    <h3>Capital Expenditure</h3>
+                    <p>
+                    Expenditure incurred for acquiring or improving a long-term
+                    asset is generally called capital expenditure.
+                    </p>
 
-                    <div class="note-area">
-
-                        <h3>
-                            Capital Expenditure and Revenue Expenditure
-                        </h3>
-
-                        <p>
-                            YOUR NOTES HERE
-                        </p>
-
+                    <div class="example">
+                    Example: Purchase of machinery, furniture or building.
                     </div>
 
+                    <h3>Revenue Expenditure</h3>
+                    <p>
+                    Expenditure incurred for the normal day-to-day operations of
+                    a business is generally called revenue expenditure.
+                    </p>
+
+                    <div class="example">
+                    Example: Salary, rent, electricity and wages.
+                    </div>
                 `
             }
-
         ]
     },
-
-
-    /* =====================================================
-       UNIT II
-       ===================================================== */
 
     {
         unit: "Unit II",
@@ -546,186 +482,183 @@ const accountingData = [
         hours: "15 Hours",
         weightage: "25",
         co: "CO1, CO2, CO3",
-
         topics: [
 
             {
                 title: "Accounting Equation",
-
                 note: `
+                    <h3>Accounting Equation</h3>
+                    <p>
+                    The accounting equation shows the relationship between assets,
+                    liabilities and capital.
+                    </p>
 
-                    <div class="note-area">
-
-                        <h3>Accounting Equation</h3>
-
-                        <p>
-                            YOUR NOTES HERE
-                        </p>
-
+                    <div class="note-box">
+                    <b>Assets = Capital + Liabilities</b>
                     </div>
 
+                    <h3>Example</h3>
+                    <p>
+                    If capital is ₹50,000 and liabilities are ₹20,000:
+                    </p>
+
+                    <div class="example">
+                    Assets = ₹50,000 + ₹20,000 = ₹70,000
+                    </div>
                 `
             },
-
 
             {
                 title: "Double Entry System",
-
                 note: `
+                    <h3>Double Entry System</h3>
+                    <p>
+                    Under the double entry system, every business transaction
+                    affects at least two accounts and the total debit is equal
+                    to the total credit.
+                    </p>
 
-                    <div class="note-area">
-
-                        <h3>Double Entry System</h3>
-
-                        <p>
-                            YOUR NOTES HERE
-                        </p>
-
+                    <div class="note-box">
+                    <b>Every Debit has a corresponding Credit.</b>
                     </div>
-
                 `
             },
-
 
             {
                 title: "Single Entry System",
-
                 note: `
-
-                    <div class="note-area">
-
-                        <h3>Single Entry System</h3>
-
-                        <p>
-                            YOUR NOTES HERE
-                        </p>
-
-                    </div>
-
+                    <h3>Single Entry System</h3>
+                    <p>
+                    Single entry system is an incomplete system of recording
+                    financial transactions. It does not record every transaction
+                    according to the principles of double entry.
+                    </p>
                 `
             },
-
 
             {
                 title: "Types of Accounts",
-
                 note: `
+                    <h3>Types of Accounts</h3>
+                    <ul>
+                        <li>Personal Account</li>
+                        <li>Real Account</li>
+                        <li>Nominal Account</li>
+                    </ul>
 
-                    <div class="note-area">
-
-                        <h3>Types of Accounts</h3>
-
-                        <p>
-                            YOUR NOTES HERE
-                        </p>
-
-                    </div>
-
+                    <h3>Golden Rules</h3>
+                    <ul>
+                        <li><b>Personal:</b> Debit the Receiver, Credit the Giver.</li>
+                        <li><b>Real:</b> Debit what comes in, Credit what goes out.</li>
+                        <li><b>Nominal:</b> Debit all expenses and losses, Credit all incomes and gains.</li>
+                    </ul>
                 `
             },
-
 
             {
                 title: "Rules of Debit and Credit",
-
                 note: `
+                    <h3>Rules of Debit and Credit</h3>
 
-                    <div class="note-area">
-
-                        <h3>Rules of Debit and Credit</h3>
-
-                        <p>
-                            YOUR NOTES HERE
-                        </p>
-
+                    <div class="note-box">
+                    <b>Personal Account:</b> Debit the Receiver, Credit the Giver.
                     </div>
 
+                    <div class="note-box">
+                    <b>Real Account:</b> Debit what comes in, Credit what goes out.
+                    </div>
+
+                    <div class="note-box">
+                    <b>Nominal Account:</b> Debit all expenses and losses,
+                    Credit all incomes and gains.
+                    </div>
                 `
             },
-
 
             {
                 title: "Preparation of Journal",
-
                 note: `
+                    <h3>Journal</h3>
+                    <p>
+                    Journal is the book of original entry in which business
+                    transactions are recorded in chronological order.
+                    </p>
 
-                    <div class="note-area">
+                    <h3>Example</h3>
+                    <p>Started business with cash ₹50,000.</p>
 
-                        <h3>Preparation of Journal</h3>
+                    <table class="journal">
+                        <tr>
+                            <th>Particulars</th>
+                            <th>Debit (₹)</th>
+                            <th>Credit (₹)</th>
+                        </tr>
+                        <tr>
+                            <td>Cash A/c Dr.</td>
+                            <td>50,000</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>To Capital A/c</td>
+                            <td>-</td>
+                            <td>50,000</td>
+                        </tr>
+                    </table>
 
-                        <p>
-                            YOUR NOTES HERE
-                        </p>
-
+                    <div class="example">
+                    Narration: Being business started with cash.
                     </div>
-
                 `
             },
-
 
             {
                 title: "Ledger",
-
                 note: `
-
-                    <div class="note-area">
-
-                        <h3>Ledger</h3>
-
-                        <p>
-                            YOUR NOTES HERE
-                        </p>
-
-                    </div>
-
+                    <h3>Ledger</h3>
+                    <p>
+                    Ledger is the principal book in which transactions relating
+                    to individual accounts are classified and summarised.
+                    </p>
                 `
             },
-
 
             {
                 title: "Subsidiary Books",
-
                 note: `
+                    <h3>Subsidiary Books</h3>
+                    <p>
+                    Subsidiary books are special books used to record transactions
+                    of similar nature.
+                    </p>
 
-                    <div class="note-area">
-
-                        <h3>Subsidiary Books</h3>
-
-                        <p>
-                            YOUR NOTES HERE
-                        </p>
-
-                    </div>
-
+                    <ul>
+                        <li>Purchase Book</li>
+                        <li>Sales Book</li>
+                        <li>Purchase Return Book</li>
+                        <li>Sales Return Book</li>
+                        <li>Cash Book</li>
+                        <li>Bills Receivable Book</li>
+                        <li>Bills Payable Book</li>
+                    </ul>
                 `
             },
 
-
             {
                 title: "Trial Balance",
-
                 note: `
+                    <h3>Trial Balance</h3>
+                    <p>
+                    Trial balance is a statement prepared to check the arithmetical
+                    accuracy of ledger accounts.
+                    </p>
 
-                    <div class="note-area">
-
-                        <h3>Trial Balance</h3>
-
-                        <p>
-                            YOUR NOTES HERE
-                        </p>
-
+                    <div class="note-box">
+                    <b>Total Debit = Total Credit</b>
                     </div>
-
                 `
             }
-
         ]
     },
-
-
-    /* =====================================================
-       UNIT III
-       ===================================================== */
 
     {
         unit: "Unit III",
@@ -733,110 +666,115 @@ const accountingData = [
         hours: "15 Hours",
         weightage: "25",
         co: "CO2, CO3, CO4",
-
         topics: [
 
             {
                 title: "Trading Account",
-
                 note: `
+                    <h3>Trading Account</h3>
+                    <p>
+                    Trading Account is prepared to determine the gross profit
+                    or gross loss of a business.
+                    </p>
 
-                    <div class="note-area">
-
-                        <h3>Trading Account</h3>
-
-                        <p>
-                            YOUR NOTES HERE
-                        </p>
-
+                    <div class="note-box">
+                    <b>Gross Profit = Sales – Cost of Goods Sold</b>
                     </div>
 
+                    <h3>Debit Side</h3>
+                    <ul>
+                        <li>Opening Stock</li>
+                        <li>Purchases</li>
+                        <li>Direct Expenses</li>
+                    </ul>
+
+                    <h3>Credit Side</h3>
+                    <ul>
+                        <li>Sales</li>
+                        <li>Closing Stock</li>
+                    </ul>
                 `
             },
-
 
             {
                 title: "Profit and Loss Account",
-
                 note: `
+                    <h3>Profit and Loss Account</h3>
+                    <p>
+                    Profit and Loss Account is prepared to determine the net profit
+                    or net loss of a business.
+                    </p>
 
-                    <div class="note-area">
-
-                        <h3>Profit and Loss Account</h3>
-
-                        <p>
-                            YOUR NOTES HERE
-                        </p>
-
+                    <div class="note-box">
+                    <b>Net Profit = Gross Profit + Other Incomes – Indirect Expenses</b>
                     </div>
 
+                    <h3>Examples of Indirect Expenses</h3>
+                    <ul>
+                        <li>Salary</li>
+                        <li>Rent</li>
+                        <li>Insurance</li>
+                        <li>Depreciation</li>
+                        <li>Advertisement</li>
+                    </ul>
                 `
             },
-
 
             {
                 title: "Balance Sheet",
-
                 note: `
+                    <h3>Balance Sheet</h3>
+                    <p>
+                    Balance Sheet is a statement showing the financial position
+                    of a business on a particular date.
+                    </p>
 
-                    <div class="note-area">
-
-                        <h3>Balance Sheet</h3>
-
-                        <p>
-                            YOUR NOTES HERE
-                        </p>
-
+                    <div class="note-box">
+                    It shows <b>Assets, Liabilities and Capital</b>.
                     </div>
-
                 `
             },
-
 
             {
                 title: "Adjustments in Final Accounts",
-
                 note: `
+                    <h3>Adjustments</h3>
+                    <p>
+                    Adjustments are additional information given outside the trial
+                    balance which must be considered while preparing final accounts.
+                    </p>
 
-                    <div class="note-area">
-
-                        <h3>Adjustments in Final Accounts</h3>
-
-                        <p>
-                            YOUR NOTES HERE
-                        </p>
-
-                    </div>
-
+                    <ul>
+                        <li>Closing Stock</li>
+                        <li>Outstanding Expenses</li>
+                        <li>Prepaid Expenses</li>
+                        <li>Accrued Income</li>
+                        <li>Income Received in Advance</li>
+                        <li>Depreciation</li>
+                        <li>Bad Debts</li>
+                    </ul>
                 `
             },
 
-
             {
                 title: "Final Accounts with Adjustments",
-
                 note: `
+                    <h3>Final Accounts with Adjustments</h3>
+                    <p>
+                    While preparing final accounts, every adjustment is given its
+                    appropriate accounting treatment in the Trading Account,
+                    Profit and Loss Account and Balance Sheet.
+                    </p>
 
-                    <div class="note-area">
-
-                        <h3>Final Accounts with Adjustments</h3>
-
-                        <p>
-                            YOUR NOTES HERE
-                        </p>
-
+                    <div class="example">
+                    Example: Outstanding Salary is added to salary expense in
+                    Profit and Loss Account and shown as a liability in the
+                    Balance Sheet.
                     </div>
-
                 `
             }
-
         ]
     },
-
-
-    /* =====================================================
-       UNIT IV
-       ===================================================== */
 
     {
         unit: "Unit IV",
@@ -844,74 +782,67 @@ const accountingData = [
         hours: "10 Hours",
         weightage: "16",
         co: "CO2, CO3, CO4",
-
         topics: [
 
             {
                 title: "Bank Reconciliation Statement",
-
                 note: `
+                    <h3>Bank Reconciliation Statement</h3>
+                    <p>
+                    Bank Reconciliation Statement is prepared to reconcile the
+                    balance shown by the cash book with the balance shown by the
+                    bank statement/pass book.
+                    </p>
 
-                    <div class="note-area">
-
-                        <h3>Bank Reconciliation Statement</h3>
-
-                        <p>
-                            YOUR NOTES HERE
-                        </p>
-
-                    </div>
-
+                    <h3>Common Reasons for Difference</h3>
+                    <ul>
+                        <li>Cheques issued but not presented for payment</li>
+                        <li>Cheques deposited but not yet collected</li>
+                        <li>Bank charges</li>
+                        <li>Interest credited by bank</li>
+                        <li>Direct payments by bank</li>
+                    </ul>
                 `
             },
-
 
             {
                 title: "Preparation of Bank Reconciliation Statement",
-
                 note: `
+                    <h3>Preparation of BRS</h3>
+                    <p>
+                    BRS can be prepared by starting with the balance as per Cash
+                    Book or the balance as per Pass Book and then making the
+                    necessary adjustments.
+                    </p>
 
-                    <div class="note-area">
-
-                        <h3>
-                            Preparation of Bank Reconciliation Statement
-                        </h3>
-
-                        <p>
-                            YOUR NOTES HERE
-                        </p>
-
+                    <div class="note-box">
+                    The objective is to arrive at the same bank balance under both
+                    records.
                     </div>
-
                 `
             },
 
-
             {
                 title: "Receipts and Payments Account",
-
                 note: `
+                    <h3>Receipts and Payments Account</h3>
+                    <p>
+                    Receipts and Payments Account is a summary of all cash and
+                    bank receipts and payments of a non-profit organisation
+                    during a particular accounting period.
+                    </p>
 
-                    <div class="note-area">
-
-                        <h3>Receipts and Payments Account</h3>
-
-                        <p>
-                            YOUR NOTES HERE
-                        </p>
-
-                    </div>
-
+                    <h3>Features</h3>
+                    <ul>
+                        <li>It is a real account.</li>
+                        <li>It records both capital and revenue items.</li>
+                        <li>It records cash and bank transactions.</li>
+                        <li>It includes receipts and payments of the period.</li>
+                    </ul>
                 `
             }
-
         ]
     },
-
-
-    /* =====================================================
-       UNIT V
-       ===================================================== */
 
     {
         unit: "Unit V",
@@ -919,289 +850,192 @@ const accountingData = [
         hours: "10 Hours",
         weightage: "17",
         co: "CO2, CO3, CO4",
-
         topics: [
 
             {
                 title: "Meaning of Depreciation",
-
                 note: `
+                    <h3>Depreciation</h3>
+                    <p>
+                    Depreciation is the gradual reduction in the value of a
+                    fixed asset due to use, passage of time, obsolescence or
+                    other related causes.
+                    </p>
 
-                    <div class="note-area">
-
-                        <h3>Meaning of Depreciation</h3>
-
-                        <p>
-                            YOUR NOTES HERE
-                        </p>
-
+                    <div class="note-box">
+                    Depreciation is charged to allocate the cost of an asset
+                    over its useful life.
                     </div>
-
                 `
             },
-
 
             {
                 title: "Need for Depreciation",
-
                 note: `
-
-                    <div class="note-area">
-
-                        <h3>Need for Depreciation</h3>
-
-                        <p>
-                            YOUR NOTES HERE
-                        </p>
-
-                    </div>
-
+                    <h3>Need for Depreciation</h3>
+                    <ul>
+                        <li>To find correct profit or loss.</li>
+                        <li>To show assets at appropriate values.</li>
+                        <li>To follow the matching principle.</li>
+                        <li>To provide for replacement of assets.</li>
+                    </ul>
                 `
             },
-
 
             {
                 title: "Causes of Depreciation",
-
                 note: `
-
-                    <div class="note-area">
-
-                        <h3>Causes of Depreciation</h3>
-
-                        <p>
-                            YOUR NOTES HERE
-                        </p>
-
-                    </div>
-
+                    <h3>Causes of Depreciation</h3>
+                    <ul>
+                        <li>Wear and tear</li>
+                        <li>Passage of time</li>
+                        <li>Obsolescence</li>
+                        <li>Depletion</li>
+                        <li>Accident or damage</li>
+                    </ul>
                 `
             },
-
 
             {
                 title: "Straight Line Method",
-
                 note: `
+                    <h3>Straight Line Method</h3>
+                    <p>
+                    Under the Straight Line Method, an equal amount of depreciation
+                    is charged every year over the useful life of the asset.
+                    </p>
 
-                    <div class="note-area">
-
-                        <h3>Straight Line Method</h3>
-
-                        <p>
-                            YOUR NOTES HERE
-                        </p>
-
+                    <div class="note-box">
+                    <b>
+                    Depreciation = (Cost of Asset – Scrap Value) ÷ Useful Life
+                    </b>
                     </div>
 
+                    <div class="example">
+                    Cost of machine = ₹1,00,000<br>
+                    Scrap value = ₹10,000<br>
+                    Useful life = 5 years<br><br>
+                    Depreciation = (₹1,00,000 – ₹10,000) ÷ 5<br>
+                    = ₹18,000 per year
+                    </div>
                 `
             },
 
-
             {
                 title: "Written Down Value Method",
-
                 note: `
+                    <h3>Written Down Value Method</h3>
+                    <p>
+                    Under the Written Down Value Method, depreciation is calculated
+                    on the book value of the asset at the beginning of each year.
+                    </p>
 
-                    <div class="note-area">
-
-                        <h3>Written Down Value Method</h3>
-
-                        <p>
-                            YOUR NOTES HERE
-                        </p>
-
+                    <div class="note-box">
+                    <b>
+                    Depreciation = Opening Book Value × Rate of Depreciation
+                    </b>
                     </div>
 
+                    <p>
+                    Therefore, the depreciation amount generally decreases every
+                    year when the rate remains constant.
+                    </p>
                 `
             }
-
         ]
     }
-
 ];
 
 
-/* =========================================================
+/* =====================================================
    CREATE UNIT MENU
-   ========================================================= */
+===================================================== */
 
-const unitsContainer =
-    document.getElementById("unitsContainer");
+const unitsContainer = document.getElementById("unitsContainer");
 
-
-accountingData.forEach((unitData) => {
-
-    /* CREATE UNIT */
+accountingData.forEach((unitData, unitIndex) => {
 
     const unit = document.createElement("div");
-
     unit.className = "unit";
 
-
-    /* CREATE UNIT HEADER */
-
     const header = document.createElement("button");
-
     header.className = "unit-header";
 
-
     header.innerHTML = `
-
         <span>
-
             ${unitData.unit} – ${unitData.title}
-
             <span class="unit-info">
-
-                ${unitData.hours}
-                |
-                Weightage: ${unitData.weightage}
-                |
-                ${unitData.co}
-
+                ${unitData.hours} | Weightage: ${unitData.weightage} | ${unitData.co}
             </span>
-
         </span>
-
-        <span class="arrow">
-            ▼
-        </span>
-
+        <span class="arrow">▼</span>
     `;
 
-
-    /* CREATE TOPICS CONTAINER */
-
-    const topics =
-        document.createElement("div");
-
+    const topics = document.createElement("div");
     topics.className = "topics";
 
+    unitData.topics.forEach((topic, topicIndex) => {
 
-    /* CREATE TOPIC BUTTONS */
-
-    unitData.topics.forEach((topic) => {
-
-        const button =
-            document.createElement("button");
-
+        const button = document.createElement("button");
         button.className = "topic-btn";
-
-        button.textContent =
-            "📖 " + topic.title;
-
-
-        /* TOPIC CLICK */
+        button.textContent = "📖 " + topic.title;
 
         button.addEventListener("click", () => {
 
-            document
-                .querySelectorAll(".topic-btn")
-                .forEach(btn => {
-
-                    btn.classList.remove("active");
-
-                });
-
+            document.querySelectorAll(".topic-btn").forEach(btn => {
+                btn.classList.remove("active");
+            });
 
             button.classList.add("active");
 
-
             showLecture(unitData, topic);
 
-
-            /* MOBILE SCROLL */
-
             if (window.innerWidth < 850) {
-
-                document
-                    .getElementById("lectureContent")
-                    .scrollIntoView({
-                        behavior: "smooth"
-                    });
-
+                document.getElementById("lectureContent")
+                    .scrollIntoView({ behavior: "smooth" });
             }
-
         });
 
-
         topics.appendChild(button);
-
     });
-
-
-    /* UNIT CLICK */
 
     header.addEventListener("click", () => {
-
         unit.classList.toggle("open");
-
     });
 
-
     unit.appendChild(header);
-
     unit.appendChild(topics);
-
     unitsContainer.appendChild(unit);
-
 });
 
 
-/* =========================================================
-   SHOW LECTURE
-   ========================================================= */
+/* =====================================================
+   SHOW LECTURE NOTE
+===================================================== */
 
 function showLecture(unitData, topic) {
 
-    const lecture =
-        document.getElementById("lectureContent");
-
+    const lecture = document.getElementById("lectureContent");
 
     lecture.innerHTML = `
-
-        <h2>
-            ${topic.title}
-        </h2>
-
+        <h2>${topic.title}</h2>
 
         <div class="meta">
-
-            <span class="badge">
-                ${unitData.unit}
-            </span>
-
-            <span class="badge">
-                ${unitData.hours}
-            </span>
-
-            <span class="badge">
-                Weightage: ${unitData.weightage}
-            </span>
-
-            <span class="badge">
-                ${unitData.co}
-            </span>
-
+            <span class="badge">${unitData.unit}</span>
+            <span class="badge">${unitData.hours}</span>
+            <span class="badge">Weightage: ${unitData.weightage}</span>
+            <span class="badge">${unitData.co}</span>
         </div>
-
 
         ${topic.note}
 
-
         <div class="back-top">
-
             📚 EduNegi | Financial Accounting
-
         </div>
-
     `;
-
 }
 
 </script>
-
 
 </body>
 </html>
