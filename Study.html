@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EduNegi | Financial Accounting</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #1f2937;
+}
+
+/* HEADER */
+.header {
+    background: linear-gradient(135deg, #173b73, #2563a8);
+    color: white;
+    padding: 28px 20px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 34px;
+    margin-bottom: 8px;
+}
+
+.header p {
+    font-size: 16px;
+}
+
+/* MAIN CONTAINER */
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 18px;
+
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 24px;
+}
+
+/* LEFT SIDE */
+.units {
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+
+.unit {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.unit:last-child {
+    border-bottom: none;
+}
+
+.unit-header {
+    width: 100%;
+    border: none;
+    background: white;
+
+    padding: 18px;
+
+    text-align: left;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-weight: bold;
+    color: #173b73;
+    font-size: 16px;
+}
+
+.unit-header:hover {
+    background: #eef5ff;
+}
+
+.unit-info {
+    display: block;
+    font-size: 12px;
+    color: #6b7280;
+    margin-top: 5px;
+    font-weight: normal;
+}
+
+.arrow {
+    font-size: 18px;
+    transition: transform 0.2s;
+}
+
+.unit.open .arrow {
+    transform: rotate(180deg);
+}
+
+/* TOPICS */
+.topics {
+    display: none;
+    padding: 0 12px 12px;
+}
+
+.unit.open .topics {
+    display: block;
+}
+
+.topic-btn {
+    width: 100%;
+    border: none;
+
+    background: #f8fafc;
+
+    padding: 12px 14px;
+    margin-top: 5px;
+
+    border-radius: 8px;
+
+    text-align: left;
+    cursor: pointer;
+
+    color: #374151;
+    font-size: 14px;
+}
+
+.topic-btn:hover,
+.topic-btn.active {
+    background: #dbeafe;
+    color: #173b73;
+    font-weight: bold;
+}
+
+/* RIGHT SIDE */
+.lecture {
+    background: white;
+    border-radius: 14px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+
+    padding: 30px;
+    min-height: 550px;
+}
+
+.welcome {
+    text-align: center;
+    padding: 100px 20px;
+    color: #6b7280;
+}
+
+.welcome .icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.lecture h2 {
+    color: #173b73;
+    font-size: 29px;
+    margin-bottom: 10px;
+}
+
+.lecture h3 {
+    color: #2563a8;
+    margin: 24px 0 10px;
+}
+
+.lecture p,
+.lecture li {
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+.lecture ul {
+    padding-left: 22px;
+}
+
+.meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 15px 0 22px;
+}
+
+.badge {
+    background: #eff6ff;
+    color: #1d4ed8;
+    padding: 7px 11px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+.note-area {
+    background: #f8fafc;
+    border-left: 4px solid #2563a8;
+
+    padding: 20px;
+    margin-top: 20px;
+
+    border-radius: 8px;
+
+    min-height: 300px;
+}
+
+.note-area h3 {
+    margin-top: 0;
+}
+
+.example {
+    background: #fff7ed;
+    border-left: 4px solid #f97316;
+
+    padding: 18px;
+    margin-top: 15px;
+
+    border-radius: 8px;
+}
+
+.back-top {
+    margin-top: 30px;
+    text-align: center;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+/* MOBILE */
+@media (max-width: 850px) {
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .lecture {
+        min-height: auto;
+    }
+
+    .header h1 {
+        font-size: 28px;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <h1>📚 EduNegi</h1>
+
+    <p>
+        Financial Accounting – Unit-wise Lecture Notes
+    </p>
+
+</header>
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="container">
+
+
+    <!-- ================= LEFT SIDE ================= -->
+
+    <aside class="units" id="unitsContainer"></aside>
+
+
+    <!-- ================= RIGHT SIDE ================= -->
+
+    <section class="lecture" id="lectureContent">
+
+        <div class="welcome">
+
+            <div class="icon">📖</div>
+
+            <h2>
+                Welcome to EduNegi
+            </h2>
+
+            <p>
+                Select a Unit and then click on a topic to view the lecture note.
+            </p>
+
+            <br>
+
+            <p>
+                <b>Student Friendly Learning</b>
+            </p>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<script>
+
+/* =========================================================
+   EDUNEGI ACCOUNTING DATA
+
+   IMPORTANT:
+
+   Har topic ke andar:
+
+   YOUR NOTES HERE
+
+   ki jagah apne lecture notes likhein.
+
+   Aap HTML formatting bhi use kar sakte hain.
+
+   Example:
+
+   <p>This is my lecture note.</p>
+
+   <h3>Example</h3>
+
+   <ul>
+       <li>Point One</li>
+       <li>Point Two</li>
+   </ul>
+
+   ========================================================= */
+
+
+const accountingData = [
+
+    /* =====================================================
+       UNIT I
+       ===================================================== */
+
+    {
+        unit: "Unit I",
+        title: "Introduction to Accounting",
+        hours: "10 Hours",
+        weightage: "17",
+        co: "CO1, CO2",
+
+        topics: [
+
+            {
+                title: "Concept of Accounting",
+
+                note: `
+
+                    <!-- ==============================
+                         WRITE YOUR NOTES HERE
+                         ============================== -->
+
+                    <div class="">
+
+                        <h3>Concept of Accounting</h3>
+
+                        <p>
+                             Accounting is the systematic process of identifying,
+    recording, classifying, summarising and interpreting
+    financial transactions.
+                        </p>
+ <iframe
+    src="    "
+    width="100%"
+    height="700"
+    style="border:0; border-radius:10px;"
+    allow="autoplay">
+</iframe>
+
+
+                    </div>
+
+                `
+            },
+
+
+            {
+                title: "Importance of Accounting",
+
+                note: `
+
+                    <div class="note-area">
+
+                        <h3>Importance of Accounting</h3>
+
+                        <p>
+                            YOUR NOTES HERE
+                        </p>
+
+                    </div>
+
+                `
+            },
+
+
+            {
+                title: "Scope of Accounting",
+
+                note: `
+
+                    <div class="note-area">
+
+                        <h3>Scope of Accounting</h3>
+
+                        <p>
+                            YOUR NOTES HERE
+                        </p>
+
+                    </div>
+
+                `
+            },
+
+
+            {
+                title: "Basic Accounting Principles",
+
+                note: `
+
+                    <div class="note-area">
+
+                        <h3>Basic Accounting Principles</h3>
+
+                        <p>
+                            YOUR NOTES HERE
+                        </p>
+
+                    </div>
+
+                `
+            },
+
+
+            {
+                title: "Accounting Conventions",
+
+                note: `
+
+                    <div class="note-area">
+
+                        <h3>Accounting Conventions</h3>
+
+                        <p>
+                            YOUR NOTES HERE
+                        </p>
+
+                    </div>
+
+                `
+            },
+
+
+            {
+                title: "Forms of Accounting",
+
+                note: `
+
+                    <div class="note-area">
+
+                        <h3>Forms of Accounting</h3>
+
+                        <p>
+                            YOUR NOTES HERE
+                        </p>
+
+                    </div>
+
+                `
+            },
+
+
+            {
+                title: "Users of Accounting Information",
+
+                note: `
+
+                    <div class="note-area">
+
+                        <h3>Users of Accounting Information</h3>
+
+                        <p>
+                            YOUR NOTES HERE
+                        </p>
+
+                    </div>
+
+                `
+            },
+
+
+            {
+                title: "Basic Accounting Terms",
+
+                note: `
+
+                    <div class="note-area">
+
+                        <h3>Basic Accounting Terms</h3>
+
+                        <p>
+                            YOUR NOTES HERE
+                        </p>
+
+                    </div>
+
+                `
+            },
+
+
+            {
+                title: "Capital Expenditure and Revenue Expenditure",
+
+                note: `
+
+                    <div class="note-area">
+
+                        <h3>
+                            Capital Expenditure and Revenue Expenditure
+                        </h3>
+
+                        <p>
+                            YOUR NOTES HERE
+                        </p>
+
+                    </div>
+
+                `
+            }
+
+        ]
+    },
+
+
+    /* =====================================================
+       UNIT II
+       ===================================================== */
+
+    {
+        unit: "Unit II",
+        title: "Journal, Ledger & Trial Balance",
+        hours: "15 Hours",
+        weightage: "25",
+        co: "CO1, CO2, CO3",
+
+        topics: [
+
+            {
+                title: "Accounting Equation",
+
+                note: `
+
+                    <div class="note-area">
+
+                        <h3>Accounting Equation</h3>
+
+                        <p>
+                            YOUR NOTES HERE
+                        </p>
+
+                    </div>
+
+                `
+            },
+
+
+            {
+                title: "Double Entry System",
+
+                note: `
+
+                    <div class="note-area">
+
+                        <h3>Double Entry System</h3>
+
+                        <p>
+                            YOUR NOTES HERE
+                        </p>
+
+                    </div>
+
+                `
+            },
+
+
+            {
+                title: "Single Entry System",
+
+                note: `
+
+                    <div class="note-area">
+
+                        <h3>Single Entry System</h3>
+
+                        <p>
+                            YOUR NOTES HERE
+                        </p>
+
+                    </div>
+
+                `
+            },
+
+
+            {
+                title: "Types of Accounts",
+
+                note: `
+
+                    <div class="note-area">
+
+                        <h3>Types of Accounts</h3>
+
+                        <p>
+                            YOUR NOTES HERE
+                        </p>
+
+                    </div>
+
+                `
+            },
+
+
+            {
+                title: "Rules of Debit and Credit",
+
+                note: `
+
+                    <div class="note-area">
+
+                        <h3>Rules of Debit and Credit</h3>
+
+                        <p>
+                            YOUR NOTES HERE
+                        </p>
+
+                    </div>
+
+                `
+            },
+
+
+            {
+                title: "Preparation of Journal",
+
+                note: `
+
+                    <div class="note-area">
+
+                        <h3>Preparation of Journal</h3>
+
+                        <p>
+                            YOUR NOTES HERE
+                        </p>
+
+                    </div>
+
+                `
+            },
+
+
+            {
+                title: "Ledger",
+
+                note: `
+
+                    <div class="note-area">
+
+                        <h3>Ledger</h3>
+
+                        <p>
+                            YOUR NOTES HERE
+                        </p>
+
+                    </div>
+
+                `
+            },
+
+
+            {
+                title: "Subsidiary Books",
+
+                note: `
+
+                    <div class="note-area">
+
+                        <h3>Subsidiary Books</h3>
+
+                        <p>
+                            YOUR NOTES HERE
+                        </p>
+
+                    </div>
+
+                `
+            },
+
+
+            {
+                title: "Trial Balance",
+
+                note: `
+
+                    <div class="note-area">
+
+                        <h3>Trial Balance</h3>
+
+                        <p>
+                            YOUR NOTES HERE
+                        </p>
+
+                    </div>
+
+                `
+            }
+
+        ]
+    },
+
+
+    /* =====================================================
+       UNIT III
+       ===================================================== */
+
+    {
+        unit: "Unit III",
+        title: "Final Accounts",
+        hours: "15 Hours",
+        weightage: "25",
+        co: "CO2, CO3, CO4",
+
+        topics: [
+
+            {
+                title: "Trading Account",
+
+                note: `
+
+                    <div class="note-area">
+
+                        <h3>Trading Account</h3>
+
+                        <p>
+                            YOUR NOTES HERE
+                        </p>
+
+                    </div>
+
+                `
+            },
+
+
+            {
+                title: "Profit and Loss Account",
+
+                note: `
+
+                    <div class="note-area">
+
+                        <h3>Profit and Loss Account</h3>
+
+                        <p>
+                            YOUR NOTES HERE
+                        </p>
+
+                    </div>
+
+                `
+            },
+
+
+            {
+                title: "Balance Sheet",
+
+                note: `
+
+                    <div class="note-area">
+
+                        <h3>Balance Sheet</h3>
+
+                        <p>
+                            YOUR NOTES HERE
+                        </p>
+
+                    </div>
+
+                `
+            },
+
+
+            {
+                title: "Adjustments in Final Accounts",
+
+                note: `
+
+                    <div class="note-area">
+
+                        <h3>Adjustments in Final Accounts</h3>
+
+                        <p>
+                            YOUR NOTES HERE
+                        </p>
+
+                    </div>
+
+                `
+            },
+
+
+            {
+                title: "Final Accounts with Adjustments",
+
+                note: `
+
+                    <div class="note-area">
+
+                        <h3>Final Accounts with Adjustments</h3>
+
+                        <p>
+                            YOUR NOTES HERE
+                        </p>
+
+                    </div>
+
+                `
+            }
+
+        ]
+    },
+
+
+    /* =====================================================
+       UNIT IV
+       ===================================================== */
+
+    {
+        unit: "Unit IV",
+        title: "Bank Reconciliation & Receipts and Payments",
+        hours: "10 Hours",
+        weightage: "16",
+        co: "CO2, CO3, CO4",
+
+        topics: [
+
+            {
+                title: "Bank Reconciliation Statement",
+
+                note: `
+
+                    <div class="note-area">
+
+                        <h3>Bank Reconciliation Statement</h3>
+
+                        <p>
+                            YOUR NOTES HERE
+                        </p>
+
+                    </div>
+
+                `
+            },
+
+
+            {
+                title: "Preparation of Bank Reconciliation Statement",
+
+                note: `
+
+                    <div class="note-area">
+
+                        <h3>
+                            Preparation of Bank Reconciliation Statement
+                        </h3>
+
+                        <p>
+                            YOUR NOTES HERE
+                        </p>
+
+                    </div>
+
+                `
+            },
+
+
+            {
+                title: "Receipts and Payments Account",
+
+                note: `
+
+                    <div class="note-area">
+
+                        <h3>Receipts and Payments Account</h3>
+
+                        <p>
+                            YOUR NOTES HERE
+                        </p>
+
+                    </div>
+
+                `
+            }
+
+        ]
+    },
+
+
+    /* =====================================================
+       UNIT V
+       ===================================================== */
+
+    {
+        unit: "Unit V",
+        title: "Depreciation Accounting",
+        hours: "10 Hours",
+        weightage: "17",
+        co: "CO2, CO3, CO4",
+
+        topics: [
+
+            {
+                title: "Meaning of Depreciation",
+
+                note: `
+
+                    <div class="note-area">
+
+                        <h3>Meaning of Depreciation</h3>
+
+                        <p>
+                            YOUR NOTES HERE
+                        </p>
+
+                    </div>
+
+                `
+            },
+
+
+            {
+                title: "Need for Depreciation",
+
+                note: `
+
+                    <div class="note-area">
+
+                        <h3>Need for Depreciation</h3>
+
+                        <p>
+                            YOUR NOTES HERE
+                        </p>
+
+                    </div>
+
+                `
+            },
+
+
+            {
+                title: "Causes of Depreciation",
+
+                note: `
+
+                    <div class="note-area">
+
+                        <h3>Causes of Depreciation</h3>
+
+                        <p>
+                            YOUR NOTES HERE
+                        </p>
+
+                    </div>
+
+                `
+            },
+
+
+            {
+                title: "Straight Line Method",
+
+                note: `
+
+                    <div class="note-area">
+
+                        <h3>Straight Line Method</h3>
+
+                        <p>
+                            YOUR NOTES HERE
+                        </p>
+
+                    </div>
+
+                `
+            },
+
+
+            {
+                title: "Written Down Value Method",
+
+                note: `
+
+                    <div class="note-area">
+
+                        <h3>Written Down Value Method</h3>
+
+                        <p>
+                            YOUR NOTES HERE
+                        </p>
+
+                    </div>
+
+                `
+            }
+
+        ]
+    }
+
+];
+
+
+/* =========================================================
+   CREATE UNIT MENU
+   ========================================================= */
+
+const unitsContainer =
+    document.getElementById("unitsContainer");
+
+
+accountingData.forEach((unitData) => {
+
+    /* CREATE UNIT */
+
+    const unit = document.createElement("div");
+
+    unit.className = "unit";
+
+
+    /* CREATE UNIT HEADER */
+
+    const header = document.createElement("button");
+
+    header.className = "unit-header";
+
+
+    header.innerHTML = `
+
+        <span>
+
+            ${unitData.unit} – ${unitData.title}
+
+            <span class="unit-info">
+
+                ${unitData.hours}
+                |
+                Weightage: ${unitData.weightage}
+                |
+                ${unitData.co}
+
+            </span>
+
+        </span>
+
+        <span class="arrow">
+            ▼
+        </span>
+
+    `;
+
+
+    /* CREATE TOPICS CONTAINER */
+
+    const topics =
+        document.createElement("div");
+
+    topics.className = "topics";
+
+
+    /* CREATE TOPIC BUTTONS */
+
+    unitData.topics.forEach((topic) => {
+
+        const button =
+            document.createElement("button");
+
+        button.className = "topic-btn";
+
+        button.textContent =
+            "📖 " + topic.title;
+
+
+        /* TOPIC CLICK */
+
+        button.addEventListener("click", () => {
+
+            document
+                .querySelectorAll(".topic-btn")
+                .forEach(btn => {
+
+                    btn.classList.remove("active");
+
+                });
+
+
+            button.classList.add("active");
+
+
+            showLecture(unitData, topic);
+
+
+            /* MOBILE SCROLL */
+
+            if (window.innerWidth < 850) {
+
+                document
+                    .getElementById("lectureContent")
+                    .scrollIntoView({
+                        behavior: "smooth"
+                    });
+
+            }
+
+        });
+
+
+        topics.appendChild(button);
+
+    });
+
+
+    /* UNIT CLICK */
+
+    header.addEventListener("click", () => {
+
+        unit.classList.toggle("open");
+
+    });
+
+
+    unit.appendChild(header);
+
+    unit.appendChild(topics);
+
+    unitsContainer.appendChild(unit);
+
+});
+
+
+/* =========================================================
+   SHOW LECTURE
+   ========================================================= */
+
+function showLecture(unitData, topic) {
+
+    const lecture =
+        document.getElementById("lectureContent");
+
+
+    lecture.innerHTML = `
+
+        <h2>
+            ${topic.title}
+        </h2>
+
+
+        <div class="meta">
+
+            <span class="badge">
+                ${unitData.unit}
+            </span>
+
+            <span class="badge">
+                ${unitData.hours}
+            </span>
+
+            <span class="badge">
+                Weightage: ${unitData.weightage}
+            </span>
+
+            <span class="badge">
+                ${unitData.co}
+            </span>
+
+        </div>
+
+
+        ${topic.note}
+
+
+        <div class="back-top">
+
+            📚 EduNegi | Financial Accounting
+
+        </div>
+
+    `;
+
+}
+
+</script>
+
+
+</body>
+</html>
